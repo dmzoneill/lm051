@@ -1,0 +1,63 @@
+\contentsline {chapter}{\numberline {1}Introduction}{1}
+\contentsline {section}{\numberline {1.1}Narrative}{1}
+\contentsline {paragraph}{}{1}
+\contentsline {paragraph}{}{2}
+\contentsline {chapter}{\numberline {2}Discussion - Patterns}{3}
+\contentsline {section}{\numberline {2.1}Required Patterns}{3}
+\contentsline {subsection}{\numberline {2.1.1}Observer}{3}
+\contentsline {paragraph}{}{3}
+\contentsline {subsection}{\numberline {2.1.2}Factory Method}{3}
+\contentsline {paragraph}{}{3}
+\contentsline {subsection}{\numberline {2.1.3}Strategy}{4}
+\contentsline {paragraph}{}{4}
+\contentsline {subsection}{\numberline {2.1.4}Bridge}{4}
+\contentsline {paragraph}{}{4}
+\contentsline {paragraph}{}{5}
+\contentsline {subsection}{\numberline {2.1.5}Decorator}{5}
+\contentsline {paragraph}{}{5}
+\contentsline {paragraph}{}{5}
+\contentsline {section}{\numberline {2.2}Chosen Pattern}{6}
+\contentsline {subsection}{\numberline {2.2.1}Memento}{6}
+\contentsline {paragraph}{}{6}
+\contentsline {paragraph}{}{6}
+\contentsline {chapter}{\numberline {3}Design}{7}
+\contentsline {section}{\numberline {3.1}UML - Class Diagram}{7}
+\contentsline {section}{\numberline {3.2}UML - Sequence Diagram}{9}
+\contentsline {chapter}{\numberline {4}Development}{11}
+\contentsline {section}{\numberline {4.1}Code}{11}
+\contentsline {subsection}{\numberline {4.1.1}BattleshipTest.xaml.cs}{11}
+\contentsline {subsection}{\numberline {4.1.2}I User Interface.cs}{16}
+\contentsline {subsection}{\numberline {4.1.3}Game Window.cs}{17}
+\contentsline {subsection}{\numberline {4.1.4}Model Window.cs}{18}
+\contentsline {subsection}{\numberline {4.1.5}Text Window.cs}{19}
+\contentsline {subsection}{\numberline {4.1.6}Game.cs}{20}
+\contentsline {subsection}{\numberline {4.1.7}I Observer.cs}{23}
+\contentsline {subsection}{\numberline {4.1.8}I Team.cs}{24}
+\contentsline {subsection}{\numberline {4.1.9}Standard Team.cs}{25}
+\contentsline {subsection}{\numberline {4.1.10}Team.cs}{27}
+\contentsline {subsection}{\numberline {4.1.11}Hard Team.cs}{29}
+\contentsline {subsection}{\numberline {4.1.12}Easy Team.cs}{30}
+\contentsline {subsection}{\numberline {4.1.13}Computer Team.cs}{31}
+\contentsline {subsection}{\numberline {4.1.14}I Ship.cs}{32}
+\contentsline {subsection}{\numberline {4.1.15}Ship.cs}{33}
+\contentsline {subsection}{\numberline {4.1.16}I Player.cs}{35}
+\contentsline {subsection}{\numberline {4.1.17}Player.cs}{36}
+\contentsline {subsection}{\numberline {4.1.18}Hard Player.cs}{39}
+\contentsline {subsection}{\numberline {4.1.19}Easy Player.cs}{40}
+\contentsline {subsection}{\numberline {4.1.20}Computer Player.cs}{41}
+\contentsline {subsection}{\numberline {4.1.21}Move Strategy.cs}{42}
+\contentsline {subsection}{\numberline {4.1.22}RL Move Strategy.cs}{43}
+\contentsline {subsection}{\numberline {4.1.23}Evolutionary Move Strategy.cs}{44}
+\contentsline {subsection}{\numberline {4.1.24}I Map Component.cs}{45}
+\contentsline {subsection}{\numberline {4.1.25}Concrete Map Component.cs}{46}
+\contentsline {subsection}{\numberline {4.1.26}Map Decorator.cs}{47}
+\contentsline {subsection}{\numberline {4.1.27}Mine Obstacle Decorator.cs}{48}
+\contentsline {subsection}{\numberline {4.1.28}Land Obstacle Decorator.cs}{49}
+\contentsline {subsection}{\numberline {4.1.29}Originator.cs}{50}
+\contentsline {subsection}{\numberline {4.1.30}Memento.cs}{51}
+\contentsline {chapter}{\numberline {5}Testing}{52}
+\contentsline {paragraph}{}{52}
+\contentsline {chapter}{\numberline {6}Critique \& Discussion}{53}
+\contentsline {paragraph}{}{53}
+\contentsline {chapter}{\numberline {}Bibliography}{55}
+\contentsline {chapter}{\numberline {}List of figures}{56}

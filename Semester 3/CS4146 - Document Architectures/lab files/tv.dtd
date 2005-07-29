@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT tvshow 
+(
+    title,
+    genrelist,
+    creator,
+    cast
+)>
+<!ELEMENT title (#PCDATA) >
+<!ELEMENT genrelist (genre+) >
+<!ELEMENT creator (firstname,surname) >
+<!ELEMENT cast (castmember+) >
+
+<!ELEMENT genre (#PCDATA) >
+
+<!ELEMENT firstname (#PCDATA) >
+<!ELEMENT surname (#PCDATA) >
+
+<!ELEMENT castmember (firstname, surname) >
+
+<!ATTLIST castmember role CDATA #REQUIRED>
+<!ATTLIST tvshow year CDATA #REQUIRED>
+<!ATTLIST tvshow rating CDATA #REQUIRED>
+<!ATTLIST tvshow season CDATA #REQUIRED>
+
+
+<!ATTLIST genre name (Animation|SciFi|Comedy) "Animation">

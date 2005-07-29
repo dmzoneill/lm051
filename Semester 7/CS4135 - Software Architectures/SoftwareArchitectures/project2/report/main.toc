@@ -1,0 +1,33 @@
+\contentsline {chapter}{\numberline {1}Web Services}{1}
+\contentsline {section}{\numberline {1.1}Support for the requirements}{1}
+\contentsline {paragraph}{}{1}
+\contentsline {paragraph}{}{1}
+\contentsline {chapter}{\numberline {2}Deployment Technologies}{1}
+\contentsline {section}{\numberline {2.1}Visual Studio}{1}
+\contentsline {paragraph}{}{1}
+\contentsline {section}{\numberline {2.2}C\#}{1}
+\contentsline {paragraph}{}{1}
+\contentsline {section}{\numberline {2.3}Windows Communication Foundation}{1}
+\contentsline {subsection}{\numberline {2.3.1}Introduction}{1}
+\contentsline {paragraph}{}{1}
+\contentsline {subsection}{\numberline {2.3.2}Service Contracts}{1}
+\contentsline {paragraph}{}{1}
+\contentsline {subsection}{\numberline {2.3.3}Data Contracts}{2}
+\contentsline {paragraph}{}{2}
+\contentsline {section}{\numberline {2.4}Windows Presentation Foundation}{2}
+\contentsline {subsection}{\numberline {2.4.1}Model View Controller}{2}
+\contentsline {paragraph}{}{2}
+\contentsline {subsection}{\numberline {2.4.2}View}{2}
+\contentsline {paragraph}{}{2}
+\contentsline {subsection}{\numberline {2.4.3}Controller}{2}
+\contentsline {paragraph}{}{2}
+\contentsline {chapter}{\numberline {3}Development}{3}
+\contentsline {section}{\numberline {3.1}Client}{3}
+\contentsline {subsection}{\numberline {3.1.1}MainWindow.xaml.cs}{3}
+\contentsline {section}{\numberline {3.2}Server}{6}
+\contentsline {subsection}{\numberline {3.2.1}ICalculator.cs}{6}
+\contentsline {subsection}{\numberline {3.2.2}CalculatorService.svc.cs}{7}
+\contentsline {section}{\numberline {3.3}Published Metadata}{8}
+\contentsline {subsection}{\numberline {3.3.1}app.config (WSDL)}{8}
+\contentsline {chapter}{\numberline {4}Evaluation}{9}
+\contentsline {paragraph}{}{9}

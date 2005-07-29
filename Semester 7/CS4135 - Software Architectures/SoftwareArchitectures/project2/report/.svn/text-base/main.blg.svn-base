@@ -1,0 +1,67 @@
+This is BibTeX, Version 0.99d (TeX Live 2011)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: main.aux
+A level-1 auxiliary file: pages/abstract.aux
+A level-1 auxiliary file: pages/chapter1.aux
+A level-1 auxiliary file: pages/chapter2.aux
+A level-1 auxiliary file: pages/chapter3.aux
+A level-1 auxiliary file: pages/chapter4.aux
+A level-1 auxiliary file: pages/chapter5.aux
+A level-1 auxiliary file: pages/chapter7.aux
+The style file: plain.bst
+Database file #1: bibliography/main.bib
+Warning--entry type for "sts" isn't style-file defined
+--line 33 of file bibliography/main.bib
+Warning--entry type for "meyers" isn't style-file defined
+--line 41 of file bibliography/main.bib
+Name 1 in "Kaner, Bach, and Pettichord" has a comma at the end for entry lessons
+while executing---line 1049 of file plain.bst
+Warning--to sort, need author, editor, or key in gof
+Warning--to sort, need author, editor, or key in Fowler1
+Warning--empty author and editor in Fowler1
+Warning--empty year in Fowler1
+Warning--empty author and editor in gof
+Name 1 in "Kaner, Bach, and Pettichord" has a comma at the end for entry lessons
+while executing---line 1090 of file plain.bst
+You've used 5 entries,
+            2118 wiz_defined-function locations,
+            522 strings with 4475 characters,
+and the built_in function-call counts, 1010 in all, are:
+= -- 83
+> -- 29
+< -- 0
++ -- 13
+- -- 8
+* -- 48
+:= -- 158
+add.period$ -- 11
+call.type$ -- 5
+change.case$ -- 16
+chr.to.int$ -- 0
+cite$ -- 10
+duplicate$ -- 52
+empty$ -- 115
+format.name$ -- 8
+if$ -- 219
+int.to.chr$ -- 0
+int.to.str$ -- 5
+missing$ -- 4
+newline$ -- 24
+num.names$ -- 6
+pop$ -- 41
+preamble$ -- 1
+purify$ -- 14
+quote$ -- 0
+skip$ -- 38
+stack$ -- 0
+substring$ -- 25
+swap$ -- 5
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 14
+warning$ -- 5
+while$ -- 6
+width$ -- 6
+write$ -- 41
+(There were 2 error messages)

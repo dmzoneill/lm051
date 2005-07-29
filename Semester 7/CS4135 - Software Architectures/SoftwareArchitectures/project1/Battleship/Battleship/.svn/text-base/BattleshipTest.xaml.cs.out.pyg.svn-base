@@ -1,0 +1,245 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{ï}\PY{err}{»}\PY{err}{¿}\PY{k}{using} \PY{n+nn}{System}\PY{p}{;}
+\PY{k}{using} \PY{n+nn}{System.Collections.Generic}\PY{p}{;}
+\PY{k}{using} \PY{n+nn}{System.Linq}\PY{p}{;}
+\PY{k}{using} \PY{n+nn}{System.Text}\PY{p}{;}
+\PY{k}{using} \PY{n+nn}{System.Windows}\PY{p}{;}
+\PY{k}{using} \PY{n+nn}{System.Windows.Controls}\PY{p}{;}
+\PY{k}{using} \PY{n+nn}{System.Windows.Data}\PY{p}{;}
+\PY{k}{using} \PY{n+nn}{System.Windows.Documents}\PY{p}{;}
+\PY{k}{using} \PY{n+nn}{System.Windows.Input}\PY{p}{;}
+\PY{k}{using} \PY{n+nn}{System.Windows.Media}\PY{p}{;}
+\PY{k}{using} \PY{n+nn}{System.Windows.Media.Imaging}\PY{p}{;}
+\PY{k}{using} \PY{n+nn}{System.Windows.Shapes}\PY{p}{;}
+
+\PY{k}{using} \PY{n+nn}{Battleship.GameEngine.Boundary}\PY{p}{;}
+\PY{k}{using} \PY{n+nn}{Battleship.GameEngine.Gamepiece}\PY{p}{;}
+\PY{k}{using} \PY{n+nn}{Battleship.GameEngine.Maze}\PY{p}{;}
+\PY{k}{using} \PY{n+nn}{Battleship.GameEngine.Participant}\PY{p}{;}
+\PY{k}{using} \PY{n+nn}{Battleship.GameEngine.Group}\PY{p}{;}
+\PY{k}{using} \PY{n+nn}{Battleship.GameEngine.User\PYZus{}Interface}\PY{p}{;}
+\PY{k}{using} \PY{n+nn}{System.Threading}\PY{p}{;}
+\PY{k}{using} \PY{n+nn}{System.Windows.Threading}\PY{p}{;}
+
+\PY{k}{namespace} \PY{n+nn}{Battleship}
+\PY{p}{\PYZob{}}
+    \PY{c+c1}{/// <summary>}
+    \PY{c+c1}{/// Interaction logic for BattleshipTest.xaml}
+    \PY{c+c1}{/// </summary>}
+    \PY{k}{public} \PY{k}{partial} \PY{k}{class} \PY{n+nc}{BattleshipTest} \PY{p}{:} \PY{n}{Window}
+    \PY{p}{\PYZob{}}
+        \PY{k}{private} \PY{k}{static} \PY{n}{BattleshipTest} \PY{n}{instance}\PY{p}{;}
+        \PY{k}{private} \PY{n}{ThreadStart} \PY{n}{threadstart}\PY{p}{;}
+        \PY{k}{private} \PY{n}{Thread} \PY{n}{gameThread}\PY{p}{;}
+        \PY{k}{private} \PY{n}{Game} \PY{n}{game}\PY{p}{;}
+        \PY{k}{private} \PY{k+kt}{int} \PY{n}{threadStatus} \PY{p}{=} \PY{l+m}{0}\PY{p}{;}
+
+        \PY{k}{private} \PY{k}{delegate} \PY{k}{void} \PY{n+nf}{messageDelegate}\PY{p}{(}\PY{k+kt}{string} \PY{n}{cname}\PY{p}{,} \PY{k+kt}{string} \PY{n}{msg}\PY{p}{,} \PY{n}{Color} \PY{n}{color}\PY{p}{)}\PY{p}{;}
+        \PY{k}{private} \PY{n}{messageDelegate} \PY{n}{callBack}\PY{p}{;}
+
+        \PY{k}{private} \PY{n}{List}\PY{p}{<}\PY{k+kt}{string}\PY{p}{>} \PY{n}{selectedTeams} \PY{p}{=} \PY{k}{new} \PY{n}{List}\PY{p}{<}\PY{k+kt}{string}\PY{p}{>}\PY{p}{(}\PY{p}{)}\PY{p}{;}
+        \PY{k}{private} \PY{n}{List}\PY{p}{<}\PY{k+kt}{string}\PY{p}{>} \PY{n}{computerAlgorithmTypes} \PY{p}{=} \PY{k}{new} \PY{n}{List}\PY{p}{<}\PY{k+kt}{string}\PY{p}{>}\PY{p}{(}\PY{p}{)}\PY{p}{;}
+
+        \PY{c+cp}{\PYZsh{}region Construction and destruction}
+        \PY{k}{public} \PY{n+nf}{BattleshipTest}\PY{p}{(}\PY{p}{)}
+        \PY{p}{\PYZob{}}
+            \PY{n}{InitializeComponent}\PY{p}{(}\PY{p}{)}\PY{p}{;}
+            \PY{n}{BattleshipTest}\PY{p}{.}\PY{n}{instance} \PY{p}{=} \PY{k}{this}\PY{p}{;}
+            \PY{k}{this}\PY{p}{.}\PY{n}{callBack} \PY{p}{=} \PY{k}{this}\PY{p}{.}\PY{n}{addMessageToRichtextBox}\PY{p}{;}
+            \PY{k}{this}\PY{p}{.}\PY{n}{richTextBox1}\PY{p}{.}\PY{n}{Document} \PY{p}{=} \PY{k}{new} \PY{n}{FlowDocument}\PY{p}{(}\PY{p}{)}\PY{p}{;}
+
+            \PY{k+kt}{string} \PY{n}{evolutionary} \PY{p}{=} \PY{l+s}{"Evolutionary Algorithm"}\PY{p}{;}
+            \PY{k+kt}{string} \PY{n}{reinforcementAlg} \PY{p}{=} \PY{l+s}{"Reinforcement Algorithm"}\PY{p}{;}
+
+            \PY{c+c1}{// Default Algorithms}
+            \PY{k}{this}\PY{p}{.}\PY{n}{computerAlgorithmTypes}\PY{p}{.}\PY{n}{Add}\PY{p}{(} \PY{n}{evolutionary} \PY{p}{)}\PY{p}{;}
+            \PY{k}{this}\PY{p}{.}\PY{n}{computerAlgorithmTypes}\PY{p}{.}\PY{n}{Add}\PY{p}{(} \PY{n}{reinforcementAlg} \PY{p}{)}\PY{p}{;}
+
+            \PY{c+c1}{// Check Box Filling & Default}
+            \PY{k}{this}\PY{p}{.}\PY{n}{Computer\PYZus{}1\PYZus{}AI\PYZus{}cb}\PY{p}{.}\PY{n}{Items}\PY{p}{.}\PY{n}{Add}\PY{p}{(} \PY{n}{evolutionary} \PY{p}{)}\PY{p}{;}
+            \PY{k}{this}\PY{p}{.}\PY{n}{Computer\PYZus{}1\PYZus{}AI\PYZus{}cb}\PY{p}{.}\PY{n}{Items}\PY{p}{.}\PY{n}{Add}\PY{p}{(} \PY{n}{reinforcementAlg} \PY{p}{)}\PY{p}{;}
+
+            \PY{k}{this}\PY{p}{.}\PY{n}{Computer\PYZus{}1\PYZus{}AI\PYZus{}cb}\PY{p}{.}\PY{n}{SelectedIndex} \PY{p}{=} \PY{l+m}{0}\PY{p}{;}
+
+            \PY{c+c1}{// Check Box Filling & Default}
+            \PY{k}{this}\PY{p}{.}\PY{n}{Computer\PYZus{}2\PYZus{}AI\PYZus{}cb}\PY{p}{.}\PY{n}{Items}\PY{p}{.}\PY{n}{Add}\PY{p}{(} \PY{n}{evolutionary} \PY{p}{)}\PY{p}{;}
+            \PY{k}{this}\PY{p}{.}\PY{n}{Computer\PYZus{}2\PYZus{}AI\PYZus{}cb}\PY{p}{.}\PY{n}{Items}\PY{p}{.}\PY{n}{Add}\PY{p}{(} \PY{n}{reinforcementAlg} \PY{p}{)}\PY{p}{;}
+
+            \PY{k}{this}\PY{p}{.}\PY{n}{Computer\PYZus{}2\PYZus{}AI\PYZus{}cb}\PY{p}{.}\PY{n}{SelectedIndex} \PY{p}{=} \PY{l+m}{0}\PY{p}{;}
+
+            \PY{k}{this}\PY{p}{.}\PY{n}{game} \PY{p}{=} \PY{k}{new} \PY{n}{Game}\PY{p}{(}\PY{p}{)}\PY{p}{;}
+
+        \PY{p}{\PYZcb{}}
+
+        \PY{k}{private} \PY{k}{void} \PY{n+nf}{Window\PYZus{}Closing}\PY{p}{(}\PY{k+kt}{object} \PY{n}{sender}\PY{p}{,} \PY{n}{System}\PY{p}{.}\PY{n}{ComponentModel}\PY{p}{.}\PY{n}{CancelEventArgs} \PY{n}{e}\PY{p}{)}
+        \PY{p}{\PYZob{}}
+            \PY{k}{try}
+            \PY{p}{\PYZob{}}
+                \PY{k}{this}\PY{p}{.}\PY{n}{gameThread}\PY{p}{.}\PY{n}{Abort}\PY{p}{(}\PY{p}{)}\PY{p}{;}
+
+                \PY{c+c1}{// While gameThread is terminating, main thread will wait for half a second}
+                \PY{n}{System}\PY{p}{.}\PY{n}{Threading}\PY{p}{.}\PY{n}{Thread}\PY{p}{.}\PY{n}{Sleep}\PY{p}{(} \PY{l+m}{5}\PY{l+m}{0}\PY{l+m}{0} \PY{p}{)}\PY{p}{;}
+            \PY{p}{\PYZcb{}}
+            \PY{k}{catch}\PY{p}{(} \PY{n}{Exception} \PY{p}{)}
+            \PY{p}{\PYZob{}}
+
+            \PY{p}{\PYZcb{}}
+        \PY{p}{\PYZcb{}}
+        \PY{c+cp}{\PYZsh{}endregion}
+
+        \PY{c+cp}{\PYZsh{}region Game control memento start game ui elements}
+        \PY{k}{private} \PY{k}{void} \PY{n+nf}{gameControlButton\PYZus{}Click}\PY{p}{(}\PY{k+kt}{object} \PY{n}{sender}\PY{p}{,} \PY{n}{RoutedEventArgs} \PY{n}{e}\PY{p}{)}
+        \PY{p}{\PYZob{}}
+            \PY{n}{Console}\PY{p}{.}\PY{n}{WriteLine}\PY{p}{(}\PY{l+s}{"called"}\PY{p}{)}\PY{p}{;}
+            \PY{k}{try}
+            \PY{p}{\PYZob{}}
+                \PY{k}{if} \PY{p}{(}\PY{n}{threadStatus} \PY{p}{=}\PY{p}{=} \PY{l+m}{0}\PY{p}{)}
+                \PY{p}{\PYZob{}}
+                    \PY{k}{this}\PY{p}{.}\PY{n}{gameControlButton}\PY{p}{.}\PY{n}{Content} \PY{p}{=} \PY{l+s}{"Pause"}\PY{p}{;}
+                    \PY{n}{threadStatus} \PY{p}{=} \PY{l+m}{1}\PY{p}{;}
+                    \PY{k}{this}\PY{p}{.}\PY{n}{threadstart} \PY{p}{=} \PY{k}{new} \PY{n}{ThreadStart}\PY{p}{(}\PY{n}{game}\PY{p}{.}\PY{n}{StartGame}\PY{p}{)}\PY{p}{;}
+                    \PY{k}{this}\PY{p}{.}\PY{n}{gameThread} \PY{p}{=} \PY{k}{new} \PY{n}{Thread}\PY{p}{(}\PY{n}{threadstart}\PY{p}{)}\PY{p}{;}
+                    \PY{k}{this}\PY{p}{.}\PY{n}{gameThread}\PY{p}{.}\PY{n}{Start}\PY{p}{(}\PY{p}{)}\PY{p}{;}
+                \PY{p}{\PYZcb{}}
+                \PY{k}{else} \PY{n+nf}{if} \PY{p}{(}\PY{n}{threadStatus} \PY{p}{=}\PY{p}{=} \PY{l+m}{1}\PY{p}{)}
+                \PY{p}{\PYZob{}}
+                    \PY{k}{this}\PY{p}{.}\PY{n}{gameControlButton}\PY{p}{.}\PY{n}{Content} \PY{p}{=} \PY{l+s}{"Resume"}\PY{p}{;}
+                    \PY{n}{threadStatus} \PY{p}{=} \PY{l+m}{2}\PY{p}{;}
+                    \PY{k}{this}\PY{p}{.}\PY{n}{gameThread}\PY{p}{.}\PY{n}{Suspend}\PY{p}{(}\PY{p}{)}\PY{p}{;}
+                \PY{p}{\PYZcb{}}
+                \PY{k}{else}
+                \PY{p}{\PYZob{}}
+                    \PY{k}{this}\PY{p}{.}\PY{n}{gameControlButton}\PY{p}{.}\PY{n}{Content} \PY{p}{=} \PY{l+s}{"Pause"}\PY{p}{;}
+                    \PY{k}{this}\PY{p}{.}\PY{n}{gameThread}\PY{p}{.}\PY{n}{Resume}\PY{p}{(}\PY{p}{)}\PY{p}{;}
+                \PY{p}{\PYZcb{}}
+
+            \PY{p}{\PYZcb{}}
+            \PY{k}{catch} \PY{p}{(}\PY{n}{Exception}\PY{p}{)}
+            \PY{p}{\PYZob{}}
+                \PY{n}{MessageBox}\PY{p}{.}\PY{n}{Show}\PY{p}{(}\PY{l+s}{"Unable to start the game thread"}\PY{p}{)}\PY{p}{;}
+            \PY{p}{\PYZcb{}}
+        \PY{p}{\PYZcb{}}
+
+        \PY{k}{private} \PY{k}{void} \PY{n+nf}{restoreMememtoButton\PYZus{}Click}\PY{p}{(} \PY{k+kt}{object} \PY{n}{sender} \PY{p}{,} \PY{n}{RoutedEventArgs} \PY{n}{e} \PY{p}{)}
+        \PY{p}{\PYZob{}}
+            \PY{k}{this}\PY{p}{.}\PY{n}{game}\PY{p}{.}\PY{n}{UndoMove}\PY{p}{(}\PY{p}{)}\PY{p}{;}
+        \PY{p}{\PYZcb{}}
+        \PY{c+cp}{\PYZsh{}endregion}
+
+        \PY{c+cp}{\PYZsh{}region Team control ui elements}
+        \PY{k}{private} \PY{k}{void} \PY{n+nf}{createTeamsButton\PYZus{}Click}\PY{p}{(} \PY{k+kt}{object} \PY{n}{sender} \PY{p}{,} \PY{n}{RoutedEventArgs} \PY{n}{e} \PY{p}{)}
+        \PY{p}{\PYZob{}}
+            \PY{c+c1}{// Fowler would be upset, remove temps! bad code smell}
+            \PY{k+kt}{bool} \PY{n}{teamEasy} \PY{p}{=} \PY{p}{(}\PY{k+kt}{bool}\PY{p}{)} \PY{n}{easyTeam\PYZus{}TB}\PY{p}{.}\PY{n}{IsChecked}\PY{p}{;}
+            \PY{k+kt}{bool} \PY{n}{teamHard} \PY{p}{=} \PY{p}{(} \PY{k+kt}{bool} \PY{p}{)} \PY{n}{hardTeam\PYZus{}TB}\PY{p}{.}\PY{n}{IsChecked}\PY{p}{;}
+            \PY{k+kt}{bool} \PY{n}{teamComputer} \PY{p}{=} \PY{p}{(} \PY{k+kt}{bool} \PY{p}{)} \PY{n}{computerTeam\PYZus{}TB}\PY{p}{.}\PY{n}{IsChecked}\PY{p}{;}
+
+            \PY{c+c1}{// Defensive code block, bad!}
+            \PY{k}{if}\PY{p}{(} \PY{n}{teamEasy} \PY{p}{&}\PY{p}{&} \PY{n}{teamHard} \PY{p}{&}\PY{p}{&} \PY{n}{teamComputer} \PY{p}{)}
+            \PY{p}{\PYZob{}}
+                \PY{n}{MessageBox}\PY{p}{.}\PY{n}{Show}\PY{p}{(} \PY{l+s}{"You cannot have more than two teams! Please select two only."} \PY{p}{)}\PY{p}{;}
+                \PY{k}{this}\PY{p}{.}\PY{n}{easyTeam\PYZus{}TB}\PY{p}{.}\PY{n}{IsChecked} \PY{p}{=} \PY{k}{false}\PY{p}{;}
+                \PY{k}{this}\PY{p}{.}\PY{n}{hardTeam\PYZus{}TB}\PY{p}{.}\PY{n}{IsChecked} \PY{p}{=} \PY{k}{false}\PY{p}{;}
+                \PY{k}{this}\PY{p}{.}\PY{n}{computerTeam\PYZus{}TB}\PY{p}{.}\PY{n}{IsChecked} \PY{p}{=} \PY{k}{false}\PY{p}{;}
+                \PY{k}{this}\PY{p}{.}\PY{n}{selectedTeams}\PY{p}{.}\PY{n}{Clear}\PY{p}{(}\PY{p}{)}\PY{p}{;}
+            \PY{p}{\PYZcb{}}
+            \PY{k}{else} \PY{n+nf}{if}\PY{p}{(} \PY{p}{(} \PY{n}{teamEasy} \PY{p}{&}\PY{p}{&} \PY{n}{teamHard} \PY{p}{&}\PY{p}{&} \PY{p}{!}\PY{n}{teamComputer} \PY{p}{)} \PY{p}{|}\PY{p}{|} \PY{p}{(} \PY{n}{teamEasy} \PY{p}{&}\PY{p}{&} \PY{p}{!}\PY{n}{teamHard} \PY{p}{&}\PY{p}{&} \PY{n}{teamComputer} \PY{p}{)} \PY{p}{|}\PY{p}{|} \PY{p}{(} \PY{p}{!}\PY{n}{teamEasy} \PY{p}{&}\PY{p}{&} \PY{n}{teamHard} \PY{p}{&}\PY{p}{&} \PY{n}{teamComputer} \PY{p}{)} \PY{p}{)}
+            \PY{p}{\PYZob{}}
+                \PY{k}{if} \PY{p}{(}\PY{n}{teamEasy} \PY{p}{=}\PY{p}{=} \PY{k}{true}\PY{p}{)}
+                \PY{p}{\PYZob{}}
+                    \PY{k}{this}\PY{p}{.}\PY{n}{selectedTeams}\PY{p}{.}\PY{n}{Add}\PY{p}{(} \PY{l+s}{"Easy"} \PY{p}{)}\PY{p}{;}
+                \PY{p}{\PYZcb{}}
+
+                \PY{k}{if} \PY{p}{(} \PY{n}{teamHard} \PY{p}{=}\PY{p}{=} \PY{k}{true}\PY{p}{)}
+                \PY{p}{\PYZob{}}
+                    \PY{k}{this}\PY{p}{.}\PY{n}{selectedTeams}\PY{p}{.}\PY{n}{Add}\PY{p}{(} \PY{l+s}{"Hard"} \PY{p}{)}\PY{p}{;}
+                \PY{p}{\PYZcb{}}
+
+                \PY{k}{if} \PY{p}{(} \PY{n}{teamComputer} \PY{p}{=}\PY{p}{=} \PY{k}{true}\PY{p}{)}
+                \PY{p}{\PYZob{}}
+                    \PY{k}{this}\PY{p}{.}\PY{n}{selectedTeams}\PY{p}{.}\PY{n}{Add}\PY{p}{(} \PY{l+s}{"Computer"} \PY{p}{)}\PY{p}{;}
+                \PY{p}{\PYZcb{}}
+
+                \PY{k}{this}\PY{p}{.}\PY{n}{computerAlgorithmTypes}\PY{p}{[} \PY{l+m}{0} \PY{p}{]} \PY{p}{=} \PY{p}{(} \PY{k+kt}{string} \PY{p}{)} \PY{k}{this}\PY{p}{.}\PY{n}{Computer\PYZus{}1\PYZus{}AI\PYZus{}cb}\PY{p}{.}\PY{n}{SelectedValue}\PY{p}{;}
+                \PY{k}{this}\PY{p}{.}\PY{n}{computerAlgorithmTypes}\PY{p}{[} \PY{l+m}{1} \PY{p}{]} \PY{p}{=} \PY{p}{(} \PY{k+kt}{string} \PY{p}{)} \PY{k}{this}\PY{p}{.}\PY{n}{Computer\PYZus{}2\PYZus{}AI\PYZus{}cb}\PY{p}{.}\PY{n}{SelectedValue}\PY{p}{;}
+         
+                \PY{k}{this}\PY{p}{.}\PY{n}{game}\PY{p}{.}\PY{n}{CreateTeams}\PY{p}{(} \PY{n}{selectedTeams} \PY{p}{,} \PY{n}{computerAlgorithmTypes} \PY{p}{)}\PY{p}{;}
+                \PY{k}{this}\PY{p}{.}\PY{n}{gameControlButton}\PY{p}{.}\PY{n}{IsEnabled} \PY{p}{=} \PY{k}{true}\PY{p}{;}
+                \PY{k}{this}\PY{p}{.}\PY{n}{restoreMememtoButton}\PY{p}{.}\PY{n}{IsEnabled} \PY{p}{=} \PY{k}{true}\PY{p}{;}
+            \PY{p}{\PYZcb{}}
+            \PY{k}{else}
+            \PY{p}{\PYZob{}}
+                \PY{n}{MessageBox}\PY{p}{.}\PY{n}{Show}\PY{p}{(}\PY{l+s}{"Please select 2 teams!"}\PY{p}{)}\PY{p}{;}
+            \PY{p}{\PYZcb{}}
+        \PY{p}{\PYZcb{}}       
+        \PY{c+cp}{\PYZsh{}endregion}
+
+        \PY{c+cp}{\PYZsh{}region Message handling area for delgated messages to the UI}
+        \PY{k}{public} \PY{k}{void} \PY{n+nf}{addMessageToRichtextBox}\PY{p}{(} \PY{k+kt}{string} \PY{n}{classname} \PY{p}{,} \PY{k+kt}{string} \PY{n}{message} \PY{p}{,} \PY{n}{Color} \PY{n}{color} \PY{p}{)}
+        \PY{p}{\PYZob{}}
+            \PY{k+kt}{string} \PY{n}{package}\PY{p}{;}
+            \PY{k+kt}{string} \PY{n}{objname}\PY{p}{;}
+
+            \PY{n}{Paragraph} \PY{n}{p} \PY{p}{=} \PY{k}{new} \PY{n}{Paragraph}\PY{p}{(}\PY{p}{)}\PY{p}{;}
+            \PY{n}{p}\PY{p}{.}\PY{n}{LineHeight} \PY{p}{=} \PY{l+m}{5}\PY{p}{;}
+
+            \PY{k+kt}{int} \PY{n}{x} \PY{p}{=} \PY{n}{classname}\PY{p}{.}\PY{n}{LastIndexOf}\PY{p}{(} \PY{l+s+sc}{'.'} \PY{p}{)}\PY{p}{;}
+
+            \PY{k}{if}\PY{p}{(} \PY{n}{x} \PY{p}{=}\PY{p}{=} \PY{p}{-}\PY{l+m}{1} \PY{p}{)}
+            \PY{p}{\PYZob{}}
+                \PY{n}{package} \PY{p}{=} \PY{l+s}{""}\PY{p}{;}
+                \PY{n}{objname} \PY{p}{=} \PY{n}{classname}\PY{p}{;}
+            \PY{p}{\PYZcb{}}
+            \PY{k}{else}
+            \PY{p}{\PYZob{}}
+                \PY{n}{package} \PY{p}{=} \PY{n}{classname}\PY{p}{.}\PY{n}{Substring}\PY{p}{(} \PY{l+m}{0} \PY{p}{,} \PY{n}{x} \PY{p}{)}\PY{p}{;}
+                \PY{n}{objname} \PY{p}{=} \PY{n}{classname}\PY{p}{.}\PY{n}{Substring}\PY{p}{(} \PY{n}{x} \PY{p}{+} \PY{l+m}{1} \PY{p}{,} \PY{n}{classname}\PY{p}{.}\PY{n}{Length} \PY{p}{-} \PY{n}{x} \PY{p}{-} \PY{l+m}{1} \PY{p}{)}\PY{p}{;}
+            \PY{p}{\PYZcb{}}
+
+            \PY{n}{Run} \PY{n}{r1} \PY{p}{=} \PY{k}{new} \PY{n}{Run}\PY{p}{(} \PY{l+s}{"Package : "} \PY{p}{)}\PY{p}{;}
+            \PY{n}{r1}\PY{p}{.}\PY{n}{Foreground} \PY{p}{=} \PY{k}{new} \PY{n}{SolidColorBrush}\PY{p}{(} \PY{n}{Colors}\PY{p}{.}\PY{n}{Green} \PY{p}{)}\PY{p}{;}
+            \PY{n}{p}\PY{p}{.}\PY{n}{Inlines}\PY{p}{.}\PY{n}{Add}\PY{p}{(} \PY{n}{r1} \PY{p}{)}\PY{p}{;}
+
+            \PY{n}{Run} \PY{n}{r2} \PY{p}{=} \PY{k}{new} \PY{n}{Run}\PY{p}{(} \PY{n}{package} \PY{p}{)}\PY{p}{;}
+            \PY{n}{r2}\PY{p}{.}\PY{n}{Foreground} \PY{p}{=} \PY{k}{new} \PY{n}{SolidColorBrush}\PY{p}{(} \PY{n}{Colors}\PY{p}{.}\PY{n}{Red} \PY{p}{)}\PY{p}{;}
+            \PY{n}{p}\PY{p}{.}\PY{n}{Inlines}\PY{p}{.}\PY{n}{Add}\PY{p}{(} \PY{n}{r2} \PY{p}{)}\PY{p}{;}
+
+            \PY{n}{Run} \PY{n}{r3} \PY{p}{=} \PY{k}{new} \PY{n}{Run}\PY{p}{(} \PY{l+s}{"  Object : "} \PY{p}{)}\PY{p}{;}
+            \PY{n}{r3}\PY{p}{.}\PY{n}{Foreground} \PY{p}{=} \PY{k}{new} \PY{n}{SolidColorBrush}\PY{p}{(} \PY{n}{Colors}\PY{p}{.}\PY{n}{Green} \PY{p}{)}\PY{p}{;}
+            \PY{n}{p}\PY{p}{.}\PY{n}{Inlines}\PY{p}{.}\PY{n}{Add}\PY{p}{(} \PY{n}{r3} \PY{p}{)}\PY{p}{;}
+
+            \PY{n}{Run} \PY{n}{r4} \PY{p}{=} \PY{k}{new} \PY{n}{Run}\PY{p}{(} \PY{n}{objname} \PY{p}{)}\PY{p}{;}
+            \PY{n}{r4}\PY{p}{.}\PY{n}{Foreground} \PY{p}{=} \PY{k}{new} \PY{n}{SolidColorBrush}\PY{p}{(} \PY{n}{Colors}\PY{p}{.}\PY{n}{Red} \PY{p}{)}\PY{p}{;}
+            \PY{n}{p}\PY{p}{.}\PY{n}{Inlines}\PY{p}{.}\PY{n}{Add}\PY{p}{(} \PY{n}{r4} \PY{p}{)}\PY{p}{;}
+
+            \PY{n}{Run} \PY{n}{r5} \PY{p}{=} \PY{k}{new} \PY{n}{Run}\PY{p}{(} \PY{l+s}{"  Said : "} \PY{p}{)}\PY{p}{;}
+            \PY{n}{r5}\PY{p}{.}\PY{n}{Foreground} \PY{p}{=} \PY{k}{new} \PY{n}{SolidColorBrush}\PY{p}{(} \PY{n}{Colors}\PY{p}{.}\PY{n}{Green} \PY{p}{)}\PY{p}{;}
+            \PY{n}{p}\PY{p}{.}\PY{n}{Inlines}\PY{p}{.}\PY{n}{Add}\PY{p}{(} \PY{n}{r5} \PY{p}{)}\PY{p}{;}
+
+            \PY{n}{Run} \PY{n}{r6} \PY{p}{=} \PY{k}{new} \PY{n}{Run}\PY{p}{(} \PY{n}{message} \PY{p}{)}\PY{p}{;}
+            \PY{n}{r6}\PY{p}{.}\PY{n}{Foreground} \PY{p}{=} \PY{k}{new} \PY{n}{SolidColorBrush}\PY{p}{(} \PY{n}{color} \PY{p}{)}\PY{p}{;}
+            \PY{n}{p}\PY{p}{.}\PY{n}{Inlines}\PY{p}{.}\PY{n}{Add}\PY{p}{(} \PY{n}{r6} \PY{p}{)}\PY{p}{;}
+
+            \PY{k}{this}\PY{p}{.}\PY{n}{richTextBox1}\PY{p}{.}\PY{n}{Document}\PY{p}{.}\PY{n}{Blocks}\PY{p}{.}\PY{n}{Add}\PY{p}{(} \PY{n}{p} \PY{p}{)}\PY{p}{;}
+            \PY{k}{this}\PY{p}{.}\PY{n}{richTextBox1}\PY{p}{.}\PY{n}{ScrollToEnd}\PY{p}{(}\PY{p}{)}\PY{p}{;}
+        \PY{p}{\PYZcb{}}
+
+        \PY{k}{public} \PY{k}{static} \PY{k}{void} \PY{n+nf}{acceptMessage}\PY{p}{(} \PY{k+kt}{string} \PY{n}{classname} \PY{p}{,} \PY{k+kt}{string} \PY{n}{message} \PY{p}{,} \PY{n}{Color} \PY{n}{color} \PY{p}{)}
+        \PY{p}{\PYZob{}}
+            \PY{n}{BattleshipTest}\PY{p}{.}\PY{n}{instance}\PY{p}{.}\PY{n}{addMessage}\PY{p}{(} \PY{n}{classname} \PY{p}{,} \PY{n}{message} \PY{p}{,} \PY{n}{color} \PY{p}{)}\PY{p}{;}
+        \PY{p}{\PYZcb{}}
+
+        \PY{k}{public} \PY{k}{void} \PY{n+nf}{addMessage}\PY{p}{(} \PY{k+kt}{string} \PY{n}{classname} \PY{p}{,} \PY{k+kt}{string} \PY{n}{message} \PY{p}{,} \PY{n}{Color} \PY{n}{color} \PY{p}{)}
+        \PY{p}{\PYZob{}}
+            \PY{k}{this}\PY{p}{.}\PY{n}{Dispatcher}\PY{p}{.}\PY{n}{Invoke}\PY{p}{(} \PY{n}{System}\PY{p}{.}\PY{n}{Windows}\PY{p}{.}\PY{n}{Threading}\PY{p}{.}\PY{n}{DispatcherPriority}\PY{p}{.}\PY{n}{Background} \PY{p}{,} \PY{k}{new} \PY{n}{System}\PY{p}{.}\PY{n}{Windows}\PY{p}{.}\PY{n}{Threading}\PY{p}{.}\PY{n}{DispatcherOperationCallback}\PY{p}{(}
+            \PY{k}{delegate}
+            \PY{p}{\PYZob{}}
+                \PY{k}{this}\PY{p}{.}\PY{n}{callBack}\PY{p}{(} \PY{n}{classname} \PY{p}{,} \PY{n}{message} \PY{p}{,} \PY{n}{color} \PY{p}{)}\PY{p}{;}
+                \PY{k}{return} \PY{k}{null}\PY{p}{;}
+            \PY{p}{\PYZcb{}} \PY{p}{)} \PY{p}{,} \PY{k}{null} \PY{p}{)}\PY{p}{;}
+        \PY{p}{\PYZcb{}}
+
+        \PY{c+cp}{\PYZsh{}endregion}
+    \PY{p}{\PYZcb{}}
+\PY{p}{\PYZcb{}}
+\end{Verbatim}

@@ -1,0 +1,103 @@
+\chapter{Deployment Technologies}
+	\section{Visual Studio}
+		\vspace{5mm}
+	    \begin{multicols}{2}
+		\paragraph{}
+		
+		Visual Studio an integrated development environment (IDE) is the axe of an serious wielding developer.
+		This fully features integrated development environment (IDE) supports a multitude of different project types,
+		catering for all possible scenarios for the current age.  The editor itself supports all the features you would expect in an 
+		integrated development environment (IDE), such as code refactoring tools, autocompletion (intelliSense), 
+		class designers, code versioning and database schema designers, but takes it to a whole new level by the sheer attention to detail and implementation of these features make the environment a joy to work in and extremely productive.    
+			
+		\end{multicols}
+		
+	\section{C\#}
+		\vspace{5mm}
+		\begin{multicols}{2}
+		\paragraph{}
+		
+		CSharp is a multi-paradigm language, to name a few imperative, declarative, functional and object oriented.  
+		The language developed by Microsoft is sworn by some to be the successor to Java.  This strongly types language
+		reintroduced many of the favored keywords such as virtual and such notable additions such as override which negate
+		the need for interpretation and annotations seen in the java environment.  C\# itself is compiled into a command language runtime format
+		like Java and as such can to be ran an any architecture that implements the .NET runtime.  Such notable ports include Mono originally 
+		developed by Novel before going open source.   
+
+		\end{multicols}
+
+	\section{Windows Communication Foundation}
+		\subsection{Introduction}
+		\vspace{5mm}
+		\begin{multicols}{2}
+		\paragraph{}
+		
+		Windows Communication Foundation (WCF) is a part of the .NET Framework that provides a unified programming model for 
+		rapidly building service-oriented applications (SOA) that communicate across the web.  The implementation of these applications is typically 
+		hosted on Internet Information Servers (IIS) which exposes the application to web requests.  Windows Communication Foundation (WCF) 
+		realizes service oriented architectures principles to support clients in the distributed computing environment.  The server 
+		implementation publishes it service for a Web Service Description Language (WSDL) typically in the Extendable Markup Language (XML) 
+		to which clients can subscribe to in order to consume or produce ( send \& receive ) information to and from the service.
+
+		\end{multicols}
+		
+		\subsection{Service Contracts}
+		\vspace{5mm}
+		\begin{multicols}{2}
+		\paragraph{}
+		
+		In Windows Communication Foundation (WCF), service contracts are interfaces to which clients program to and service implementers realize.
+		These interfaces are exactly the same as a normal interface in an object oriented language except special annotations [ServiceContract] \&
+		[OperationContract] are used to defined what will be exposed as part of the Web Service Description Language(WSDL) to which clients will
+		subscribe to.
+		
+		\end{multicols}
+		
+		\subsection{Data Contracts}
+		\vspace{5mm}
+		\begin{multicols}{2}
+		\paragraph{}
+		
+		In Windows Communication Foundation (WCF), data contracts are formal agreements between clients and the service regards data type, it's 
+		mechanism for defining	abstract data types as the exchange information.
+		A data contract is implemented as normal class to which special annotations are added, namely [DataContract] \& [DataMember].  These annotations
+		respectively define whether a class and its members should be exposed as part of the Web Service Description Language(WSDL) service contract. 
+
+		\end{multicols}
+		
+	\section{Windows Presentation Foundation}
+		\subsection{Model View Controller}
+		\vspace{5mm}
+		\begin{multicols}{2}
+		\paragraph{}
+		
+		Windows Presentation Foundation Applications (WPF) is a model view controller User Interface Designer for rendering user interfaces.
+		The separation of concerns primarily, business logic( controller ) and the interface design( view ).  The controller can be written
+		in any of the .Net family languages and the view is written in Xaml ( XML ).  This allows clear separation of the interface from the business logic
+		and allows different controllers written in different .NET languages to use the same interface consistently.
+		Windows presentation foundation itself is a graphical subsystem built on top of DirectX allowing for greater efficiency over the old Graphical 
+		Device Interface ( GDI ) system. 
+
+		\end{multicols}
+		
+		\subsection{View}
+		\vspace{5mm}
+		\begin{multicols}{2}
+		\paragraph{}
+		
+		The view in Windows Presentation Foundation Applications (WPF) is written in Extensible Application Markup Language (XAML) is a declarative language 
+		used in the specification of user interfaces comprised of controls such as buttons, text boxes, windows etc.  The specification supports data binding, 
+		eventing and other features as a means to simplify the designing user interfaces. 
+		business logic
+
+		\end{multicols}
+		
+		\subsection{Controller}
+		\vspace{5mm}
+		\begin{multicols}{2}
+		\paragraph{}
+		
+		The controller in Windows Presentation Foundation Applications (WPF) can be written in any of the .NET family languages, its bound to the view at runtime 
+		and implements event handlers that accept the events that are generated for the view.  
+
+		\end{multicols}

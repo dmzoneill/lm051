@@ -1,0 +1,14 @@
+C:\Users\Administrator\Desktop\lgp\CalculatorService\CalculatorClient\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\lgp\CalculatorService\CalculatorClient\obj\x86\Debug\MainWindow.baml
+C:\Users\Administrator\Desktop\lgp\CalculatorService\CalculatorClient\obj\x86\Debug\MainWindow.g.cs
+C:\Users\Administrator\Desktop\lgp\CalculatorService\CalculatorClient\obj\x86\Debug\App.g.cs
+C:\Users\Administrator\Desktop\lgp\CalculatorService\CalculatorClient\obj\x86\Debug\CalculatorClient_MarkupCompile.cache
+C:\Users\Administrator\Desktop\lgp\CalculatorService\CalculatorClient\obj\x86\Debug\CalculatorClient.g.resources
+C:\Users\Administrator\Desktop\lgp\CalculatorService\CalculatorClient\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Administrator\Desktop\lgp\CalculatorService\CalculatorClient\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Administrator\Desktop\lgp\CalculatorService\CalculatorClient\bin\Debug\CalculatorClient.exe.config
+C:\Users\Administrator\Desktop\lgp\CalculatorService\CalculatorClient\bin\Debug\CalculatorClient.exe
+C:\Users\Administrator\Desktop\lgp\CalculatorService\CalculatorClient\bin\Debug\CalculatorClient.pdb
+C:\Users\Administrator\Desktop\lgp\CalculatorService\CalculatorClient\obj\x86\Debug\CalculatorClient.exe
+C:\Users\Administrator\Desktop\lgp\CalculatorService\CalculatorClient\obj\x86\Debug\CalculatorClient.pdb
+C:\Users\Administrator\Desktop\lgp\CalculatorService\CalculatorClient\obj\x86\Debug\Client.Properties.Resources.resources

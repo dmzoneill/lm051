@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:1042/CalculatorService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/CalculatorService" />
+  <xs:element name="opAddition">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="lvalue" type="xs:int" />
+        <xs:element minOccurs="0" name="rvalue" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="opAdditionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/CalculatorService" minOccurs="0" name="opAdditionResult" nillable="true" type="q1:EvaluatedExpression" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="opSubtraction">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="lvalue" type="xs:int" />
+        <xs:element minOccurs="0" name="rvalue" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="opSubtractionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/CalculatorService" minOccurs="0" name="opSubtractionResult" nillable="true" type="q2:EvaluatedExpression" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="opMultiplication">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="lvalue" type="xs:int" />
+        <xs:element minOccurs="0" name="rvalue" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="opMultiplicationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/CalculatorService" minOccurs="0" name="opMultiplicationResult" nillable="true" type="q3:EvaluatedExpression" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="opDivision">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="lvalue" type="xs:int" />
+        <xs:element minOccurs="0" name="rvalue" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="opDivisionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/CalculatorService" minOccurs="0" name="opDivisionResult" nillable="true" type="q4:EvaluatedExpression" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="undo">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="undoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/CalculatorService" minOccurs="0" name="undoResult" nillable="true" type="q5:EvaluatedExpression" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,26 @@
+ -- Q1
+ -- a
+select distinct SERIES from SYS.Podcasts;
+ -- b
+select max(DOWNLOAD) from SYS.Podcasts;
+ -- c
+select BITRATE, FORMAT, FILESIZE, EPISODE from SYS.Podcasts where LENGTH<60; 
+ -- Q2
+select ID, EPISODE from SYS.Podcasts where FORMAT!='WAV' or FORMAT!='WMA';
+ -- Q3
+select EPISODE, SERIES from SYS.Podcasts where LENGTH>20 and (BITRATE=32 or BITRATE=64);
+ -- Q4
+select SERIES from SYS.Podcasts group by SERIES having count(*)=1;
+ -- Q5
+select distinct SERIES, max(DOWNLOAD) from SYS.Podcasts where FORMAT='WMA' group by SERIES;
+ -- Q6
+select FORMAT, min(FILESIZE), max(FILESIZE) from SYS.Podcasts group by FORMAT;
+ -- Q7
+select SERIES, sum(FILESIZE), avg(LENGTH), sum(PLAYED) from SYS.Podcasts group by SERIES;
+ -- Q8
+select avg(BITRATE), MAX(PLAYED), min(FILESIZE) from SYS.Podcasts group by SERIES having count(*)>1;
+ -- Q9
+select LENGTH, PLAYED, BITRATE from SYS.Podcasts where SERIES in (select distinct SERIES from SYS.Podcasts group by SERIES having count(*)=1);
+ -- Q10
+select ID, EPISODE, FILESIZE, (((BITRATE * (LENGTH * 60)) / 8) / 1024) as projectedSize, FILESIZE*0.7 as minTolerance, FILESIZE*1.3 as maxTolerance from SYS.Podcasts where FILESIZE>((((BITRATE * (LENGTH * 60)) / 8) / 1024)*0.7) and FILESIZE<((((BITRATE * (LENGTH * 60)) / 8) / 1024)*1.3);
+

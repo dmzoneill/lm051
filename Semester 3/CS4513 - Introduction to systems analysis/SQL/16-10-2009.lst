@@ -1,0 +1,2477 @@
+SQL> desc EMP
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ EMPNO                                     NOT NULL NUMBER(4)
+ ENAME                                              VARCHAR2(10)
+ JOB                                                VARCHAR2(9)
+ MGR                                                NUMBER(4)
+ HIREDATE                                           DATE
+ SAL                                                NUMBER(7,2)
+ COMM                                               NUMBER(7,2)
+ DEPTNO                                             NUMBER(2)
+
+SQL> desc DEPT
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ DEPTNO                                             NUMBER(2)
+ DNAME                                              VARCHAR2(14)
+ LOC                                                VARCHAR2(13)
+
+SQL> select * from emp;
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO                                                                      
+----------                                                                      
+      7369 SMITH      CLERK           7902 17-DEC-80        800                 
+        20                                                                      
+                                                                                
+      7499 ALLEN      SALESMAN        7698 20-FEB-81       1600        300      
+        30                                                                      
+                                                                                
+      7521 WARD       SALESMAN        7698 22-FEB-81       1250        500      
+        30                                                                      
+                                                                                
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO                                                                      
+----------                                                                      
+      7566 JONES      MANAGER         7839 02-APR-81       2975                 
+        20                                                                      
+                                                                                
+      7654 MARTIN     SALESMAN        7698 28-SEP-81       1250       1400      
+        30                                                                      
+                                                                                
+      7698 BLAKE      MANAGER         7839 01-MAY-81       2850                 
+        30                                                                      
+                                                                                
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO                                                                      
+----------                                                                      
+      7782 CLARK      MANAGER         7839 09-JUN-81       2450                 
+        10                                                                      
+                                                                                
+      7788 SCOTT      ANALYST         7566 09-DEC-82       3000                 
+        20                                                                      
+                                                                                
+      7839 KING       PRESIDENT            17-NOV-81       5000                 
+        10                                                                      
+                                                                                
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO                                                                      
+----------                                                                      
+      7844 TURNER     SALESMAN        7698 08-SEP-81       1500          0      
+        30                                                                      
+                                                                                
+      7876 ADAMS      CLERK           7788 12-JAN-83       1100                 
+        20                                                                      
+                                                                                
+      7900 JAMES      CLERK           7698 03-DEC-81        950                 
+        30                                                                      
+                                                                                
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO                                                                      
+----------                                                                      
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                 
+        20                                                                      
+                                                                                
+      7934 MILLER     CLERK           7782 23-JAN-82       1300                 
+        10                                                                      
+                                                                                
+
+14 rows selected.
+
+SQL> select * from EMP where JOB='CLERK' and JOB='ANALYST';
+
+no rows selected
+
+SQL> @6
+
+no rows selected
+
+SQL> @6
+
+no rows selected
+
+SQL> select * from EMP where JOB='CLERK' and JOB='ANALYST';
+
+no rows selected
+
+SQL> select * from EMP where JOB='CLERK';
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO                                                                      
+----------                                                                      
+      7369 SMITH      CLERK           7902 17-DEC-80        800                 
+        20                                                                      
+                                                                                
+      7876 ADAMS      CLERK           7788 12-JAN-83       1100                 
+        20                                                                      
+                                                                                
+      7900 JAMES      CLERK           7698 03-DEC-81        950                 
+        30                                                                      
+                                                                                
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO                                                                      
+----------                                                                      
+      7934 MILLER     CLERK           7782 23-JAN-82       1300                 
+        10                                                                      
+                                                                                
+
+SQL> select * from EMP where JOB='CLERK' OR JOB='ANALYST';
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO                                                                      
+----------                                                                      
+      7369 SMITH      CLERK           7902 17-DEC-80        800                 
+        20                                                                      
+                                                                                
+      7788 SCOTT      ANALYST         7566 09-DEC-82       3000                 
+        20                                                                      
+                                                                                
+      7876 ADAMS      CLERK           7788 12-JAN-83       1100                 
+        20                                                                      
+                                                                                
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO                                                                      
+----------                                                                      
+      7900 JAMES      CLERK           7698 03-DEC-81        950                 
+        30                                                                      
+                                                                                
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                 
+        20                                                                      
+                                                                                
+      7934 MILLER     CLERK           7782 23-JAN-82       1300                 
+        10                                                                      
+                                                                                
+
+6 rows selected.
+
+SQL> @6
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO                                                                      
+----------                                                                      
+      7369 SMITH      CLERK           7902 17-DEC-80        800                 
+        20                                                                      
+                                                                                
+      7788 SCOTT      ANALYST         7566 09-DEC-82       3000                 
+        20                                                                      
+                                                                                
+      7876 ADAMS      CLERK           7788 12-JAN-83       1100                 
+        20                                                                      
+                                                                                
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO                                                                      
+----------                                                                      
+      7900 JAMES      CLERK           7698 03-DEC-81        950                 
+        30                                                                      
+                                                                                
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                 
+        20                                                                      
+                                                                                
+      7934 MILLER     CLERK           7782 23-JAN-82       1300                 
+        10                                                                      
+                                                                                
+
+6 rows selected.
+
+SQL> @6
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO                                                                      
+----------                                                                      
+      7369 SMITH      CLERK           7902 17-DEC-80        800                 
+        20                                                                      
+                                                                                
+      7788 SCOTT      ANALYST         7566 09-DEC-82       3000                 
+        20                                                                      
+                                                                                
+      7876 ADAMS      CLERK           7788 12-JAN-83       1100                 
+        20                                                                      
+                                                                                
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO                                                                      
+----------                                                                      
+      7900 JAMES      CLERK           7698 03-DEC-81        950                 
+        30                                                                      
+                                                                                
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                 
+        20                                                                      
+                                                                                
+      7934 MILLER     CLERK           7782 23-JAN-82       1300                 
+        10                                                                      
+                                                                                
+
+6 rows selected.
+
+select * from EMP where JOB='CLERK' intersect slect * from emp where DEPTNO='30'
+                                              *
+ERROR at line 1:
+ORA-00928: missing SELECT keyword 
+
+
+SQL> @6
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO                                                                      
+----------                                                                      
+      7369 SMITH      CLERK           7902 17-DEC-80        800                 
+        20                                                                      
+                                                                                
+      7788 SCOTT      ANALYST         7566 09-DEC-82       3000                 
+        20                                                                      
+                                                                                
+      7876 ADAMS      CLERK           7788 12-JAN-83       1100                 
+        20                                                                      
+                                                                                
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO                                                                      
+----------                                                                      
+      7900 JAMES      CLERK           7698 03-DEC-81        950                 
+        30                                                                      
+                                                                                
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                 
+        20                                                                      
+                                                                                
+      7934 MILLER     CLERK           7782 23-JAN-82       1300                 
+        10                                                                      
+                                                                                
+
+6 rows selected.
+
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO                                                                      
+----------                                                                      
+      7900 JAMES      CLERK           7698 03-DEC-81        950                 
+        30                                                                      
+                                                                                
+
+SQL> 
+SQL> @6
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO                                                                      
+----------                                                                      
+      7369 SMITH      CLERK           7902 17-DEC-80        800                 
+        20                                                                      
+                                                                                
+      7788 SCOTT      ANALYST         7566 09-DEC-82       3000                 
+        20                                                                      
+                                                                                
+      7876 ADAMS      CLERK           7788 12-JAN-83       1100                 
+        20                                                                      
+                                                                                
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO                                                                      
+----------                                                                      
+      7900 JAMES      CLERK           7698 03-DEC-81        950                 
+        30                                                                      
+                                                                                
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                 
+        20                                                                      
+                                                                                
+      7934 MILLER     CLERK           7782 23-JAN-82       1300                 
+        10                                                                      
+                                                                                
+
+6 rows selected.
+
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO                                                                      
+----------                                                                      
+      7900 JAMES      CLERK           7698 03-DEC-81        950                 
+        30                                                                      
+                                                                                
+
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO                                                                      
+----------                                                                      
+      7788 SCOTT      ANALYST         7566 09-DEC-82       3000                 
+        20                                                                      
+                                                                                
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                 
+        20                                                                      
+                                                                                
+
+SQL> select * from DEPT;
+
+    DEPTNO DNAME          LOC                                                   
+---------- -------------- -------------                                         
+        10 ACCOUNTING     NEW YORK                                              
+        20 RESEARCH       DALLAS                                                
+        30 SALES          CHICAGO                                               
+        40 OPERATIONS     BOSTON                                                
+
+SQL> @6
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO                                                                      
+----------                                                                      
+      7369 SMITH      CLERK           7902 17-DEC-80        800                 
+        20                                                                      
+                                                                                
+      7788 SCOTT      ANALYST         7566 09-DEC-82       3000                 
+        20                                                                      
+                                                                                
+      7876 ADAMS      CLERK           7788 12-JAN-83       1100                 
+        20                                                                      
+                                                                                
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO                                                                      
+----------                                                                      
+      7900 JAMES      CLERK           7698 03-DEC-81        950                 
+        30                                                                      
+                                                                                
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                 
+        20                                                                      
+                                                                                
+      7934 MILLER     CLERK           7782 23-JAN-82       1300                 
+        10                                                                      
+                                                                                
+
+6 rows selected.
+
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO                                                                      
+----------                                                                      
+      7900 JAMES      CLERK           7698 03-DEC-81        950                 
+        30                                                                      
+                                                                                
+
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO                                                                      
+----------                                                                      
+      7788 SCOTT      ANALYST         7566 09-DEC-82       3000                 
+        20                                                                      
+                                                                                
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                 
+        20                                                                      
+                                                                                
+
+
+    DEPTNO                                                                      
+----------                                                                      
+        40                                                                      
+
+SQL> select * from EMP;
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO                                                                      
+----------                                                                      
+      7369 SMITH      CLERK           7902 17-DEC-80        800                 
+        20                                                                      
+                                                                                
+      7499 ALLEN      SALESMAN        7698 20-FEB-81       1600        300      
+        30                                                                      
+                                                                                
+      7521 WARD       SALESMAN        7698 22-FEB-81       1250        500      
+        30                                                                      
+                                                                                
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO                                                                      
+----------                                                                      
+      7566 JONES      MANAGER         7839 02-APR-81       2975                 
+        20                                                                      
+                                                                                
+      7654 MARTIN     SALESMAN        7698 28-SEP-81       1250       1400      
+        30                                                                      
+                                                                                
+      7698 BLAKE      MANAGER         7839 01-MAY-81       2850                 
+        30                                                                      
+                                                                                
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO                                                                      
+----------                                                                      
+      7782 CLARK      MANAGER         7839 09-JUN-81       2450                 
+        10                                                                      
+                                                                                
+      7788 SCOTT      ANALYST         7566 09-DEC-82       3000                 
+        20                                                                      
+                                                                                
+      7839 KING       PRESIDENT            17-NOV-81       5000                 
+        10                                                                      
+                                                                                
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO                                                                      
+----------                                                                      
+      7844 TURNER     SALESMAN        7698 08-SEP-81       1500          0      
+        30                                                                      
+                                                                                
+      7876 ADAMS      CLERK           7788 12-JAN-83       1100                 
+        20                                                                      
+                                                                                
+      7900 JAMES      CLERK           7698 03-DEC-81        950                 
+        30                                                                      
+                                                                                
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO                                                                      
+----------                                                                      
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                 
+        20                                                                      
+                                                                                
+      7934 MILLER     CLERK           7782 23-JAN-82       1300                 
+        10                                                                      
+                                                                                
+
+14 rows selected.
+
+SQL> @6
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO                                                                      
+----------                                                                      
+      7369 SMITH      CLERK           7902 17-DEC-80        800                 
+        20                                                                      
+                                                                                
+      7788 SCOTT      ANALYST         7566 09-DEC-82       3000                 
+        20                                                                      
+                                                                                
+      7876 ADAMS      CLERK           7788 12-JAN-83       1100                 
+        20                                                                      
+                                                                                
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO                                                                      
+----------                                                                      
+      7900 JAMES      CLERK           7698 03-DEC-81        950                 
+        30                                                                      
+                                                                                
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                 
+        20                                                                      
+                                                                                
+      7934 MILLER     CLERK           7782 23-JAN-82       1300                 
+        10                                                                      
+                                                                                
+
+6 rows selected.
+
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO                                                                      
+----------                                                                      
+      7900 JAMES      CLERK           7698 03-DEC-81        950                 
+        30                                                                      
+                                                                                
+
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO                                                                      
+----------                                                                      
+      7788 SCOTT      ANALYST         7566 09-DEC-82       3000                 
+        20                                                                      
+                                                                                
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                 
+        20                                                                      
+                                                                                
+
+
+    DEPTNO                                                                      
+----------                                                                      
+        40                                                                      
+
+
+       MGR                                                                      
+----------                                                                      
+      7839                                                                      
+                                                                                
+      7782                                                                      
+      7698                                                                      
+      7902                                                                      
+      7566                                                                      
+      7788                                                                      
+
+7 rows selected.
+
+SQL> @6
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO                                                                      
+----------                                                                      
+      7369 SMITH      CLERK           7902 17-DEC-80        800                 
+        20                                                                      
+                                                                                
+      7788 SCOTT      ANALYST         7566 09-DEC-82       3000                 
+        20                                                                      
+                                                                                
+      7876 ADAMS      CLERK           7788 12-JAN-83       1100                 
+        20                                                                      
+                                                                                
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO                                                                      
+----------                                                                      
+      7900 JAMES      CLERK           7698 03-DEC-81        950                 
+        30                                                                      
+                                                                                
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                 
+        20                                                                      
+                                                                                
+      7934 MILLER     CLERK           7782 23-JAN-82       1300                 
+        10                                                                      
+                                                                                
+
+6 rows selected.
+
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO                                                                      
+----------                                                                      
+      7900 JAMES      CLERK           7698 03-DEC-81        950                 
+        30                                                                      
+                                                                                
+
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO                                                                      
+----------                                                                      
+      7788 SCOTT      ANALYST         7566 09-DEC-82       3000                 
+        20                                                                      
+                                                                                
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                 
+        20                                                                      
+                                                                                
+
+
+    DEPTNO                                                                      
+----------                                                                      
+        40                                                                      
+
+select DISINCT EMPNO from EMP minus DISTINCT MGR from EMP
+                                    *
+ERROR at line 1:
+ORA-00928: missing SELECT keyword 
+
+
+SQL> 
+SQL> @6
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO                                                                      
+----------                                                                      
+      7369 SMITH      CLERK           7902 17-DEC-80        800                 
+        20                                                                      
+                                                                                
+      7788 SCOTT      ANALYST         7566 09-DEC-82       3000                 
+        20                                                                      
+                                                                                
+      7876 ADAMS      CLERK           7788 12-JAN-83       1100                 
+        20                                                                      
+                                                                                
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO                                                                      
+----------                                                                      
+      7900 JAMES      CLERK           7698 03-DEC-81        950                 
+        30                                                                      
+                                                                                
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                 
+        20                                                                      
+                                                                                
+      7934 MILLER     CLERK           7782 23-JAN-82       1300                 
+        10                                                                      
+                                                                                
+
+6 rows selected.
+
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO                                                                      
+----------                                                                      
+      7900 JAMES      CLERK           7698 03-DEC-81        950                 
+        30                                                                      
+                                                                                
+
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO                                                                      
+----------                                                                      
+      7788 SCOTT      ANALYST         7566 09-DEC-82       3000                 
+        20                                                                      
+                                                                                
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                 
+        20                                                                      
+                                                                                
+
+
+    DEPTNO                                                                      
+----------                                                                      
+        40                                                                      
+
+select DISINCT EMPNO from EMP minus select DISTINCT MGR from EMP
+       *
+ERROR at line 1:
+ORA-00904: "DISINCT": invalid identifier 
+
+
+SQL> @6
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO                                                                      
+----------                                                                      
+      7369 SMITH      CLERK           7902 17-DEC-80        800                 
+        20                                                                      
+                                                                                
+      7788 SCOTT      ANALYST         7566 09-DEC-82       3000                 
+        20                                                                      
+                                                                                
+      7876 ADAMS      CLERK           7788 12-JAN-83       1100                 
+        20                                                                      
+                                                                                
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO                                                                      
+----------                                                                      
+      7900 JAMES      CLERK           7698 03-DEC-81        950                 
+        30                                                                      
+                                                                                
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                 
+        20                                                                      
+                                                                                
+      7934 MILLER     CLERK           7782 23-JAN-82       1300                 
+        10                                                                      
+                                                                                
+
+6 rows selected.
+
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO                                                                      
+----------                                                                      
+      7900 JAMES      CLERK           7698 03-DEC-81        950                 
+        30                                                                      
+                                                                                
+
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO                                                                      
+----------                                                                      
+      7788 SCOTT      ANALYST         7566 09-DEC-82       3000                 
+        20                                                                      
+                                                                                
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                 
+        20                                                                      
+                                                                                
+
+
+    DEPTNO                                                                      
+----------                                                                      
+        40                                                                      
+
+
+     EMPNO                                                                      
+----------                                                                      
+      7369                                                                      
+      7499                                                                      
+      7521                                                                      
+      7654                                                                      
+      7844                                                                      
+      7876                                                                      
+      7900                                                                      
+      7934                                                                      
+
+8 rows selected.
+
+SQL> select * from EMP;
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO                                                                      
+----------                                                                      
+      7369 SMITH      CLERK           7902 17-DEC-80        800                 
+        20                                                                      
+                                                                                
+      7499 ALLEN      SALESMAN        7698 20-FEB-81       1600        300      
+        30                                                                      
+                                                                                
+      7521 WARD       SALESMAN        7698 22-FEB-81       1250        500      
+        30                                                                      
+                                                                                
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO                                                                      
+----------                                                                      
+      7566 JONES      MANAGER         7839 02-APR-81       2975                 
+        20                                                                      
+                                                                                
+      7654 MARTIN     SALESMAN        7698 28-SEP-81       1250       1400      
+        30                                                                      
+                                                                                
+      7698 BLAKE      MANAGER         7839 01-MAY-81       2850                 
+        30                                                                      
+                                                                                
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO                                                                      
+----------                                                                      
+      7782 CLARK      MANAGER         7839 09-JUN-81       2450                 
+        10                                                                      
+                                                                                
+      7788 SCOTT      ANALYST         7566 09-DEC-82       3000                 
+        20                                                                      
+                                                                                
+      7839 KING       PRESIDENT            17-NOV-81       5000                 
+        10                                                                      
+                                                                                
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO                                                                      
+----------                                                                      
+      7844 TURNER     SALESMAN        7698 08-SEP-81       1500          0      
+        30                                                                      
+                                                                                
+      7876 ADAMS      CLERK           7788 12-JAN-83       1100                 
+        20                                                                      
+                                                                                
+      7900 JAMES      CLERK           7698 03-DEC-81        950                 
+        30                                                                      
+                                                                                
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO                                                                      
+----------                                                                      
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                 
+        20                                                                      
+                                                                                
+      7934 MILLER     CLERK           7782 23-JAN-82       1300                 
+        10                                                                      
+                                                                                
+
+14 rows selected.
+
+SQL> @6
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO                                                                      
+----------                                                                      
+      7369 SMITH      CLERK           7902 17-DEC-80        800                 
+        20                                                                      
+                                                                                
+      7788 SCOTT      ANALYST         7566 09-DEC-82       3000                 
+        20                                                                      
+                                                                                
+      7876 ADAMS      CLERK           7788 12-JAN-83       1100                 
+        20                                                                      
+                                                                                
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO                                                                      
+----------                                                                      
+      7900 JAMES      CLERK           7698 03-DEC-81        950                 
+        30                                                                      
+                                                                                
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                 
+        20                                                                      
+                                                                                
+      7934 MILLER     CLERK           7782 23-JAN-82       1300                 
+        10                                                                      
+                                                                                
+
+6 rows selected.
+
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO                                                                      
+----------                                                                      
+      7900 JAMES      CLERK           7698 03-DEC-81        950                 
+        30                                                                      
+                                                                                
+
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO                                                                      
+----------                                                                      
+      7788 SCOTT      ANALYST         7566 09-DEC-82       3000                 
+        20                                                                      
+                                                                                
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                 
+        20                                                                      
+                                                                                
+
+
+    DEPTNO                                                                      
+----------                                                                      
+        40                                                                      
+
+
+     EMPNO                                                                      
+----------                                                                      
+      7369                                                                      
+      7499                                                                      
+      7521                                                                      
+      7654                                                                      
+      7844                                                                      
+      7876                                                                      
+      7900                                                                      
+      7934                                                                      
+
+8 rows selected.
+
+
+no rows selected
+
+SQL> @6
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO                                                                      
+----------                                                                      
+      7369 SMITH      CLERK           7902 17-DEC-80        800                 
+        20                                                                      
+                                                                                
+      7788 SCOTT      ANALYST         7566 09-DEC-82       3000                 
+        20                                                                      
+                                                                                
+      7876 ADAMS      CLERK           7788 12-JAN-83       1100                 
+        20                                                                      
+                                                                                
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO                                                                      
+----------                                                                      
+      7900 JAMES      CLERK           7698 03-DEC-81        950                 
+        30                                                                      
+                                                                                
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                 
+        20                                                                      
+                                                                                
+      7934 MILLER     CLERK           7782 23-JAN-82       1300                 
+        10                                                                      
+                                                                                
+
+6 rows selected.
+
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO                                                                      
+----------                                                                      
+      7900 JAMES      CLERK           7698 03-DEC-81        950                 
+        30                                                                      
+                                                                                
+
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO                                                                      
+----------                                                                      
+      7788 SCOTT      ANALYST         7566 09-DEC-82       3000                 
+        20                                                                      
+                                                                                
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                 
+        20                                                                      
+                                                                                
+
+
+    DEPTNO                                                                      
+----------                                                                      
+        40                                                                      
+
+
+     EMPNO                                                                      
+----------                                                                      
+      7369                                                                      
+      7499                                                                      
+      7521                                                                      
+      7654                                                                      
+      7844                                                                      
+      7876                                                                      
+      7900                                                                      
+      7934                                                                      
+
+8 rows selected.
+
+
+no rows selected
+
+SQL> @6
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO                                                                      
+----------                                                                      
+      7369 SMITH      CLERK           7902 17-DEC-80        800                 
+        20                                                                      
+                                                                                
+      7788 SCOTT      ANALYST         7566 09-DEC-82       3000                 
+        20                                                                      
+                                                                                
+      7876 ADAMS      CLERK           7788 12-JAN-83       1100                 
+        20                                                                      
+                                                                                
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO                                                                      
+----------                                                                      
+      7900 JAMES      CLERK           7698 03-DEC-81        950                 
+        30                                                                      
+                                                                                
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                 
+        20                                                                      
+                                                                                
+      7934 MILLER     CLERK           7782 23-JAN-82       1300                 
+        10                                                                      
+                                                                                
+
+6 rows selected.
+
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO                                                                      
+----------                                                                      
+      7900 JAMES      CLERK           7698 03-DEC-81        950                 
+        30                                                                      
+                                                                                
+
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO                                                                      
+----------                                                                      
+      7788 SCOTT      ANALYST         7566 09-DEC-82       3000                 
+        20                                                                      
+                                                                                
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                 
+        20                                                                      
+                                                                                
+
+
+    DEPTNO                                                                      
+----------                                                                      
+        40                                                                      
+
+
+     EMPNO                                                                      
+----------                                                                      
+      7369                                                                      
+      7499                                                                      
+      7521                                                                      
+      7654                                                                      
+      7844                                                                      
+      7876                                                                      
+      7900                                                                      
+      7934                                                                      
+
+8 rows selected.
+
+
+no rows selected
+
+SQL> @6
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO                                                                      
+----------                                                                      
+      7369 SMITH      CLERK           7902 17-DEC-80        800                 
+        20                                                                      
+                                                                                
+      7788 SCOTT      ANALYST         7566 09-DEC-82       3000                 
+        20                                                                      
+                                                                                
+      7876 ADAMS      CLERK           7788 12-JAN-83       1100                 
+        20                                                                      
+                                                                                
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO                                                                      
+----------                                                                      
+      7900 JAMES      CLERK           7698 03-DEC-81        950                 
+        30                                                                      
+                                                                                
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                 
+        20                                                                      
+                                                                                
+      7934 MILLER     CLERK           7782 23-JAN-82       1300                 
+        10                                                                      
+                                                                                
+
+6 rows selected.
+
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO                                                                      
+----------                                                                      
+      7900 JAMES      CLERK           7698 03-DEC-81        950                 
+        30                                                                      
+                                                                                
+
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO                                                                      
+----------                                                                      
+      7788 SCOTT      ANALYST         7566 09-DEC-82       3000                 
+        20                                                                      
+                                                                                
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                 
+        20                                                                      
+                                                                                
+
+
+    DEPTNO                                                                      
+----------                                                                      
+        40                                                                      
+
+
+     EMPNO                                                                      
+----------                                                                      
+      7369                                                                      
+      7499                                                                      
+      7521                                                                      
+      7654                                                                      
+      7844                                                                      
+      7876                                                                      
+      7900                                                                      
+      7934                                                                      
+
+8 rows selected.
+
+
+no rows selected
+
+select count(DISINCT MGR) from EMP
+                     *
+ERROR at line 1:
+ORA-00907: missing right parenthesis 
+
+
+SQL> @6
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO                                                                      
+----------                                                                      
+      7369 SMITH      CLERK           7902 17-DEC-80        800                 
+        20                                                                      
+                                                                                
+      7788 SCOTT      ANALYST         7566 09-DEC-82       3000                 
+        20                                                                      
+                                                                                
+      7876 ADAMS      CLERK           7788 12-JAN-83       1100                 
+        20                                                                      
+                                                                                
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO                                                                      
+----------                                                                      
+      7900 JAMES      CLERK           7698 03-DEC-81        950                 
+        30                                                                      
+                                                                                
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                 
+        20                                                                      
+                                                                                
+      7934 MILLER     CLERK           7782 23-JAN-82       1300                 
+        10                                                                      
+                                                                                
+
+6 rows selected.
+
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO                                                                      
+----------                                                                      
+      7900 JAMES      CLERK           7698 03-DEC-81        950                 
+        30                                                                      
+                                                                                
+
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO                                                                      
+----------                                                                      
+      7788 SCOTT      ANALYST         7566 09-DEC-82       3000                 
+        20                                                                      
+                                                                                
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                 
+        20                                                                      
+                                                                                
+
+
+    DEPTNO                                                                      
+----------                                                                      
+        40                                                                      
+
+
+     EMPNO                                                                      
+----------                                                                      
+      7369                                                                      
+      7499                                                                      
+      7521                                                                      
+      7654                                                                      
+      7844                                                                      
+      7876                                                                      
+      7900                                                                      
+      7934                                                                      
+
+8 rows selected.
+
+
+no rows selected
+
+
+COUNT(DISTINCTMGR)                                                              
+------------------                                                              
+                 6                                                              
+
+SQL> @6
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO                                                                      
+----------                                                                      
+      7369 SMITH      CLERK           7902 17-DEC-80        800                 
+        20                                                                      
+                                                                                
+      7788 SCOTT      ANALYST         7566 09-DEC-82       3000                 
+        20                                                                      
+                                                                                
+      7876 ADAMS      CLERK           7788 12-JAN-83       1100                 
+        20                                                                      
+                                                                                
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO                                                                      
+----------                                                                      
+      7900 JAMES      CLERK           7698 03-DEC-81        950                 
+        30                                                                      
+                                                                                
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                 
+        20                                                                      
+                                                                                
+      7934 MILLER     CLERK           7782 23-JAN-82       1300                 
+        10                                                                      
+                                                                                
+
+6 rows selected.
+
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO                                                                      
+----------                                                                      
+      7900 JAMES      CLERK           7698 03-DEC-81        950                 
+        30                                                                      
+                                                                                
+
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO                                                                      
+----------                                                                      
+      7788 SCOTT      ANALYST         7566 09-DEC-82       3000                 
+        20                                                                      
+                                                                                
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                 
+        20                                                                      
+                                                                                
+
+
+    DEPTNO                                                                      
+----------                                                                      
+        40                                                                      
+
+
+     EMPNO                                                                      
+----------                                                                      
+      7369                                                                      
+      7499                                                                      
+      7521                                                                      
+      7654                                                                      
+      7844                                                                      
+      7876                                                                      
+      7900                                                                      
+      7934                                                                      
+
+8 rows selected.
+
+
+no rows selected
+
+
+COUNT(DISTINCTMGR)                                                              
+------------------                                                              
+                 6                                                              
+
+
+COUNT(DISTINCTMGR)                                                              
+------------------                                                              
+                 4                                                              
+
+SQL> set lines 120
+SQL> slect * from EMP;
+SP2-0734: unknown command beginning "slect * fr..." - rest of line ignored.
+SQL> select * from EMP;
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO                                   
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------                                   
+      7369 SMITH      CLERK           7902 17-DEC-80        800                    20                                   
+      7499 ALLEN      SALESMAN        7698 20-FEB-81       1600        300         30                                   
+      7521 WARD       SALESMAN        7698 22-FEB-81       1250        500         30                                   
+      7566 JONES      MANAGER         7839 02-APR-81       2975                    20                                   
+      7654 MARTIN     SALESMAN        7698 28-SEP-81       1250       1400         30                                   
+      7698 BLAKE      MANAGER         7839 01-MAY-81       2850                    30                                   
+      7782 CLARK      MANAGER         7839 09-JUN-81       2450                    10                                   
+      7788 SCOTT      ANALYST         7566 09-DEC-82       3000                    20                                   
+      7839 KING       PRESIDENT            17-NOV-81       5000                    10                                   
+      7844 TURNER     SALESMAN        7698 08-SEP-81       1500          0         30                                   
+      7876 ADAMS      CLERK           7788 12-JAN-83       1100                    20                                   
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO                                   
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------                                   
+      7900 JAMES      CLERK           7698 03-DEC-81        950                    30                                   
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                    20                                   
+      7934 MILLER     CLERK           7782 23-JAN-82       1300                    10                                   
+
+14 rows selected.
+
+SQL> @6
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO                                   
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------                                   
+      7369 SMITH      CLERK           7902 17-DEC-80        800                    20                                   
+      7788 SCOTT      ANALYST         7566 09-DEC-82       3000                    20                                   
+      7876 ADAMS      CLERK           7788 12-JAN-83       1100                    20                                   
+      7900 JAMES      CLERK           7698 03-DEC-81        950                    30                                   
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                    20                                   
+      7934 MILLER     CLERK           7782 23-JAN-82       1300                    10                                   
+
+6 rows selected.
+
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO                                   
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------                                   
+      7900 JAMES      CLERK           7698 03-DEC-81        950                    30                                   
+
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO                                   
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------                                   
+      7788 SCOTT      ANALYST         7566 09-DEC-82       3000                    20                                   
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                    20                                   
+
+
+    DEPTNO                                                                                                              
+----------                                                                                                              
+        40                                                                                                              
+
+
+     EMPNO                                                                                                              
+----------                                                                                                              
+      7369                                                                                                              
+      7499                                                                                                              
+      7521                                                                                                              
+      7654                                                                                                              
+      7844                                                                                                              
+      7876                                                                                                              
+      7900                                                                                                              
+      7934                                                                                                              
+
+8 rows selected.
+
+
+no rows selected
+
+
+COUNT(DISTINCTMGR)                                                                                                      
+------------------                                                                                                      
+                 6                                                                                                      
+
+
+COUNT(DISTINCTMGR)                                                                                                      
+------------------                                                                                                      
+                 4                                                                                                      
+
+
+       MGR COUNT(DISTINCTMGR)                                                                                           
+---------- ------------------                                                                                           
+      7566                  1                                                                                           
+      7698                  1                                                                                           
+      7782                  1                                                                                           
+      7788                  1                                                                                           
+      7839                  1                                                                                           
+      7902                  1                                                                                           
+                            0                                                                                           
+
+7 rows selected.
+
+SQL> @6
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO                                   
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------                                   
+      7369 SMITH      CLERK           7902 17-DEC-80        800                    20                                   
+      7788 SCOTT      ANALYST         7566 09-DEC-82       3000                    20                                   
+      7876 ADAMS      CLERK           7788 12-JAN-83       1100                    20                                   
+      7900 JAMES      CLERK           7698 03-DEC-81        950                    30                                   
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                    20                                   
+      7934 MILLER     CLERK           7782 23-JAN-82       1300                    10                                   
+
+6 rows selected.
+
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO                                   
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------                                   
+      7900 JAMES      CLERK           7698 03-DEC-81        950                    30                                   
+
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO                                   
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------                                   
+      7788 SCOTT      ANALYST         7566 09-DEC-82       3000                    20                                   
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                    20                                   
+
+
+    DEPTNO                                                                                                              
+----------                                                                                                              
+        40                                                                                                              
+
+
+     EMPNO                                                                                                              
+----------                                                                                                              
+      7369                                                                                                              
+      7499                                                                                                              
+      7521                                                                                                              
+      7654                                                                                                              
+      7844                                                                                                              
+      7876                                                                                                              
+      7900                                                                                                              
+      7934                                                                                                              
+
+8 rows selected.
+
+
+no rows selected
+
+
+COUNT(DISTINCTMGR)                                                                                                      
+------------------                                                                                                      
+                 6                                                                                                      
+
+
+COUNT(DISTINCTMGR)                                                                                                      
+------------------                                                                                                      
+                 4                                                                                                      
+
+
+       MGR COUNT(MGR)                                                                                                   
+---------- ----------                                                                                                   
+      7839          3                                                                                                   
+                    0                                                                                                   
+      7782          1                                                                                                   
+      7698          5                                                                                                   
+      7902          1                                                                                                   
+      7566          2                                                                                                   
+      7788          1                                                                                                   
+
+7 rows selected.
+
+SQL> select * from EMP;
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO                                   
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------                                   
+      7369 SMITH      CLERK           7902 17-DEC-80        800                    20                                   
+      7499 ALLEN      SALESMAN        7698 20-FEB-81       1600        300         30                                   
+      7521 WARD       SALESMAN        7698 22-FEB-81       1250        500         30                                   
+      7566 JONES      MANAGER         7839 02-APR-81       2975                    20                                   
+      7654 MARTIN     SALESMAN        7698 28-SEP-81       1250       1400         30                                   
+      7698 BLAKE      MANAGER         7839 01-MAY-81       2850                    30                                   
+      7782 CLARK      MANAGER         7839 09-JUN-81       2450                    10                                   
+      7788 SCOTT      ANALYST         7566 09-DEC-82       3000                    20                                   
+      7839 KING       PRESIDENT            17-NOV-81       5000                    10                                   
+      7844 TURNER     SALESMAN        7698 08-SEP-81       1500          0         30                                   
+      7876 ADAMS      CLERK           7788 12-JAN-83       1100                    20                                   
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO                                   
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------                                   
+      7900 JAMES      CLERK           7698 03-DEC-81        950                    30                                   
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                    20                                   
+      7934 MILLER     CLERK           7782 23-JAN-82       1300                    10                                   
+
+14 rows selected.
+
+SQL> @6
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO                                   
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------                                   
+      7369 SMITH      CLERK           7902 17-DEC-80        800                    20                                   
+      7788 SCOTT      ANALYST         7566 09-DEC-82       3000                    20                                   
+      7876 ADAMS      CLERK           7788 12-JAN-83       1100                    20                                   
+      7900 JAMES      CLERK           7698 03-DEC-81        950                    30                                   
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                    20                                   
+      7934 MILLER     CLERK           7782 23-JAN-82       1300                    10                                   
+
+6 rows selected.
+
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO                                   
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------                                   
+      7900 JAMES      CLERK           7698 03-DEC-81        950                    30                                   
+
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO                                   
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------                                   
+      7788 SCOTT      ANALYST         7566 09-DEC-82       3000                    20                                   
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                    20                                   
+
+
+    DEPTNO                                                                                                              
+----------                                                                                                              
+        40                                                                                                              
+
+
+     EMPNO                                                                                                              
+----------                                                                                                              
+      7369                                                                                                              
+      7499                                                                                                              
+      7521                                                                                                              
+      7654                                                                                                              
+      7844                                                                                                              
+      7876                                                                                                              
+      7900                                                                                                              
+      7934                                                                                                              
+
+8 rows selected.
+
+
+no rows selected
+
+
+COUNT(DISTINCTMGR)                                                                                                      
+------------------                                                                                                      
+                 6                                                                                                      
+
+
+COUNT(DISTINCTMGR)                                                                                                      
+------------------                                                                                                      
+                 4                                                                                                      
+
+
+       MGR COUNT(MGR)                                                                                                   
+---------- ----------                                                                                                   
+      7839          3                                                                                                   
+                    0                                                                                                   
+      7782          1                                                                                                   
+      7698          5                                                                                                   
+      7902          1                                                                                                   
+      7566          2                                                                                                   
+      7788          1                                                                                                   
+
+7 rows selected.
+
+
+       MGR COUNT(MGR)                                                                                                   
+---------- ----------                                                                                                   
+        10          1                                                                                                   
+        20          1                                                                                                   
+        30          1                                                                                                   
+      7566          2                                                                                                   
+      7698          5                                                                                                   
+      7782          1                                                                                                   
+      7788          1                                                                                                   
+      7839          3                                                                                                   
+      7902          1                                                                                                   
+                    0                                                                                                   
+
+10 rows selected.
+
+SQL> @6
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO                                   
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------                                   
+      7369 SMITH      CLERK           7902 17-DEC-80        800                    20                                   
+      7788 SCOTT      ANALYST         7566 09-DEC-82       3000                    20                                   
+      7876 ADAMS      CLERK           7788 12-JAN-83       1100                    20                                   
+      7900 JAMES      CLERK           7698 03-DEC-81        950                    30                                   
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                    20                                   
+      7934 MILLER     CLERK           7782 23-JAN-82       1300                    10                                   
+
+6 rows selected.
+
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO                                   
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------                                   
+      7900 JAMES      CLERK           7698 03-DEC-81        950                    30                                   
+
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO                                   
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------                                   
+      7788 SCOTT      ANALYST         7566 09-DEC-82       3000                    20                                   
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                    20                                   
+
+
+    DEPTNO                                                                                                              
+----------                                                                                                              
+        40                                                                                                              
+
+
+     EMPNO                                                                                                              
+----------                                                                                                              
+      7369                                                                                                              
+      7499                                                                                                              
+      7521                                                                                                              
+      7654                                                                                                              
+      7844                                                                                                              
+      7876                                                                                                              
+      7900                                                                                                              
+      7934                                                                                                              
+
+8 rows selected.
+
+
+no rows selected
+
+
+COUNT(DISTINCTMGR)                                                                                                      
+------------------                                                                                                      
+                 6                                                                                                      
+
+
+COUNT(DISTINCTMGR)                                                                                                      
+------------------                                                                                                      
+                 4                                                                                                      
+
+
+       MGR COUNT(MGR)                                                                                                   
+---------- ----------                                                                                                   
+      7839          3                                                                                                   
+                    0                                                                                                   
+      7782          1                                                                                                   
+      7698          5                                                                                                   
+      7902          1                                                                                                   
+      7566          2                                                                                                   
+      7788          1                                                                                                   
+
+7 rows selected.
+
+select MGR,count(MGR),DEPTNO,count(DEPTNO) from EMP group by DEPTNO
+       *
+ERROR at line 1:
+ORA-00979: not a GROUP BY expression 
+
+
+SQL> @6
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO                                   
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------                                   
+      7369 SMITH      CLERK           7902 17-DEC-80        800                    20                                   
+      7788 SCOTT      ANALYST         7566 09-DEC-82       3000                    20                                   
+      7876 ADAMS      CLERK           7788 12-JAN-83       1100                    20                                   
+      7900 JAMES      CLERK           7698 03-DEC-81        950                    30                                   
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                    20                                   
+      7934 MILLER     CLERK           7782 23-JAN-82       1300                    10                                   
+
+6 rows selected.
+
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO                                   
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------                                   
+      7900 JAMES      CLERK           7698 03-DEC-81        950                    30                                   
+
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO                                   
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------                                   
+      7788 SCOTT      ANALYST         7566 09-DEC-82       3000                    20                                   
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                    20                                   
+
+
+    DEPTNO                                                                                                              
+----------                                                                                                              
+        40                                                                                                              
+
+
+     EMPNO                                                                                                              
+----------                                                                                                              
+      7369                                                                                                              
+      7499                                                                                                              
+      7521                                                                                                              
+      7654                                                                                                              
+      7844                                                                                                              
+      7876                                                                                                              
+      7900                                                                                                              
+      7934                                                                                                              
+
+8 rows selected.
+
+
+no rows selected
+
+
+COUNT(DISTINCTMGR)                                                                                                      
+------------------                                                                                                      
+                 6                                                                                                      
+
+
+COUNT(DISTINCTMGR)                                                                                                      
+------------------                                                                                                      
+                 4                                                                                                      
+
+
+       MGR COUNT(MGR)                                                                                                   
+---------- ----------                                                                                                   
+      7839          3                                                                                                   
+                    0                                                                                                   
+      7782          1                                                                                                   
+      7698          5                                                                                                   
+      7902          1                                                                                                   
+      7566          2                                                                                                   
+      7788          1                                                                                                   
+
+7 rows selected.
+
+select MGR,count(MGR),DEPTNO,count(DEPTNO) from EMP group by MGR
+                      *
+ERROR at line 1:
+ORA-00979: not a GROUP BY expression 
+
+
+SQL> @6
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO                                   
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------                                   
+      7369 SMITH      CLERK           7902 17-DEC-80        800                    20                                   
+      7788 SCOTT      ANALYST         7566 09-DEC-82       3000                    20                                   
+      7876 ADAMS      CLERK           7788 12-JAN-83       1100                    20                                   
+      7900 JAMES      CLERK           7698 03-DEC-81        950                    30                                   
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                    20                                   
+      7934 MILLER     CLERK           7782 23-JAN-82       1300                    10                                   
+
+6 rows selected.
+
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO                                   
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------                                   
+      7900 JAMES      CLERK           7698 03-DEC-81        950                    30                                   
+
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO                                   
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------                                   
+      7788 SCOTT      ANALYST         7566 09-DEC-82       3000                    20                                   
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                    20                                   
+
+
+    DEPTNO                                                                                                              
+----------                                                                                                              
+        40                                                                                                              
+
+
+     EMPNO                                                                                                              
+----------                                                                                                              
+      7369                                                                                                              
+      7499                                                                                                              
+      7521                                                                                                              
+      7654                                                                                                              
+      7844                                                                                                              
+      7876                                                                                                              
+      7900                                                                                                              
+      7934                                                                                                              
+
+8 rows selected.
+
+
+no rows selected
+
+
+COUNT(DISTINCTMGR)                                                                                                      
+------------------                                                                                                      
+                 6                                                                                                      
+
+
+COUNT(DISTINCTMGR)                                                                                                      
+------------------                                                                                                      
+                 4                                                                                                      
+
+
+       MGR COUNT(MGR)                                                                                                   
+---------- ----------                                                                                                   
+      7839          3                                                                                                   
+                    0                                                                                                   
+      7782          1                                                                                                   
+      7698          5                                                                                                   
+      7902          1                                                                                                   
+      7566          2                                                                                                   
+      7788          1                                                                                                   
+
+7 rows selected.
+
+select MGR,count(DISTINCT MGR), from EMP INTERSECT select DISTINCT DEPTNO from EMP
+                                *
+ERROR at line 1:
+ORA-00936: missing expression 
+
+
+SQL> @6
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO                                   
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------                                   
+      7369 SMITH      CLERK           7902 17-DEC-80        800                    20                                   
+      7788 SCOTT      ANALYST         7566 09-DEC-82       3000                    20                                   
+      7876 ADAMS      CLERK           7788 12-JAN-83       1100                    20                                   
+      7900 JAMES      CLERK           7698 03-DEC-81        950                    30                                   
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                    20                                   
+      7934 MILLER     CLERK           7782 23-JAN-82       1300                    10                                   
+
+6 rows selected.
+
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO                                   
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------                                   
+      7900 JAMES      CLERK           7698 03-DEC-81        950                    30                                   
+
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO                                   
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------                                   
+      7788 SCOTT      ANALYST         7566 09-DEC-82       3000                    20                                   
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                    20                                   
+
+
+    DEPTNO                                                                                                              
+----------                                                                                                              
+        40                                                                                                              
+
+
+     EMPNO                                                                                                              
+----------                                                                                                              
+      7369                                                                                                              
+      7499                                                                                                              
+      7521                                                                                                              
+      7654                                                                                                              
+      7844                                                                                                              
+      7876                                                                                                              
+      7900                                                                                                              
+      7934                                                                                                              
+
+8 rows selected.
+
+
+no rows selected
+
+
+COUNT(DISTINCTMGR)                                                                                                      
+------------------                                                                                                      
+                 6                                                                                                      
+
+
+COUNT(DISTINCTMGR)                                                                                                      
+------------------                                                                                                      
+                 4                                                                                                      
+
+
+       MGR COUNT(MGR)                                                                                                   
+---------- ----------                                                                                                   
+      7839          3                                                                                                   
+                    0                                                                                                   
+      7782          1                                                                                                   
+      7698          5                                                                                                   
+      7902          1                                                                                                   
+      7566          2                                                                                                   
+      7788          1                                                                                                   
+
+7 rows selected.
+
+select MGR,count(DISTINCT MGR) from EMP INTERSECT select (DISTINCT DEPTNO) from EMP
+                                                          *
+ERROR at line 1:
+ORA-00936: missing expression 
+
+
+SQL> @6
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO                                   
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------                                   
+      7369 SMITH      CLERK           7902 17-DEC-80        800                    20                                   
+      7788 SCOTT      ANALYST         7566 09-DEC-82       3000                    20                                   
+      7876 ADAMS      CLERK           7788 12-JAN-83       1100                    20                                   
+      7900 JAMES      CLERK           7698 03-DEC-81        950                    30                                   
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                    20                                   
+      7934 MILLER     CLERK           7782 23-JAN-82       1300                    10                                   
+
+6 rows selected.
+
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO                                   
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------                                   
+      7900 JAMES      CLERK           7698 03-DEC-81        950                    30                                   
+
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO                                   
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------                                   
+      7788 SCOTT      ANALYST         7566 09-DEC-82       3000                    20                                   
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                    20                                   
+
+
+    DEPTNO                                                                                                              
+----------                                                                                                              
+        40                                                                                                              
+
+
+     EMPNO                                                                                                              
+----------                                                                                                              
+      7369                                                                                                              
+      7499                                                                                                              
+      7521                                                                                                              
+      7654                                                                                                              
+      7844                                                                                                              
+      7876                                                                                                              
+      7900                                                                                                              
+      7934                                                                                                              
+
+8 rows selected.
+
+
+no rows selected
+
+
+COUNT(DISTINCTMGR)                                                                                                      
+------------------                                                                                                      
+                 6                                                                                                      
+
+
+COUNT(DISTINCTMGR)                                                                                                      
+------------------                                                                                                      
+                 4                                                                                                      
+
+
+       MGR COUNT(MGR)                                                                                                   
+---------- ----------                                                                                                   
+      7839          3                                                                                                   
+                    0                                                                                                   
+      7782          1                                                                                                   
+      7698          5                                                                                                   
+      7902          1                                                                                                   
+      7566          2                                                                                                   
+      7788          1                                                                                                   
+
+7 rows selected.
+
+select (DISTINCT DEPTNO) from EMP intersect select MGR, count(DISTINCT MGR) from EMP
+        *
+ERROR at line 1:
+ORA-00936: missing expression 
+
+
+SQL> 
+SQL> @6
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO                                   
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------                                   
+      7369 SMITH      CLERK           7902 17-DEC-80        800                    20                                   
+      7788 SCOTT      ANALYST         7566 09-DEC-82       3000                    20                                   
+      7876 ADAMS      CLERK           7788 12-JAN-83       1100                    20                                   
+      7900 JAMES      CLERK           7698 03-DEC-81        950                    30                                   
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                    20                                   
+      7934 MILLER     CLERK           7782 23-JAN-82       1300                    10                                   
+
+6 rows selected.
+
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO                                   
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------                                   
+      7900 JAMES      CLERK           7698 03-DEC-81        950                    30                                   
+
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO                                   
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------                                   
+      7788 SCOTT      ANALYST         7566 09-DEC-82       3000                    20                                   
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                    20                                   
+
+
+    DEPTNO                                                                                                              
+----------                                                                                                              
+        40                                                                                                              
+
+
+     EMPNO                                                                                                              
+----------                                                                                                              
+      7369                                                                                                              
+      7499                                                                                                              
+      7521                                                                                                              
+      7654                                                                                                              
+      7844                                                                                                              
+      7876                                                                                                              
+      7900                                                                                                              
+      7934                                                                                                              
+
+8 rows selected.
+
+
+no rows selected
+
+
+COUNT(DISTINCTMGR)                                                                                                      
+------------------                                                                                                      
+                 6                                                                                                      
+
+
+COUNT(DISTINCTMGR)                                                                                                      
+------------------                                                                                                      
+                 4                                                                                                      
+
+
+       MGR COUNT(MGR)                                                                                                   
+---------- ----------                                                                                                   
+      7839          3                                                                                                   
+                    0                                                                                                   
+      7782          1                                                                                                   
+      7698          5                                                                                                   
+      7902          1                                                                                                   
+      7566          2                                                                                                   
+      7788          1                                                                                                   
+
+7 rows selected.
+
+select DISTINCT DEPTNO from EMP intersect select MGR, count(DISTINCT MGR) from EMP
+*
+ERROR at line 1:
+ORA-01789: query block has incorrect number of result columns 
+
+
+SQL> @6
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO                                   
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------                                   
+      7369 SMITH      CLERK           7902 17-DEC-80        800                    20                                   
+      7788 SCOTT      ANALYST         7566 09-DEC-82       3000                    20                                   
+      7876 ADAMS      CLERK           7788 12-JAN-83       1100                    20                                   
+      7900 JAMES      CLERK           7698 03-DEC-81        950                    30                                   
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                    20                                   
+      7934 MILLER     CLERK           7782 23-JAN-82       1300                    10                                   
+
+6 rows selected.
+
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO                                   
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------                                   
+      7900 JAMES      CLERK           7698 03-DEC-81        950                    30                                   
+
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO                                   
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------                                   
+      7788 SCOTT      ANALYST         7566 09-DEC-82       3000                    20                                   
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                    20                                   
+
+
+    DEPTNO                                                                                                              
+----------                                                                                                              
+        40                                                                                                              
+
+
+     EMPNO                                                                                                              
+----------                                                                                                              
+      7369                                                                                                              
+      7499                                                                                                              
+      7521                                                                                                              
+      7654                                                                                                              
+      7844                                                                                                              
+      7876                                                                                                              
+      7900                                                                                                              
+      7934                                                                                                              
+
+8 rows selected.
+
+
+no rows selected
+
+
+COUNT(DISTINCTMGR)                                                                                                      
+------------------                                                                                                      
+                 6                                                                                                      
+
+
+COUNT(DISTINCTMGR)                                                                                                      
+------------------                                                                                                      
+                 4                                                                                                      
+
+
+       MGR COUNT(MGR)                                                                                                   
+---------- ----------                                                                                                   
+      7839          3                                                                                                   
+                    0                                                                                                   
+      7782          1                                                                                                   
+      7698          5                                                                                                   
+      7902          1                                                                                                   
+      7566          2                                                                                                   
+      7788          1                                                                                                   
+
+7 rows selected.
+
+select DISTINCT DEPTNO, MGR from EMP intersect select MGR, count(DISTINCT MGR) from EMP
+                                                      *
+ERROR at line 1:
+ORA-00937: not a single-group group function 
+
+
+SQL> select * from EMP;
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO                                   
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------                                   
+      7369 SMITH      CLERK           7902 17-DEC-80        800                    20                                   
+      7499 ALLEN      SALESMAN        7698 20-FEB-81       1600        300         30                                   
+      7521 WARD       SALESMAN        7698 22-FEB-81       1250        500         30                                   
+      7566 JONES      MANAGER         7839 02-APR-81       2975                    20                                   
+      7654 MARTIN     SALESMAN        7698 28-SEP-81       1250       1400         30                                   
+      7698 BLAKE      MANAGER         7839 01-MAY-81       2850                    30                                   
+      7782 CLARK      MANAGER         7839 09-JUN-81       2450                    10                                   
+      7788 SCOTT      ANALYST         7566 09-DEC-82       3000                    20                                   
+      7839 KING       PRESIDENT            17-NOV-81       5000                    10                                   
+      7844 TURNER     SALESMAN        7698 08-SEP-81       1500          0         30                                   
+      7876 ADAMS      CLERK           7788 12-JAN-83       1100                    20                                   
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO                                   
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------                                   
+      7900 JAMES      CLERK           7698 03-DEC-81        950                    30                                   
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                    20                                   
+      7934 MILLER     CLERK           7782 23-JAN-82       1300                    10                                   
+
+14 rows selected.
+
+SQL> @6
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO                                   
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------                                   
+      7369 SMITH      CLERK           7902 17-DEC-80        800                    20                                   
+      7788 SCOTT      ANALYST         7566 09-DEC-82       3000                    20                                   
+      7876 ADAMS      CLERK           7788 12-JAN-83       1100                    20                                   
+      7900 JAMES      CLERK           7698 03-DEC-81        950                    30                                   
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                    20                                   
+      7934 MILLER     CLERK           7782 23-JAN-82       1300                    10                                   
+
+6 rows selected.
+
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO                                   
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------                                   
+      7900 JAMES      CLERK           7698 03-DEC-81        950                    30                                   
+
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO                                   
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------                                   
+      7788 SCOTT      ANALYST         7566 09-DEC-82       3000                    20                                   
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                    20                                   
+
+
+    DEPTNO                                                                                                              
+----------                                                                                                              
+        40                                                                                                              
+
+
+     EMPNO                                                                                                              
+----------                                                                                                              
+      7369                                                                                                              
+      7499                                                                                                              
+      7521                                                                                                              
+      7654                                                                                                              
+      7844                                                                                                              
+      7876                                                                                                              
+      7900                                                                                                              
+      7934                                                                                                              
+
+8 rows selected.
+
+
+no rows selected
+
+
+COUNT(DISTINCTMGR)                                                                                                      
+------------------                                                                                                      
+                 6                                                                                                      
+
+
+COUNT(DISTINCTMGR)                                                                                                      
+------------------                                                                                                      
+                 4                                                                                                      
+
+
+       MGR COUNT(MGR)                                                                                                   
+---------- ----------                                                                                                   
+      7839          3                                                                                                   
+                    0                                                                                                   
+      7782          1                                                                                                   
+      7698          5                                                                                                   
+      7902          1                                                                                                   
+      7566          2                                                                                                   
+      7788          1                                                                                                   
+
+7 rows selected.
+
+select DISTINCT DEPTNO, MGR from EMP intersect select MGR, count(DISTINCT MGR) from EMP
+                                                      *
+ERROR at line 1:
+ORA-00937: not a single-group group function 
+
+
+select AVG(SAL) where JOB!='MANAGER' OR JOB!='PRESIDENT'
+                *
+ERROR at line 1:
+ORA-00923: FROM keyword not found where expected 
+
+
+SQL> @6
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO                                   
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------                                   
+      7369 SMITH      CLERK           7902 17-DEC-80        800                    20                                   
+      7788 SCOTT      ANALYST         7566 09-DEC-82       3000                    20                                   
+      7876 ADAMS      CLERK           7788 12-JAN-83       1100                    20                                   
+      7900 JAMES      CLERK           7698 03-DEC-81        950                    30                                   
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                    20                                   
+      7934 MILLER     CLERK           7782 23-JAN-82       1300                    10                                   
+
+6 rows selected.
+
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO                                   
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------                                   
+      7900 JAMES      CLERK           7698 03-DEC-81        950                    30                                   
+
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO                                   
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------                                   
+      7788 SCOTT      ANALYST         7566 09-DEC-82       3000                    20                                   
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                    20                                   
+
+
+    DEPTNO                                                                                                              
+----------                                                                                                              
+        40                                                                                                              
+
+
+     EMPNO                                                                                                              
+----------                                                                                                              
+      7369                                                                                                              
+      7499                                                                                                              
+      7521                                                                                                              
+      7654                                                                                                              
+      7844                                                                                                              
+      7876                                                                                                              
+      7900                                                                                                              
+      7934                                                                                                              
+
+8 rows selected.
+
+
+no rows selected
+
+
+COUNT(DISTINCTMGR)                                                                                                      
+------------------                                                                                                      
+                 6                                                                                                      
+
+
+COUNT(DISTINCTMGR)                                                                                                      
+------------------                                                                                                      
+                 4                                                                                                      
+
+
+       MGR COUNT(MGR)                                                                                                   
+---------- ----------                                                                                                   
+      7839          3                                                                                                   
+                    0                                                                                                   
+      7782          1                                                                                                   
+      7698          5                                                                                                   
+      7902          1                                                                                                   
+      7566          2                                                                                                   
+      7788          1                                                                                                   
+
+7 rows selected.
+
+select (DISTINCT DEPTNO), (DISTINCT MGR), count(MGR) from EMP group by DEPTNO
+        *
+ERROR at line 1:
+ORA-00936: missing expression 
+
+
+
+  AVG(SAL)                                                                                                              
+----------                                                                                                              
+2073.21429                                                                                                              
+
+SQL> @6
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO                                   
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------                                   
+      7369 SMITH      CLERK           7902 17-DEC-80        800                    20                                   
+      7788 SCOTT      ANALYST         7566 09-DEC-82       3000                    20                                   
+      7876 ADAMS      CLERK           7788 12-JAN-83       1100                    20                                   
+      7900 JAMES      CLERK           7698 03-DEC-81        950                    30                                   
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                    20                                   
+      7934 MILLER     CLERK           7782 23-JAN-82       1300                    10                                   
+
+6 rows selected.
+
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO                                   
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------                                   
+      7900 JAMES      CLERK           7698 03-DEC-81        950                    30                                   
+
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO                                   
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------                                   
+      7788 SCOTT      ANALYST         7566 09-DEC-82       3000                    20                                   
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                    20                                   
+
+
+    DEPTNO                                                                                                              
+----------                                                                                                              
+        40                                                                                                              
+
+
+     EMPNO                                                                                                              
+----------                                                                                                              
+      7369                                                                                                              
+      7499                                                                                                              
+      7521                                                                                                              
+      7654                                                                                                              
+      7844                                                                                                              
+      7876                                                                                                              
+      7900                                                                                                              
+      7934                                                                                                              
+
+8 rows selected.
+
+
+no rows selected
+
+
+COUNT(DISTINCTMGR)                                                                                                      
+------------------                                                                                                      
+                 6                                                                                                      
+
+
+COUNT(DISTINCTMGR)                                                                                                      
+------------------                                                                                                      
+                 4                                                                                                      
+
+
+       MGR COUNT(MGR)                                                                                                   
+---------- ----------                                                                                                   
+      7839          3                                                                                                   
+                    0                                                                                                   
+      7782          1                                                                                                   
+      7698          5                                                                                                   
+      7902          1                                                                                                   
+      7566          2                                                                                                   
+      7788          1                                                                                                   
+
+7 rows selected.
+
+select DEPTNO, (DISTINCT MGR), count(MGR) from EMP group by DEPTNO
+                *
+ERROR at line 1:
+ORA-00936: missing expression 
+
+
+
+  AVG(SAL)                                                                                                              
+----------                                                                                                              
+2073.21429                                                                                                              
+
+SQL> @6
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO                                   
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------                                   
+      7369 SMITH      CLERK           7902 17-DEC-80        800                    20                                   
+      7788 SCOTT      ANALYST         7566 09-DEC-82       3000                    20                                   
+      7876 ADAMS      CLERK           7788 12-JAN-83       1100                    20                                   
+      7900 JAMES      CLERK           7698 03-DEC-81        950                    30                                   
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                    20                                   
+      7934 MILLER     CLERK           7782 23-JAN-82       1300                    10                                   
+
+6 rows selected.
+
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO                                   
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------                                   
+      7900 JAMES      CLERK           7698 03-DEC-81        950                    30                                   
+
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO                                   
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------                                   
+      7788 SCOTT      ANALYST         7566 09-DEC-82       3000                    20                                   
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                    20                                   
+
+
+    DEPTNO                                                                                                              
+----------                                                                                                              
+        40                                                                                                              
+
+
+     EMPNO                                                                                                              
+----------                                                                                                              
+      7369                                                                                                              
+      7499                                                                                                              
+      7521                                                                                                              
+      7654                                                                                                              
+      7844                                                                                                              
+      7876                                                                                                              
+      7900                                                                                                              
+      7934                                                                                                              
+
+8 rows selected.
+
+
+no rows selected
+
+
+COUNT(DISTINCTMGR)                                                                                                      
+------------------                                                                                                      
+                 6                                                                                                      
+
+
+COUNT(DISTINCTMGR)                                                                                                      
+------------------                                                                                                      
+                 4                                                                                                      
+
+
+       MGR COUNT(MGR)                                                                                                   
+---------- ----------                                                                                                   
+      7839          3                                                                                                   
+                    0                                                                                                   
+      7782          1                                                                                                   
+      7698          5                                                                                                   
+      7902          1                                                                                                   
+      7566          2                                                                                                   
+      7788          1                                                                                                   
+
+7 rows selected.
+
+select DEPTNO, DISTINCT MGR, count(MGR) from EMP group by DEPTNO
+               *
+ERROR at line 1:
+ORA-00936: missing expression 
+
+
+
+  AVG(SAL)                                                                                                              
+----------                                                                                                              
+2073.21429                                                                                                              
+
+SQL> DESC EMP;
+ Name                                                              Null?    Type
+ ----------------------------------------------------------------- -------- --------------------------------------------
+ EMPNO                                                             NOT NULL NUMBER(4)
+ ENAME                                                                      VARCHAR2(10)
+ JOB                                                                        VARCHAR2(9)
+ MGR                                                                        NUMBER(4)
+ HIREDATE                                                                   DATE
+ SAL                                                                        NUMBER(7,2)
+ COMM                                                                       NUMBER(7,2)
+ DEPTNO                                                                     NUMBER(2)
+
+SQL> DESC DEPT;
+ Name                                                              Null?    Type
+ ----------------------------------------------------------------- -------- --------------------------------------------
+ DEPTNO                                                                     NUMBER(2)
+ DNAME                                                                      VARCHAR2(14)
+ LOC                                                                        VARCHAR2(13)
+
+SQL> select * from EMP;
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO                                   
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------                                   
+      7369 SMITH      CLERK           7902 17-DEC-80        800                    20                                   
+      7499 ALLEN      SALESMAN        7698 20-FEB-81       1600        300         30                                   
+      7521 WARD       SALESMAN        7698 22-FEB-81       1250        500         30                                   
+      7566 JONES      MANAGER         7839 02-APR-81       2975                    20                                   
+      7654 MARTIN     SALESMAN        7698 28-SEP-81       1250       1400         30                                   
+      7698 BLAKE      MANAGER         7839 01-MAY-81       2850                    30                                   
+      7782 CLARK      MANAGER         7839 09-JUN-81       2450                    10                                   
+      7788 SCOTT      ANALYST         7566 09-DEC-82       3000                    20                                   
+      7839 KING       PRESIDENT            17-NOV-81       5000                    10                                   
+      7844 TURNER     SALESMAN        7698 08-SEP-81       1500          0         30                                   
+      7876 ADAMS      CLERK           7788 12-JAN-83       1100                    20                                   
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO                                   
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------                                   
+      7900 JAMES      CLERK           7698 03-DEC-81        950                    30                                   
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                    20                                   
+      7934 MILLER     CLERK           7782 23-JAN-82       1300                    10                                   
+
+14 rows selected.
+
+SQL> select * from DEPT;
+
+    DEPTNO DNAME          LOC                                                                                           
+---------- -------------- -------------                                                                                 
+        10 ACCOUNTING     NEW YORK                                                                                      
+        20 RESEARCH       DALLAS                                                                                        
+        30 SALES          CHICAGO                                                                                       
+        40 OPERATIONS     BOSTON                                                                                        
+
+SQL> exit

@@ -1,0 +1,10 @@
+SELECT maker, AVG(price)
+FROM Product, Laptop
+WHERE Product.model = Laptop.model
+GROUP BY maker
+HAVING MIN(ram) >= 512;
+
+SELECT maker, AVG(price)
+FROM Product, Laptop
+WHERE Product.model = Laptop.model AND ram >= 512
+GROUP BY maker;

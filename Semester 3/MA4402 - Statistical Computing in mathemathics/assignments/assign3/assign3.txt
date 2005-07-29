@@ -1,0 +1,63 @@
+mam <- read.table("MAMMALS.txt", sep="\t", header=TRUE);
+mam$brain = log(mam$brain);
+mam$body = log(mam$body);
+mam = mam[mam["brain"] !=-Inf,];
+mam = mam[mam["brain"] < mam$body,];
+rel = lm(mam$body ~ mam$brain);
+plot(summary);
+plot(rel);
+cor(mam$body ~ mam$brain);
+fitted(rel);
+anova(rel);
+confint(rel);
+scatterplot(mam$body,mam$brain);
+
+
+for(i in 1: length(mam$mam)){
+if(mam$mam[i] != "Owl monkey"){ 
+mam$prim[i]="yes"; 
+} else if(mam$mam[i] == "Vervet"){ 
+mam$prim[i]="yes"; 
+} else if(mam$mam[i] == "Patas monkey"){ 
+mam$prim[i]="yes"; 
+} else if(mam$mam[i] == "Galago"){ 
+mam$prim[i]="yes"; 
+} else if(mam$mam[i] == "Gorilla"){ 
+mam$prim[i]="yes"; 
+} else if(mam$mam[i] == "Human"){ 
+mam$prim[i]="yes"; 
+} else if(mam$mam[i] == "Rhesus monkey"){ 
+mam$prim[i]="yes"; 
+} else if(mam$mam[i] == "Chimpanzee"){ 
+mam$prim[i]="yes"; 
+} else if(mam$mam[i] == "Baboon"){ 
+mam$prim[i]="yes"; 
+} else if(mam$mam[i] == "Tree shrew"){ 
+mam$prim[i]="yes"; 
+} else if(mam$mam[i] == "Lesser short-tailed shrew"){ 
+mam$prim[i]="yes"; 
+} else if(mam$mam[i] == "Musk shrew"){ 
+mam$prim[i]="yes"; 
+} else {
+mam$prim[i]="no"; 
+}
+}
+
+
+
+
+
+primates
+-----------------------
+Owl monkey  
+Vervet
+Patas monkey
+Galago
+Gorilla
+Human
+Rhesus monkey
+Chimpanzee
+Baboon
+Tree shrew
+Lesser short-tailed shrew
+Musk shrew

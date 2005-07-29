@@ -1,0 +1,18 @@
+SQL> get 1a
+  1* select distinct SERIES from SYS.Podcasts
+SQL> run 1a
+  1* select distinct SERIES from SYS.Podcasts
+
+SERIES                                                                          
+---------------                                                                 
+Sportsworld                                                                     
+Astrobiology                                                                    
+Liveline                                                                        
+Thinktank                                                                       
+Moneybox                                                                        
+Travelbug                                                                       
+New Scientist                                                                   
+
+7 rows selected.
+
+SQL> spool off

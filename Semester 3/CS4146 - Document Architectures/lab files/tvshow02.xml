@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tvshow SYSTEM "tv.dtd">
+<tvshow year="1999" rating="PG" season="1">
+    <title>Futurama</title>
+    <genrelist>
+        <genre name="Cartoon"/>
+    </genrelist>
+    <creator>
+        <firstname>Matt</firstname>
+        <surname>Groening</surname>
+    </creator>
+    <cast>
+        <castmember role="Philip J. Fry">
+            <firstname>Billy</firstname>
+            <surname>West</surname>
+        </castmember>
+    </cast>
+</tvshow>

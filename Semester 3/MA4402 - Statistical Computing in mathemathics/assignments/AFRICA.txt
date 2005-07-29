@@ -1,0 +1,55 @@
+Country	Pop87	Pop97
+Algeria                 	23060	29830
+Angola                  	8756	10549
+Benin                   	4315	5902
+Botswana                	1146	1432
+Burkina Faso            	8330	10963
+Burundi                 	4978	5397
+Cameroon                	10927	14611
+Cape Verde              	343	394
+Central African Republic	2727	3308
+Chad                    	5273	7166
+Comoros                 	424	529
+Congo (Brazzaville)     	2020	2600
+Djibouti                	362	434
+Egypt                   	50954	64824
+Equatorial Guinea       	390	443
+Eritrea                 	NA	3715
+Ethiopia                	44788	57099
+Gabon                   	1047	1190
+Gambia                  	797	1248
+Ghana                   	13599	18100
+Guinea                  	6470	7405
+Guinea-Bissau           	924	1179
+Ivory Coast             	11069	15075
+Kenya                   	22097	27839
+Lesotho                 	1629	2049
+Liberia                 	2327	2602
+Libya                   	4057	5484
+Madagascar              	10894	14062
+Malawi                  	7629	9609
+Mali                    	7768	9789
+Mauritania              	1858	2249
+Mauritius               	1042	1154
+Morocco                 	22968	28565
+Mozambique              	14591	18165
+Namibia                 	1218	1596
+Niger                   	6798	9389
+Nigeria                 	106736	107286
+Rwanda                  	6454	7718
+Sao Tome and Principe   	114	146
+Senegal                 	6969	9404
+Seychelles              	66	78
+Sierra Leone            	3845	4892
+Somalia                 	5712	6590
+South Africa            	33285	42209
+Sudan                   	23214	32594
+Swaziland               	713	947
+Tanzania                	23884	29899
+Togo                    	3254	4736
+Tunisia                 	7481	9245
+Uganda                  	15655	20605
+Western Sahara          	NA	228
+Zaire/Congo (Kinshasa)  	32655	47590
+Zambia                  	7196	9265
+Zimbabwe                	9001	10915

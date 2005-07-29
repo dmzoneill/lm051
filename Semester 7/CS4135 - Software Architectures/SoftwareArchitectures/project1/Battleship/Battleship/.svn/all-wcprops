@@ -1,0 +1,263 @@
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/softwarearchitectures/!svn/ver/44/SoftwareArchitectures/Battleship/Battleship
+END
+I_Ship.cs
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/softwarearchitectures/!svn/ver/39/SoftwareArchitectures/Battleship/Battleship/I_Ship.cs
+END
+Concrete_Move_Strategy_B.cs
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/softwarearchitectures/!svn/ver/36/SoftwareArchitectures/Battleship/Battleship/Concrete_Move_Strategy_B.cs
+END
+Text_Window.cs
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/softwarearchitectures/!svn/ver/36/SoftwareArchitectures/Battleship/Battleship/Text_Window.cs
+END
+App.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/softwarearchitectures/!svn/ver/10/SoftwareArchitectures/Battleship/Battleship/App.xaml
+END
+Easy_Player.cs
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/softwarearchitectures/!svn/ver/22/SoftwareArchitectures/Battleship/Battleship/Easy_Player.cs
+END
+Map_Decorator.cs
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/softwarearchitectures/!svn/ver/23/SoftwareArchitectures/Battleship/Battleship/Map_Decorator.cs
+END
+App.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/softwarearchitectures/!svn/ver/10/SoftwareArchitectures/Battleship/Battleship/App.xaml.cs
+END
+Concrete_Map_Component.cs
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/softwarearchitectures/!svn/ver/22/SoftwareArchitectures/Battleship/Battleship/Concrete_Map_Component.cs
+END
+RL_Move_Strategy.cs
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/softwarearchitectures/!svn/ver/36/SoftwareArchitectures/Battleship/Battleship/RL_Move_Strategy.cs
+END
+Model_Window.cs
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/softwarearchitectures/!svn/ver/36/SoftwareArchitectures/Battleship/Battleship/Model_Window.cs
+END
+Move_Strategy.cs
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/softwarearchitectures/!svn/ver/23/SoftwareArchitectures/Battleship/Battleship/Move_Strategy.cs
+END
+Land_Obstacle.cs
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/softwarearchitectures/!svn/ver/36/SoftwareArchitectures/Battleship/Battleship/Land_Obstacle.cs
+END
+Battleship.csproj
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/softwarearchitectures/!svn/ver/36/SoftwareArchitectures/Battleship/Battleship/Battleship.csproj
+END
+BattleshipTest.xaml
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/softwarearchitectures/!svn/ver/16/SoftwareArchitectures/Battleship/Battleship/BattleshipTest.xaml
+END
+Computer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/softwarearchitectures/!svn/ver/22/SoftwareArchitectures/Battleship/Battleship/Computer.cs
+END
+I_Observer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/softwarearchitectures/!svn/ver/12/SoftwareArchitectures/Battleship/Battleship/I_Observer.cs
+END
+Game_Window.cs
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/softwarearchitectures/!svn/ver/36/SoftwareArchitectures/Battleship/Battleship/Game_Window.cs
+END
+Memento.cs
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/softwarearchitectures/!svn/ver/23/SoftwareArchitectures/Battleship/Battleship/Memento.cs
+END
+Standard_Team.cs
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/softwarearchitectures/!svn/ver/36/SoftwareArchitectures/Battleship/Battleship/Standard_Team.cs
+END
+Mine_Obstacle_Decorator.cs
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/softwarearchitectures/!svn/ver/36/SoftwareArchitectures/Battleship/Battleship/Mine_Obstacle_Decorator.cs
+END
+Evolutionary_Move_Strategy.cs
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/softwarearchitectures/!svn/ver/36/SoftwareArchitectures/Battleship/Battleship/Evolutionary_Move_Strategy.cs
+END
+Game.cs
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/softwarearchitectures/!svn/ver/36/SoftwareArchitectures/Battleship/Battleship/Game.cs
+END
+Concrete_Move_Strategy_A.cs
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/softwarearchitectures/!svn/ver/36/SoftwareArchitectures/Battleship/Battleship/Concrete_Move_Strategy_A.cs
+END
+Originator.cs
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/softwarearchitectures/!svn/ver/23/SoftwareArchitectures/Battleship/Battleship/Originator.cs
+END
+Map.cs
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/softwarearchitectures/!svn/ver/12/SoftwareArchitectures/Battleship/Battleship/Map.cs
+END
+I_Window.cs
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/softwarearchitectures/!svn/ver/19/SoftwareArchitectures/Battleship/Battleship/I_Window.cs
+END
+Hard_Team.cs
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/softwarearchitectures/!svn/ver/23/SoftwareArchitectures/Battleship/Battleship/Hard_Team.cs
+END
+I_Map.cs
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/softwarearchitectures/!svn/ver/10/SoftwareArchitectures/Battleship/Battleship/I_Map.cs
+END
+Team.cs
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/softwarearchitectures/!svn/ver/36/SoftwareArchitectures/Battleship/Battleship/Team.cs
+END
+Mine.cs
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/softwarearchitectures/!svn/ver/10/SoftwareArchitectures/Battleship/Battleship/Mine.cs
+END
+Hard_Player.cs
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/softwarearchitectures/!svn/ver/23/SoftwareArchitectures/Battleship/Battleship/Hard_Player.cs
+END
+Player.cs
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/softwarearchitectures/!svn/ver/36/SoftwareArchitectures/Battleship/Battleship/Player.cs
+END
+Land_Obstacle_Decorator.cs
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/softwarearchitectures/!svn/ver/36/SoftwareArchitectures/Battleship/Battleship/Land_Obstacle_Decorator.cs
+END
+I_Team.cs
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/softwarearchitectures/!svn/ver/36/SoftwareArchitectures/Battleship/Battleship/I_Team.cs
+END
+BattleshipTest.xaml.cs
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/softwarearchitectures/!svn/ver/36/SoftwareArchitectures/Battleship/Battleship/BattleshipTest.xaml.cs
+END
+Concrete_Map.cs
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/softwarearchitectures/!svn/ver/36/SoftwareArchitectures/Battleship/Battleship/Concrete_Map.cs
+END
+Ship.cs
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/softwarearchitectures/!svn/ver/12/SoftwareArchitectures/Battleship/Battleship/Ship.cs
+END
+BattleshipTest.xaml.cs.out.pyg
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/softwarearchitectures/!svn/ver/40/SoftwareArchitectures/Battleship/Battleship/BattleshipTest.xaml.cs.out.pyg
+END
+I_Player.cs
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/softwarearchitectures/!svn/ver/40/SoftwareArchitectures/Battleship/Battleship/I_Player.cs
+END
+Computer_Team.cs
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/softwarearchitectures/!svn/ver/23/SoftwareArchitectures/Battleship/Battleship/Computer_Team.cs
+END
+I_User_Interface.cs
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/softwarearchitectures/!svn/ver/23/SoftwareArchitectures/Battleship/Battleship/I_User_Interface.cs
+END
+Easy_Team.cs
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/softwarearchitectures/!svn/ver/23/SoftwareArchitectures/Battleship/Battleship/Easy_Team.cs
+END
+I_Map_Component.cs
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/softwarearchitectures/!svn/ver/23/SoftwareArchitectures/Battleship/Battleship/I_Map_Component.cs
+END

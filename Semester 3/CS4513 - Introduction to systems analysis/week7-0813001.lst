@@ -1,0 +1,279 @@
+SQL> @7
+
+
+
+
+ -- Q1
+select * from SYS.DEPT, SYS.EMP;
+
+    DEPTNO DNAME          LOC                EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO                         
+---------- -------------- ------------- ---------- ---------- --------- ---------- --------- ---------- ---------- ----------                         
+        10 ACCOUNTING     NEW YORK            7521 WARD       SALESMAN        7698 22-FEB-81       1250        500         30                         
+        10 ACCOUNTING     NEW YORK            7369 SMITH      CLERK           7902 17-DEC-80        800                    20                         
+        10 ACCOUNTING     NEW YORK            7499 ALLEN      SALESMAN        7698 20-FEB-81       1600        300         30                         
+        10 ACCOUNTING     NEW YORK            7566 JONES      MANAGER         7839 02-APR-81       2975                    20                         
+        10 ACCOUNTING     NEW YORK            7654 MARTIN     SALESMAN        7698 28-SEP-81       1250       1400         30                         
+        10 ACCOUNTING     NEW YORK            7698 BLAKE      MANAGER         7839 01-MAY-81       2850                    30                         
+        10 ACCOUNTING     NEW YORK            7782 CLARK      MANAGER         7839 09-JUN-81       2450                    10                         
+        10 ACCOUNTING     NEW YORK            7788 SCOTT      ANALYST         7566 09-DEC-82       3000                    20                         
+        10 ACCOUNTING     NEW YORK            7839 KING       PRESIDENT            17-NOV-81       5000                    10                         
+        10 ACCOUNTING     NEW YORK            7844 TURNER     SALESMAN        7698 08-SEP-81       1500          0         30                         
+        10 ACCOUNTING     NEW YORK            7876 ADAMS      CLERK           7788 12-JAN-83       1100                    20                         
+        10 ACCOUNTING     NEW YORK            7900 JAMES      CLERK           7698 03-DEC-81        950                    30                         
+        10 ACCOUNTING     NEW YORK            7902 FORD       ANALYST         7566 03-DEC-81       3000                    20                         
+        10 ACCOUNTING     NEW YORK            7934 MILLER     CLERK           7782 23-JAN-82       1300                    10                         
+        20 RESEARCH       DALLAS              7521 WARD       SALESMAN        7698 22-FEB-81       1250        500         30                         
+        20 RESEARCH       DALLAS              7369 SMITH      CLERK           7902 17-DEC-80        800                    20                         
+        20 RESEARCH       DALLAS              7499 ALLEN      SALESMAN        7698 20-FEB-81       1600        300         30                         
+        20 RESEARCH       DALLAS              7566 JONES      MANAGER         7839 02-APR-81       2975                    20                         
+        20 RESEARCH       DALLAS              7654 MARTIN     SALESMAN        7698 28-SEP-81       1250       1400         30                         
+        20 RESEARCH       DALLAS              7698 BLAKE      MANAGER         7839 01-MAY-81       2850                    30                         
+        20 RESEARCH       DALLAS              7782 CLARK      MANAGER         7839 09-JUN-81       2450                    10                         
+        20 RESEARCH       DALLAS              7788 SCOTT      ANALYST         7566 09-DEC-82       3000                    20                         
+        20 RESEARCH       DALLAS              7839 KING       PRESIDENT            17-NOV-81       5000                    10                         
+        20 RESEARCH       DALLAS              7844 TURNER     SALESMAN        7698 08-SEP-81       1500          0         30                         
+        20 RESEARCH       DALLAS              7876 ADAMS      CLERK           7788 12-JAN-83       1100                    20                         
+        20 RESEARCH       DALLAS              7900 JAMES      CLERK           7698 03-DEC-81        950                    30                         
+        20 RESEARCH       DALLAS              7902 FORD       ANALYST         7566 03-DEC-81       3000                    20                         
+        20 RESEARCH       DALLAS              7934 MILLER     CLERK           7782 23-JAN-82       1300                    10                         
+        30 SALES          CHICAGO             7521 WARD       SALESMAN        7698 22-FEB-81       1250        500         30                         
+        30 SALES          CHICAGO             7369 SMITH      CLERK           7902 17-DEC-80        800                    20                         
+        30 SALES          CHICAGO             7499 ALLEN      SALESMAN        7698 20-FEB-81       1600        300         30                         
+        30 SALES          CHICAGO             7566 JONES      MANAGER         7839 02-APR-81       2975                    20                         
+        30 SALES          CHICAGO             7654 MARTIN     SALESMAN        7698 28-SEP-81       1250       1400         30                         
+        30 SALES          CHICAGO             7698 BLAKE      MANAGER         7839 01-MAY-81       2850                    30                         
+        30 SALES          CHICAGO             7782 CLARK      MANAGER         7839 09-JUN-81       2450                    10                         
+        30 SALES          CHICAGO             7788 SCOTT      ANALYST         7566 09-DEC-82       3000                    20                         
+        30 SALES          CHICAGO             7839 KING       PRESIDENT            17-NOV-81       5000                    10                         
+        30 SALES          CHICAGO             7844 TURNER     SALESMAN        7698 08-SEP-81       1500          0         30                         
+        30 SALES          CHICAGO             7876 ADAMS      CLERK           7788 12-JAN-83       1100                    20                         
+        30 SALES          CHICAGO             7900 JAMES      CLERK           7698 03-DEC-81        950                    30                         
+        30 SALES          CHICAGO             7902 FORD       ANALYST         7566 03-DEC-81       3000                    20                         
+        30 SALES          CHICAGO             7934 MILLER     CLERK           7782 23-JAN-82       1300                    10                         
+        40 OPERATIONS     BOSTON              7521 WARD       SALESMAN        7698 22-FEB-81       1250        500         30                         
+        40 OPERATIONS     BOSTON              7369 SMITH      CLERK           7902 17-DEC-80        800                    20                         
+        40 OPERATIONS     BOSTON              7499 ALLEN      SALESMAN        7698 20-FEB-81       1600        300         30                         
+        40 OPERATIONS     BOSTON              7566 JONES      MANAGER         7839 02-APR-81       2975                    20                         
+        40 OPERATIONS     BOSTON              7654 MARTIN     SALESMAN        7698 28-SEP-81       1250       1400         30                         
+        40 OPERATIONS     BOSTON              7698 BLAKE      MANAGER         7839 01-MAY-81       2850                    30                         
+        40 OPERATIONS     BOSTON              7782 CLARK      MANAGER         7839 09-JUN-81       2450                    10                         
+        40 OPERATIONS     BOSTON              7788 SCOTT      ANALYST         7566 09-DEC-82       3000                    20                         
+        40 OPERATIONS     BOSTON              7839 KING       PRESIDENT            17-NOV-81       5000                    10                         
+        40 OPERATIONS     BOSTON              7844 TURNER     SALESMAN        7698 08-SEP-81       1500          0         30                         
+        40 OPERATIONS     BOSTON              7876 ADAMS      CLERK           7788 12-JAN-83       1100                    20                         
+        40 OPERATIONS     BOSTON              7900 JAMES      CLERK           7698 03-DEC-81        950                    30                         
+        40 OPERATIONS     BOSTON              7902 FORD       ANALYST         7566 03-DEC-81       3000                    20                         
+        40 OPERATIONS     BOSTON              7934 MILLER     CLERK           7782 23-JAN-82       1300                    10                         
+
+56 rows selected.
+
+
+
+
+
+
+
+ -- Q2 not sure if it should be DNAME, or LOC 'place of work'
+select SYS.EMP.ENAME, SYS.EMP.EMPNO, SYS.DEPT.LOC from SYS.DEPT, SYS.EMP where SYS.DEPT.DEPTNO = SYS.EMP.DEPTNO;
+
+ENAME           EMPNO LOC                                                                                                                             
+---------- ---------- -------------                                                                                                                   
+WARD             7521 CHICAGO                                                                                                                         
+SMITH            7369 DALLAS                                                                                                                          
+ALLEN            7499 CHICAGO                                                                                                                         
+JONES            7566 DALLAS                                                                                                                          
+MARTIN           7654 CHICAGO                                                                                                                         
+BLAKE            7698 CHICAGO                                                                                                                         
+CLARK            7782 NEW YORK                                                                                                                        
+SCOTT            7788 DALLAS                                                                                                                          
+KING             7839 NEW YORK                                                                                                                        
+TURNER           7844 CHICAGO                                                                                                                         
+ADAMS            7876 DALLAS                                                                                                                          
+JAMES            7900 CHICAGO                                                                                                                         
+FORD             7902 DALLAS                                                                                                                          
+MILLER           7934 NEW YORK                                                                                                                        
+
+14 rows selected.
+
+
+
+
+
+
+
+
+ -- Q3
+select SYS.EMP.ENAME, SYS.DEPT.LOC from SYS.DEPT, SYS.EMP where SYS.DEPT.DEPTNO = SYS.EMP.DEPTNO and SYS.DEPT.LOC='NEW YORK';
+
+ENAME      LOC                                                                                                                                        
+---------- -------------                                                                                                                              
+CLARK      NEW YORK                                                                                                                                   
+KING       NEW YORK                                                                                                                                   
+MILLER     NEW YORK                                                                                                                                   
+
+
+
+
+
+
+ -- Q4
+select SYS.EMP.ENAME, SYS.DEPT.LOC from SYS.DEPT, SYS.EMP where SYS.DEPT.DEPTNO = SYS.EMP.DEPTNO and (SYS.DEPT.LOC='NEW YORK' or SYS.DEPT.LOC='DALLAS');
+
+ENAME      LOC                                                                                                                                        
+---------- -------------                                                                                                                              
+SMITH      DALLAS                                                                                                                                     
+JONES      DALLAS                                                                                                                                     
+CLARK      NEW YORK                                                                                                                                   
+SCOTT      DALLAS                                                                                                                                     
+KING       NEW YORK                                                                                                                                   
+ADAMS      DALLAS                                                                                                                                     
+FORD       DALLAS                                                                                                                                     
+MILLER     NEW YORK                                                                                                                                   
+
+8 rows selected.
+
+
+
+
+
+
+
+ -- Q5
+select distinct JOB from SYS.DEPT, SYS.EMP where SYS.DEPT.DEPTNO = SYS.EMP.DEPTNO and SYS.DEPT.LOC='DALLAS';
+
+JOB                                                                                                                                                   
+---------                                                                                                                                             
+CLERK                                                                                                                                                 
+MANAGER                                                                                                                                               
+ANALYST                                                                                                                                               
+
+
+
+
+
+
+
+ -- Q6
+select count(*) from SYS.DEPT, SYS.EMP where SYS.DEPT.DEPTNO = SYS.EMP.DEPTNO and SYS.DEPT.LOC='CHICAGO' and JOB='SALESMAN';
+
+  COUNT(*)                                                                                                                                            
+----------                                                                                                                                            
+         4                                                                                                                                            
+
+
+
+
+
+ -- Q7
+select sum(SAL) from SYS.DEPT, SYS.EMP where SYS.DEPT.DEPTNO = SYS.EMP.DEPTNO and DNAME='RESEARCH';
+
+  SUM(SAL)                                                                                                                                            
+----------                                                                                                                                            
+     10875                                                                                                                                            
+
+
+
+
+
+
+
+ -- Q8
+select distinct LOC, sum(sal) from SYS.DEPT, SYS.EMP where SYS.DEPT.DEPTNO = SYS.EMP.DEPTNO group by LOC;
+
+LOC             SUM(SAL)                                                                                                                              
+------------- ----------                                                                                                                              
+NEW YORK            8750                                                                                                                              
+CHICAGO             9400                                                                                                                              
+DALLAS             10875                                                                                                                              
+
+
+
+
+
+
+
+ -- Q9
+select ENAME, DNAME || ' ' || JOB from SYS.DEPT, SYS.EMP  where SYS.DEPT.DEPTNO = SYS.EMP.DEPTNO;
+
+ENAME      DNAME||''||JOB                                                                                                                             
+---------- ------------------------                                                                                                                   
+WARD       SALES SALESMAN                                                                                                                             
+SMITH      RESEARCH CLERK                                                                                                                             
+ALLEN      SALES SALESMAN                                                                                                                             
+JONES      RESEARCH MANAGER                                                                                                                           
+MARTIN     SALES SALESMAN                                                                                                                             
+BLAKE      SALES MANAGER                                                                                                                              
+CLARK      ACCOUNTING MANAGER                                                                                                                         
+SCOTT      RESEARCH ANALYST                                                                                                                           
+KING       ACCOUNTING PRESIDENT                                                                                                                       
+TURNER     SALES SALESMAN                                                                                                                             
+ADAMS      RESEARCH CLERK                                                                                                                             
+JAMES      SALES CLERK                                                                                                                                
+FORD       RESEARCH ANALYST                                                                                                                           
+MILLER     ACCOUNTING CLERK                                                                                                                           
+
+14 rows selected.
+
+
+
+
+
+
+
+
+ -- Q10
+select round(avg(SAL),2) from SYS.EMP;
+
+ROUND(AVG(SAL),2)                                                                                                                                     
+-----------------                                                                                                                                     
+          2073.21                                                                                                                                     
+
+
+
+
+
+
+
+ -- Q11 norah you put 'like' up on the black board
+select distinct DNAME from SYS.DEPT, SYS.EMP  where SYS.DEPT.DEPTNO = SYS.EMP.DEPTNO and HIREDATE like '%80';
+
+DNAME                                                                                                                                                 
+--------------                                                                                                                                        
+RESEARCH                                                                                                                                              
+
+
+
+
+
+
+
+
+
+ -- Q12
+select round(avg(SAL)*0.89,2) from SYS.DEPT, SYS.EMP where SYS.DEPT.DEPTNO = SYS.EMP.DEPTNO and DNAME='SALES';
+
+ROUND(AVG(SAL)*0.89,2)                                                                                                                                
+----------------------                                                                                                                                
+               1394.33                                                                                                                                
+
+
+
+
+
+
+
+ -- Q13
+select DNAME, round(avg(SAL)*1.1,0) from SYS.DEPT, SYS.EMP where SYS.DEPT.DEPTNO = SYS.EMP.DEPTNO group by DNAME;
+
+DNAME          ROUND(AVG(SAL)*1.1,0)                                                                                                                  
+-------------- ---------------------                                                                                                                  
+ACCOUNTING                      3208                                                                                                                  
+RESEARCH                        2393                                                                                                                  
+SALES                           1723                                                                                                                  
+
+
+
+
+
+
+SQL> spool off

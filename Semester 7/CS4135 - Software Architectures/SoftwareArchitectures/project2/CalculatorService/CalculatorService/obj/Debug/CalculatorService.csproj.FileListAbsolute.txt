@@ -1,0 +1,5 @@
+C:\Users\Administrator\Desktop\lgp\CalculatorService\CalculatorService\bin\CalculatorService.dll
+C:\Users\Administrator\Desktop\lgp\CalculatorService\CalculatorService\bin\CalculatorService.pdb
+C:\Users\Administrator\Desktop\lgp\CalculatorService\CalculatorService\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\lgp\CalculatorService\CalculatorService\obj\Debug\CalculatorService.dll
+C:\Users\Administrator\Desktop\lgp\CalculatorService\CalculatorService\obj\Debug\CalculatorService.pdb

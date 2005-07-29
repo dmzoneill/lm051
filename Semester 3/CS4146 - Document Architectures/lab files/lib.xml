@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library>
+    <section id="1" subject="Computer Science">
+        <book language="English" copies="30">
+            <title>C++ Primer</title>
+            <author>
+                <firstname>John</firstname>
+                <surname>Murphy</surname>
+            </author>
+            <author>
+                <firstname>Dan</firstname>
+                <surname>North</surname>
+            </author>
+        </book>
+        <book language="English" copies="40">
+            <title>Problem Solving with Java</title>
+            <author>
+                <firstname>Nell</firstname>
+                <surname>Dale</surname>
+            </author>
+        </book>
+    </section>
+    <section id="2" subject="Chemistry"/>
+</library>

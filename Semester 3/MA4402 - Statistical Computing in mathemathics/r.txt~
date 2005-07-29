@@ -1,0 +1,339 @@
+# Q1
+# LOAD THE DATA INTO THE DATA  FRAME
+pulse <-read.table("PULSE.txt",sep="\t", header=TRUE);
+
+# APPLY THE FACTORS AND LABELS
+pulse$Ran <- factor(pulse$Ran,levels=c(1,2),labels=c("yes","no"));
+pulse$Smokes <- factor(pulse$Smokes,levels=c(1,2),labels=c("yes","no"));
+pulse$Sex <- factor(pulse$Sex,levels=c(1,2),labels=c("male","female"));
+pulse$Activity <- factor(pulse$Activity,levels=c(1,2,3),labels=c("slight","moderate","high"));
+
+# 0 IN ACTIVTY COLUMN (WE CAN FACTOR A LABEL IN, BUT WEREN'T ASKED FOR IT)
+# pulse$Activity <- factor(pulse$Activity,levels=c(0),labels=c("none"));
+
+# SORT BY THE ACTIVITY COLUMN
+pulse <- pulse[order(pulse$Activity),]
+
+
+
+
+
+
+
+
+
+# Q2
+# IMPERIAL TO METRIC CONVERSION
+# ROUND TO 3 DECIMAL PLACES
+pulse$Height <- round((pulse$Height/39.37),3);
+pulse$Weight <- round((pulse$Weight*0.45359237),3);
+
+
+
+
+
+
+
+
+
+
+# Q3
+# CREATE TABLE OF SEX
+sex <- table(pulse$Sex);
+sex
+# CREATE TABLE OF RAN
+ran <- table(pulse$Ran);
+ran
+# CREATE TABLE OF SMOKERS
+smokers <- table(pulse$Smokes)
+smokers
+# CREATE TABLE OF ACTIVITY
+activity <- table(pulse$Activity);
+activity
+
+
+
+
+
+
+
+
+
+
+# Q4
+# CREATE TABULATED TABLE OF SEC AND SMOKERS
+sexSmokers <- table(pulse$Sex, pulse$Smokes);
+
+# smokers percent
+totalSmokerPercent = (smokers[1] / length(pulse$Sex)) * 100;
+totalNonSmokersPercent = (smokers[2] / length(pulse$Sex)) * 100;
+
+# MALE PERCENTAGE SMOKERS
+malePercent <- ((sexSmokers[1,1]) / (sex[1])) * 100;
+malePercent
+
+# FEMALE PERCENTAGE SMOKERS
+femalePercent <- ((sexSmokers[2,1]) / (sex[2])) * 100;
+femalePercent
+
+# HIGH ACTIVITY PEOPLE
+highactivitypeople = which(pulse$Activity=="high");
+highactivitypeople
+
+# HIGH ACTIVITY MALES
+j =0;
+for(i in 1: length(highactivitypeople)){
+if(pulse$Sex[highactivitypeople[i]]=="male")
+j = j + 1;
+}
+highActivityMales = (j / sex[1]) * 100;
+highActivityMales
+
+# HIGH ACTIVITY FEMALES
+j =0;
+for(i in 1: length(highactivitypeople)){
+if(pulse$Sex[highactivitypeople[i]]=="female")
+j = j + 1;
+}
+highActivityFemales = (j / sex[2]) * 100;
+highActivityFemales
+
+
+
+
+
+
+
+
+
+# Q5
+summary(pulse$Height);
+stem(pulse$Height, scale=7);
+hist(pulse$Height);
+boxplot(pulse$Height);
+
+
+
+
+
+
+
+
+
+# Q6
+# SUMMARY OF PULSE1
+summary(pulse$Pulse1);
+# SUMMARY OF PULSE1 MALE | FEMALE
+Pulse1FemaleVector <- c();
+Pulse1maleVector <- c();
+for(i in 1: length(pulse$Sex)){
+if(pulse$Sex[i]=="female"){
+Pulse1FemaleVector <- c(Pulse1FemaleVector, pulse$Pulse1[i]); } else {
+Pulse1maleVector <- c(Pulse1maleVector, pulse$Pulse1[i]);
+}
+}
+summary(Pulse1FemaleVector);
+summary(Pulse1maleVector);
+
+# SUMMARY OF PULSE2
+summary(pulse$Pulse2);
+
+# SUMMARY OF PULSE2 BASED ON RAN | !RAN
+Pulse2notRan <- c();
+Pulse2Ran <- c();
+
+for(i in 1: length(pulse$Ran)){
+if(pulse$Ran[i]=="no"){
+Pulse2notRan <- c(Pulse2notRan, pulse$Pulse2[i]);} else {
+Pulse2Ran <- c(Pulse2Ran, pulse$Pulse2[i]);
+}
+}
+
+summary(Pulse2notRan);
+summary(Pulse2Ran);
+
+# SUMMARY OF PULSE2 MALE (RAN | !RAN) && FEMALE (RAN | !RAN)
+Pulse2FemaleRan <- c();
+Pulse2FemaleNotRan <- c();
+Pulse2maleRan <- c();
+Pulse2maleNotRan <- c();
+
+for(i in 1: length(pulse$Sex)){
+if(pulse$Sex[i]=="female"){
+if(pulse$Ran[i]=="yes"){
+Pulse2FemaleRan <- c(Pulse2FemaleRan, pulse$Pulse2[i]); } else {
+Pulse2FemaleNotRan <- c(Pulse2FemaleNotRan, pulse$Pulse2[i]); } 
+} else {
+if(pulse$Ran[i]=="yes"){
+Pulse2maleRan <- c(Pulse2maleRan, pulse$Pulse2[i]); } else {
+Pulse2maleNotRan <- c(Pulse2maleNotRan, pulse$Pulse2[i]); } 
+}
+}
+
+summary(Pulse2FemaleRan);
+summary(Pulse2FemaleNotRan);
+summary(Pulse2maleRan);
+summary(Pulse2maleNotRan);
+
+
+
+
+
+
+
+
+# Q7
+bmi <- c();
+bmiFemale <- c();
+bmiMale <- c();
+
+for(i in 1: length(pulse$Height)){
+bmassindex = round(pulse$Weight[i] / (pulse$Height[i]^2),2);
+bmi <- c(bmi, bmassindex);
+if(pulse$Sex[i]=="female"){
+bmiFemale <- c(bmiFemale, bmassindex);
+} else {
+bmiMale <- c(bmiMale, bmassindex);
+}
+}
+
+pulse$Bmi <- bmi;
+
+summary(bmi);
+summary(bmiFemale);
+summary(bmiMale);
+stem(bmiFemale,scale=2);
+stem(bmiMale,scale=2);
+hist(bmi);
+hist(bmiFemale);
+hist(bmiMale);
+plot(pulse$Activity, pulse$Bmi);
+plot(pulse$Sex, pulse$Bmi);
+
+
+
+
+
+
+
+
+
+# Q8
+change <- c();
+changeRan <- c();
+changeNotRan <- c();
+
+for(i in 1: length(pulse$Pulse1)){
+change <- c(change, (pulse$Pulse2[i] - pulse$Pulse1[i])); 
+if(pulse$Ran[i] == "yes"){ 
+changeRan <- c(changeRan, (pulse$Pulse2[i] - pulse$Pulse1[i])); 
+} else {
+changeNotRan <- c(changeNotRan, (pulse$Pulse2[i] - pulse$Pulse1[i]));
+}
+}
+pulse$Change <- change;
+summary(change);
+plot(pulse$Pulse1, (pulse$Pulse1 + change));
+summary(changeRan);
+summary(changeNotRan);
+plot(dnorm(changeRan));
+plot(dnorm(changeNotRan));
+plot(changeRan);
+
+
+#v <- rnorm(changeRan);
+#foo <- hist(v, plot=FALSE);
+#plot(foo$mids, foo$counts, type="l");
+
+
+
+
+
+
+
+
+
+# Q9
+# DATA
+myPulse1 = 76;
+myPulse2 = 89;
+myRan = "yes";
+mySmokes = "yes";
+mySex = "male";
+myHeight = 1.801;
+myWeight = 66.232;
+myActivity = "moderate";
+myBmi = round(myWeight / (myHeight^2),2);
+myChange = myPulse2 - myPulse1;
+# CREATE THE VECTOR OR ROW
+myData <- c(myPulse1, myPulse2, myRan, mySmokes, mySex, myHeight, myWeight, myActivity, myBmi, myChange);
+# APPEND THE ROW TO THE PULSE DATA
+rbind(pulse,myData);
+
+
+
+
+ 
+
+
+
+
+# Q10
+
+# select all the runners
+Runners = pulse[pulse["Ran"] == "yes",];
+
+
+
+# select the smokers from the runners
+RunnerSmokers = Runners[Runners["Smokes"] == "yes",];
+
+# select the smokers from the runners where there activity is high
+RunnerSmokersHigh = RunnerSmokers[RunnerSmokers["Activity"] == "high",];
+summary(RunnerSmokersHigh$Pulse1);
+summary(RunnerSmokersHigh$Pulse2);
+summary(RunnerSmokersHigh$Pulse2 - RunnerSmokersHigh$Pulse1);
+
+# select the smokers from the runners where there activity is moderate
+RunnerSmokersMod = RunnerSmokers[RunnerSmokers["Activity"] == "moderate",];
+summary(RunnerSmokersMod$Pulse1);
+summary(RunnerSmokersMod$Pulse2);
+summary(RunnerSmokersMod$Pulse2 - RunnerSmokersMod$Pulse1);
+
+# select the smokers from the runners where there activity is slight
+RunnerSmokersSlig = RunnerSmokers[RunnerSmokers["Activity"] == "slight",];
+summary(RunnerSmokersSlig$Pulse1);
+summary(RunnerSmokersSlig$Pulse2);
+summary(RunnerSmokersSlig$Pulse2 - RunnerSmokersSlig$Pulse1);
+
+
+
+
+# select the non smokers from the runners
+RunnerNonSmokers = Runners[Runners["Smokes"] == "no",];
+
+# select the smokers from the runners where there activity is high
+RunnerNonSmokeHigh = RunnerNonSmokers[RunnerNonSmokers["Activity"] == "high",];
+summary(RunnerNonSmokeHigh$Pulse1);
+summary(RunnerNonSmokeHigh$Pulse2);
+summary(RunnerNonSmokeHigh$Pulse2 - RunnerNonSmokeHigh$Pulse1);
+
+# select the smokers from the runners where there activity is moderate
+RunnerNonSmokeMod = RunnerNonSmokers[RunnerNonSmokers["Activity"] == "moderate",];
+summary(RunnerNonSmokeMod$Pulse1);
+summary(RunnerNonSmokeMod$Pulse2);
+summary(RunnerNonSmokeMod$Pulse2 - RunnerNonSmokeMod$Pulse1);
+
+# select the smokers from the runners where there activity is slight
+RunnerNonSmokeSlig = RunnerNonSmokers[RunnerNonSmokers["Activity"] == "slight",];
+summary(RunnerNonSmokeSlig$Pulse1);
+summary(RunnerNonSmokeSlig$Pulse2);
+summary(RunnerNonSmokeSlig$Pulse2 - RunnerNonSmokeSlig$Pulse1);
+
+
+# select the smokers from the runners
+# all stats for smokers
+summary(RunnerSmokers$Pulse2 - RunnerSmokers$Pulse1);
+# all stats for non smokers
+summary(RunnerNonSmokers$Pulse2 - RunnerNonSmokers$Pulse1);
+

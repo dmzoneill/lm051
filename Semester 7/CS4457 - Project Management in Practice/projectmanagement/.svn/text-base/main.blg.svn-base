@@ -1,0 +1,261 @@
+This is BibTeX, Version 0.99d (TeX Live 2011)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: main.aux
+A level-1 auxiliary file: pages/abstract.aux
+A level-1 auxiliary file: pages/chapter1.aux
+A level-1 auxiliary file: pages/chapter2.aux
+A level-1 auxiliary file: pages/chapter3.aux
+A level-1 auxiliary file: pages/chapter4.aux
+A level-1 auxiliary file: pages/chapter5.aux
+A level-1 auxiliary file: pages/crap.aux
+The style file: plain.bst
+Database file #1: bibliography/main.bib
+Warning--entry type for "MicrosoftDns" isn't style-file defined
+--line 718 of file bibliography/main.bib
+Warning--entry type for "Freebsd" isn't style-file defined
+--line 726 of file bibliography/main.bib
+Warning--entry type for "FreeBsdNis" isn't style-file defined
+--line 734 of file bibliography/main.bib
+Warning--entry type for "Burgess" isn't style-file defined
+--line 742 of file bibliography/main.bib
+Name 1 in "Greg Franks, Dorina Petriu, Murray Woodside, Jing Xu, and Peter Tregunno" has a comma at the end for entry CSBottlenecks
+while executing---line 1049 of file plain.bst
+Too many commas in name 1 of "Greg Franks, Dorina Petriu, Murray Woodside, Jing Xu, and Peter Tregunno" for entry CSBottlenecks
+while executing---line 1049 of file plain.bst
+Too many commas in name 1 of "Banerjee, J., Chou, H.-T., Kim, H.J. and Korth, H.F" for entry SchemaSemantecs
+while executing---line 1049 of file plain.bst
+Too many commas in name 1 of "Banerjee, J., Chou, H.-T., Kim, H.J. and Korth, H.F" for entry SchemaSemantecs
+while executing---line 1049 of file plain.bst
+Too many commas in name 1 of "Banerjee, J., Chou, H.-T., Kim, H.J. and Korth, H.F" for entry SchemaSemantecs
+while executing---line 1049 of file plain.bst
+Too many commas in name 1 of "Banerjee, J., Chou, H.-T., Kim, H.J. and Korth, H.F" for entry SchemaEvolutionOO
+while executing---line 1049 of file plain.bst
+Too many commas in name 1 of "Banerjee, J., Chou, H.-T., Kim, H.J. and Korth, H.F" for entry SchemaEvolutionOO
+while executing---line 1049 of file plain.bst
+Too many commas in name 1 of "Banerjee, J., Chou, H.-T., Kim, H.J. and Korth, H.F" for entry SchemaEvolutionOO
+while executing---line 1049 of file plain.bst
+Too many commas in name 1 of "anerjee, J., Chou, H.-T., Garza, J.F., Kim, W., Woelk, D. and Ballou, N" for entry SchemaDataModel
+while executing---line 1049 of file plain.bst
+Too many commas in name 1 of "anerjee, J., Chou, H.-T., Garza, J.F., Kim, W., Woelk, D. and Ballou, N" for entry SchemaDataModel
+while executing---line 1049 of file plain.bst
+Too many commas in name 1 of "anerjee, J., Chou, H.-T., Garza, J.F., Kim, W., Woelk, D. and Ballou, N" for entry SchemaDataModel
+while executing---line 1049 of file plain.bst
+Too many commas in name 1 of "anerjee, J., Chou, H.-T., Garza, J.F., Kim, W., Woelk, D. and Ballou, N" for entry SchemaDataModel
+while executing---line 1049 of file plain.bst
+Too many commas in name 1 of "anerjee, J., Chou, H.-T., Garza, J.F., Kim, W., Woelk, D. and Ballou, N" for entry SchemaDataModel
+while executing---line 1049 of file plain.bst
+Too many commas in name 1 of "anerjee, J., Chou, H.-T., Garza, J.F., Kim, W., Woelk, D. and Ballou, N" for entry SchemaDataModel
+while executing---line 1049 of file plain.bst
+Too many commas in name 1 of "anerjee, J., Chou, H.-T., Garza, J.F., Kim, W., Woelk, D. and Ballou, N" for entry SchemaDataModel
+while executing---line 1049 of file plain.bst
+Too many commas in name 1 of "Atzeni, P., Ausiello, C., Batini, C. and Moscarini, M" for entry SchemaInclusionEquivelance
+while executing---line 1049 of file plain.bst
+Too many commas in name 1 of "Atzeni, P., Ausiello, C., Batini, C. and Moscarini, M" for entry SchemaInclusionEquivelance
+while executing---line 1049 of file plain.bst
+Too many commas in name 1 of "Atzeni, P., Ausiello, C., Batini, C. and Moscarini, M" for entry SchemaInclusionEquivelance
+while executing---line 1049 of file plain.bst
+Too many commas in name 1 of "Andany, J., Leonard, M. and Palisser, C" for entry SchemaEvolutionManagement
+while executing---line 1049 of file plain.bst
+Too many commas in name 1 of "Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides" for entry DesignPatterns
+while executing---line 1049 of file plain.bst
+Name 1 in "R. N. Taylor, W. Tracz, and L. Coglianese" has a comma at the end for entry DSLArchitectures
+while executing---line 1049 of file plain.bst
+Name 1 in "C. Pu, A. Black, C. Cowan, J. Walpole, and C. Consel" has a comma at the end for entry DSLOperatingSystemInstructions
+while executing---line 1049 of file plain.bst
+Too many commas in name 1 of "C. Pu, A. Black, C. Cowan, J. Walpole, and C. Consel" for entry DSLOperatingSystemInstructions
+while executing---line 1049 of file plain.bst
+Name 1 in "R. B. Kieburtz, L. McKinney, J. M. Bell, J. Hook, A. Kotov, J. Lewis, D. P. Oliva, T. Sheard, I. Smith, and L. Walton" has a comma at the end for entry SoftwareComponents
+while executing---line 1049 of file plain.bst
+Too many commas in name 1 of "R. B. Kieburtz, L. McKinney, J. M. Bell, J. Hook, A. Kotov, J. Lewis, D. P. Oliva, T. Sheard, I. Smith, and L. Walton" for entry SoftwareComponents
+while executing---line 1049 of file plain.bst
+Too many commas in name 1 of "R. B. Kieburtz, L. McKinney, J. M. Bell, J. Hook, A. Kotov, J. Lewis, D. P. Oliva, T. Sheard, I. Smith, and L. Walton" for entry SoftwareComponents
+while executing---line 1049 of file plain.bst
+Too many commas in name 1 of "R. B. Kieburtz, L. McKinney, J. M. Bell, J. Hook, A. Kotov, J. Lewis, D. P. Oliva, T. Sheard, I. Smith, and L. Walton" for entry SoftwareComponents
+while executing---line 1049 of file plain.bst
+Too many commas in name 1 of "R. B. Kieburtz, L. McKinney, J. M. Bell, J. Hook, A. Kotov, J. Lewis, D. P. Oliva, T. Sheard, I. Smith, and L. Walton" for entry SoftwareComponents
+while executing---line 1049 of file plain.bst
+Too many commas in name 1 of "R. B. Kieburtz, L. McKinney, J. M. Bell, J. Hook, A. Kotov, J. Lewis, D. P. Oliva, T. Sheard, I. Smith, and L. Walton" for entry SoftwareComponents
+while executing---line 1049 of file plain.bst
+Too many commas in name 1 of "R. B. Kieburtz, L. McKinney, J. M. Bell, J. Hook, A. Kotov, J. Lewis, D. P. Oliva, T. Sheard, I. Smith, and L. Walton" for entry SoftwareComponents
+while executing---line 1049 of file plain.bst
+Name 1 in "G. Kiczales, J. Irwin, J. Lamping, J.-M. Loingtier, C. Lopes, C. Maeda, and A. Mendhekar" has a comma at the end for entry AspectOrientedProgramming
+while executing---line 1049 of file plain.bst
+Too many commas in name 1 of "G. Kiczales, J. Irwin, J. Lamping, J.-M. Loingtier, C. Lopes, C. Maeda, and A. Mendhekar" for entry AspectOrientedProgramming
+while executing---line 1049 of file plain.bst
+Too many commas in name 1 of "G. Kiczales, J. Irwin, J. Lamping, J.-M. Loingtier, C. Lopes, C. Maeda, and A. Mendhekar" for entry AspectOrientedProgramming
+while executing---line 1049 of file plain.bst
+Too many commas in name 1 of "G. Kiczales, J. Irwin, J. Lamping, J.-M. Loingtier, C. Lopes, C. Maeda, and A. Mendhekar" for entry AspectOrientedProgramming
+while executing---line 1049 of file plain.bst
+Name 1 in "M. Fromherz, V. Gupta, and V. Saraswat" has a comma at the end for entry DSLFramework
+while executing---line 1049 of file plain.bst
+Name 1 in "R. E. Faith, L. S. Nyland, and J. F. Prins" has a comma at the end for entry DSLRapidImplmentation
+while executing---line 1049 of file plain.bst
+Name 1 in "T. B. Dinesh, M. Haveraaen, and J. Heering" has a comma at the end for entry DSLNumericalAnalysis
+while executing---line 1049 of file plain.bst
+Name 1 in "A. van Deursen, P. Klint, and C. Verhoef" has a comma at the end for entry DSLLegacySystems
+while executing---line 1049 of file plain.bst
+Name 1 in "J. Coplien, D. Hoffman, and D. Weiss" has a comma at the end for entry CommonalitySoftware
+while executing---line 1049 of file plain.bst
+Name 1 in "S. Chandra, B. Richards, and J. R. Larus" has a comma at the end for entry DSLCacheCoherent
+while executing---line 1049 of file plain.bst
+Name 1 in "D. Bonachea, K. Fisher, A. Rogers, and F. Smith" has a comma at the end for entry LanguageLargeScale
+while executing---line 1049 of file plain.bst
+Name 1 in "A. Basu, M. Hayden, G. Morrisett, and T. von Eicken" has a comma at the end for entry LanguageProgramming
+while executing---line 1049 of file plain.bst
+Name 1 in "D. Atkins, T. Ball, G. Bruns, and K. Cox" has a comma at the end for entry DSL-IEEE
+while executing---line 1049 of file plain.bst
+Name 1 in "A.V. Aho, R. Sethi, and J.D. Ullman." has a comma at the end for entry CompilerPrinciples
+while executing---line 1049 of file plain.bst
+Name 1 in "A. Basu, M. Hayden, G. Morrisett, and T. von Eicken" has a comma at the end for entry LanguageProgramming
+while executing---line 1090 of file plain.bst
+Warning--empty journal in LanguageProgramming
+Warning--empty year in LanguageProgramming
+Name 1 in "A. van Deursen, P. Klint, and C. Verhoef" has a comma at the end for entry DSLLegacySystems
+while executing---line 1090 of file plain.bst
+Too many commas in name 1 of "Andany, J., Leonard, M. and Palisser, C" for entry SchemaEvolutionManagement
+while executing---line 1090 of file plain.bst
+Too many commas in name 1 of "anerjee, J., Chou, H.-T., Garza, J.F., Kim, W., Woelk, D. and Ballou, N" for entry SchemaDataModel
+while executing---line 1090 of file plain.bst
+Too many commas in name 1 of "anerjee, J., Chou, H.-T., Garza, J.F., Kim, W., Woelk, D. and Ballou, N" for entry SchemaDataModel
+while executing---line 1090 of file plain.bst
+Too many commas in name 1 of "anerjee, J., Chou, H.-T., Garza, J.F., Kim, W., Woelk, D. and Ballou, N" for entry SchemaDataModel
+while executing---line 1090 of file plain.bst
+Too many commas in name 1 of "anerjee, J., Chou, H.-T., Garza, J.F., Kim, W., Woelk, D. and Ballou, N" for entry SchemaDataModel
+while executing---line 1090 of file plain.bst
+Too many commas in name 1 of "anerjee, J., Chou, H.-T., Garza, J.F., Kim, W., Woelk, D. and Ballou, N" for entry SchemaDataModel
+while executing---line 1090 of file plain.bst
+Too many commas in name 1 of "anerjee, J., Chou, H.-T., Garza, J.F., Kim, W., Woelk, D. and Ballou, N" for entry SchemaDataModel
+while executing---line 1090 of file plain.bst
+Too many commas in name 1 of "anerjee, J., Chou, H.-T., Garza, J.F., Kim, W., Woelk, D. and Ballou, N" for entry SchemaDataModel
+while executing---line 1090 of file plain.bst
+Warning--empty journal in SchemaTemporallyOriented
+Too many commas in name 1 of "Atzeni, P., Ausiello, C., Batini, C. and Moscarini, M" for entry SchemaInclusionEquivelance
+while executing---line 1090 of file plain.bst
+Too many commas in name 1 of "Atzeni, P., Ausiello, C., Batini, C. and Moscarini, M" for entry SchemaInclusionEquivelance
+while executing---line 1090 of file plain.bst
+Too many commas in name 1 of "Atzeni, P., Ausiello, C., Batini, C. and Moscarini, M" for entry SchemaInclusionEquivelance
+while executing---line 1090 of file plain.bst
+Warning--empty journal in SchemaRDTheory
+Name 1 in "A.V. Aho, R. Sethi, and J.D. Ullman." has a comma at the end for entry CompilerPrinciples
+while executing---line 1090 of file plain.bst
+Too many commas in name 1 of "Banerjee, J., Chou, H.-T., Kim, H.J. and Korth, H.F" for entry SchemaEvolutionOO
+while executing---line 1090 of file plain.bst
+Too many commas in name 1 of "Banerjee, J., Chou, H.-T., Kim, H.J. and Korth, H.F" for entry SchemaEvolutionOO
+while executing---line 1090 of file plain.bst
+Too many commas in name 1 of "Banerjee, J., Chou, H.-T., Kim, H.J. and Korth, H.F" for entry SchemaEvolutionOO
+while executing---line 1090 of file plain.bst
+Too many commas in name 1 of "Banerjee, J., Chou, H.-T., Kim, H.J. and Korth, H.F" for entry SchemaSemantecs
+while executing---line 1090 of file plain.bst
+Too many commas in name 1 of "Banerjee, J., Chou, H.-T., Kim, H.J. and Korth, H.F" for entry SchemaSemantecs
+while executing---line 1090 of file plain.bst
+Too many commas in name 1 of "Banerjee, J., Chou, H.-T., Kim, H.J. and Korth, H.F" for entry SchemaSemantecs
+while executing---line 1090 of file plain.bst
+Warning--empty year in BDL
+Warning--empty year in DSLeventsimulation
+Name 1 in "C. Pu, A. Black, C. Cowan, J. Walpole, and C. Consel" has a comma at the end for entry DSLOperatingSystemInstructions
+while executing---line 1090 of file plain.bst
+Too many commas in name 1 of "C. Pu, A. Black, C. Cowan, J. Walpole, and C. Consel" for entry DSLOperatingSystemInstructions
+while executing---line 1090 of file plain.bst
+Warning--empty year in DSLOperatingSystemInstructions
+Warning--empty year in WebCombinators
+Warning--empty year in PrologSyntaxTrees
+Name 1 in "D. Atkins, T. Ball, G. Bruns, and K. Cox" has a comma at the end for entry DSL-IEEE
+while executing---line 1090 of file plain.bst
+Warning--empty year in DSL-IEEE
+Name 1 in "D. Bonachea, K. Fisher, A. Rogers, and F. Smith" has a comma at the end for entry LanguageLargeScale
+while executing---line 1090 of file plain.bst
+Warning--empty year in LanguageLargeScale
+Warning--empty year in DSLDomainEpecificExtensions
+Warning--empty year in ApplicationSpecificLanguages
+Too many commas in name 1 of "Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides" for entry DesignPatterns
+while executing---line 1090 of file plain.bst
+Warning--empty year in DSLAdhoc
+Name 1 in "G. Kiczales, J. Irwin, J. Lamping, J.-M. Loingtier, C. Lopes, C. Maeda, and A. Mendhekar" has a comma at the end for entry AspectOrientedProgramming
+while executing---line 1090 of file plain.bst
+Too many commas in name 1 of "G. Kiczales, J. Irwin, J. Lamping, J.-M. Loingtier, C. Lopes, C. Maeda, and A. Mendhekar" for entry AspectOrientedProgramming
+while executing---line 1090 of file plain.bst
+Too many commas in name 1 of "G. Kiczales, J. Irwin, J. Lamping, J.-M. Loingtier, C. Lopes, C. Maeda, and A. Mendhekar" for entry AspectOrientedProgramming
+while executing---line 1090 of file plain.bst
+Too many commas in name 1 of "G. Kiczales, J. Irwin, J. Lamping, J.-M. Loingtier, C. Lopes, C. Maeda, and A. Mendhekar" for entry AspectOrientedProgramming
+while executing---line 1090 of file plain.bst
+Warning--empty year in AspectOrientedProgramming
+Name 1 in "Greg Franks, Dorina Petriu, Murray Woodside, Jing Xu, and Peter Tregunno" has a comma at the end for entry CSBottlenecks
+while executing---line 1090 of file plain.bst
+Too many commas in name 1 of "Greg Franks, Dorina Petriu, Murray Woodside, Jing Xu, and Peter Tregunno" for entry CSBottlenecks
+while executing---line 1090 of file plain.bst
+Name 1 in "J. Coplien, D. Hoffman, and D. Weiss" has a comma at the end for entry CommonalitySoftware
+while executing---line 1090 of file plain.bst
+Warning--empty year in DSLTrees
+Warning--empty year in DSLEmbeddedCompilers
+Name 1 in "M. Fromherz, V. Gupta, and V. Saraswat" has a comma at the end for entry DSLFramework
+while executing---line 1090 of file plain.bst
+Warning--empty year in DSLFramework
+Warning--empty year in DSLInfocentrism
+Name 1 in "R. B. Kieburtz, L. McKinney, J. M. Bell, J. Hook, A. Kotov, J. Lewis, D. P. Oliva, T. Sheard, I. Smith, and L. Walton" has a comma at the end for entry SoftwareComponents
+while executing---line 1090 of file plain.bst
+Too many commas in name 1 of "R. B. Kieburtz, L. McKinney, J. M. Bell, J. Hook, A. Kotov, J. Lewis, D. P. Oliva, T. Sheard, I. Smith, and L. Walton" for entry SoftwareComponents
+while executing---line 1090 of file plain.bst
+Too many commas in name 1 of "R. B. Kieburtz, L. McKinney, J. M. Bell, J. Hook, A. Kotov, J. Lewis, D. P. Oliva, T. Sheard, I. Smith, and L. Walton" for entry SoftwareComponents
+while executing---line 1090 of file plain.bst
+Too many commas in name 1 of "R. B. Kieburtz, L. McKinney, J. M. Bell, J. Hook, A. Kotov, J. Lewis, D. P. Oliva, T. Sheard, I. Smith, and L. Walton" for entry SoftwareComponents
+while executing---line 1090 of file plain.bst
+Too many commas in name 1 of "R. B. Kieburtz, L. McKinney, J. M. Bell, J. Hook, A. Kotov, J. Lewis, D. P. Oliva, T. Sheard, I. Smith, and L. Walton" for entry SoftwareComponents
+while executing---line 1090 of file plain.bst
+Too many commas in name 1 of "R. B. Kieburtz, L. McKinney, J. M. Bell, J. Hook, A. Kotov, J. Lewis, D. P. Oliva, T. Sheard, I. Smith, and L. Walton" for entry SoftwareComponents
+while executing---line 1090 of file plain.bst
+Too many commas in name 1 of "R. B. Kieburtz, L. McKinney, J. M. Bell, J. Hook, A. Kotov, J. Lewis, D. P. Oliva, T. Sheard, I. Smith, and L. Walton" for entry SoftwareComponents
+while executing---line 1090 of file plain.bst
+Name 1 in "R. E. Faith, L. S. Nyland, and J. F. Prins" has a comma at the end for entry DSLRapidImplmentation
+while executing---line 1090 of file plain.bst
+Warning--empty year in DSLRapidImplmentation
+Name 1 in "R. N. Taylor, W. Tracz, and L. Coglianese" has a comma at the end for entry DSLArchitectures
+while executing---line 1090 of file plain.bst
+Name 1 in "S. Chandra, B. Richards, and J. R. Larus" has a comma at the end for entry DSLCacheCoherent
+while executing---line 1090 of file plain.bst
+Warning--empty year in DSLCacheCoherent
+Name 1 in "T. B. Dinesh, M. Haveraaen, and J. Heering" has a comma at the end for entry DSLNumericalAnalysis
+while executing---line 1090 of file plain.bst
+Warning--empty journal in MicrosoftGlossary
+Warning--empty year in MicrosoftGlossary
+You've used 80 entries,
+            2118 wiz_defined-function locations,
+            866 strings with 13468 characters,
+and the built_in function-call counts, 17846 in all, are:
+= -- 1673
+> -- 800
+< -- 0
++ -- 331
+- -- 240
+* -- 831
+:= -- 3308
+add.period$ -- 234
+call.type$ -- 80
+change.case$ -- 353
+chr.to.int$ -- 0
+cite$ -- 103
+duplicate$ -- 802
+empty$ -- 1416
+format.name$ -- 240
+if$ -- 3576
+int.to.chr$ -- 0
+int.to.str$ -- 80
+missing$ -- 83
+newline$ -- 397
+num.names$ -- 160
+pop$ -- 451
+preamble$ -- 1
+purify$ -- 280
+quote$ -- 0
+skip$ -- 583
+stack$ -- 0
+substring$ -- 411
+swap$ -- 76
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 306
+warning$ -- 23
+while$ -- 160
+width$ -- 82
+write$ -- 766
+(There were 88 error messages)

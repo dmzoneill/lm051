@@ -1,0 +1,63 @@
+mam	body	brain
+Arctic fox                       	3.38	44.50
+Owl monkey                       	0.48	15.50
+Mountain beaver                  	1.35	8.10
+Cow                              	465.00	423.00
+Grey wolf                        	36.33	19.50
+Goat                             	27.66	115.00
+Roe deer                         	14.83	98.20
+Guinea pig                       	1.04	5.50
+Vervet                           	4.19	58.00
+Chinchilla                       	0.43	6.40
+Ground squirrel                  	0.10	4.00
+Arctic ground squirrel           	0.92	5.70
+African giant pouched rat        	1.00	6.60
+Lesser short-tailed shrew        	0.00	0.14
+Star-nosed mole                  	0.06	1.00
+Nine-banded armadillo            	3.50	10.80
+Tree hyrax                       	2.00	12.30
+North American opossum           	1.70	6.30
+Asian elephant                   	2547.00	4603.00
+Big brown bat                    	0.02	0.30
+Donkey                           	187.10	419.00
+Horse                            	521.00	655.00
+European hedgehog                	0.79	3.50
+Patas monkey                     	10.00	115.00
+Cat                              	3.30	25.60
+Galago                           	0.20	5.00
+Genet                            	1.41	17.50
+Giraffe                          	529.00	680.00
+Gorilla                          	207.00	406.00
+Grey seal                        	85.00	325.00
+Rock hyrax (heterohyrax brucci)  	0.75	12.30
+Human                            	62.00	1320.00
+African elephant                 	6654.00	5712.00
+Water opossum                    	3.50	3.90
+Rhesus monkey                    	6.80	179.00
+Kangaroo                         	35.00	56.00
+Yellow-bellied marmot            	4.05	17.00
+Golden hamster                   	0.12	1.00
+Mouse                            	0.02	0.40
+Little brown bat                 	0.01	0.25
+Slow loris                       	1.40	12.50
+Okapi                            	250.00	490.00
+Rabbit                           	2.50	12.10
+Sheep                            	55.50	175.00
+Jaguar                           	100.00	157.00
+Chimpanzee                       	52.16	440.00
+Baboon                           	10.55	179.50
+Desert hedgehog                  	0.55	2.40
+Giant armadillo                  	60.00	81.00
+Rock hyrax (procavia habessinica)	3.60	21.00
+Raccoon                          	4.29	39.20
+Rat                              	0.28	1.90
+Eastern American mole            	0.08	1.20
+Mole rat                         	0.12	3.00
+Musk shrew                       	0.05	0.33
+Pig                              	192.00	180.00
+Echidna                          	3.00	25.00
+Brazilian tapir                  	160.00	169.00
+Tenrec                           	0.90	2.60
+Phalanger                        	1.62	11.40
+Tree shrew                       	0.10	2.50
+Red fox                          	4.24	50.40

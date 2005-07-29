@@ -1,0 +1,18 @@
+\relax 
+\@input{pages/abstract.aux}
+\@input{pages/chapter1.aux}
+\@input{pages/chapter2.aux}
+\@input{pages/chapter3.aux}
+\@input{pages/chapter4.aux}
+\@input{pages/chapter5.aux}
+\@input{pages/chapter7.aux}
+\citation{*}
+\bibdata{bibliography/main}
+\bibcite{Fowler1}{1}
+\bibcite{gof}{2}
+\bibcite{lessons}{3}
+\bibcite{meyers}{4}
+\bibcite{sts}{5}
+\bibstyle{plain}
+\@writefile{toc}{\contentsline {chapter}{\numberline {}Bibliography}{55}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {}List of figures}{56}}

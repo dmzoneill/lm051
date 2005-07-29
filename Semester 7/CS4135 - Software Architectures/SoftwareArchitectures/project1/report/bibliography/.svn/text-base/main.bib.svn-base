@@ -1,0 +1,47 @@
+%% This BibTeX bibliography file was created using BibDesk.
+%% http://bibdesk.sourceforge.net/
+
+
+%% Created for Dave at 2011-10-26 20:41:56 +0100 
+
+
+%% Saved with string encoding Unicode (UTF-8) 
+
+
+
+@book{gof,
+	Date-Added = {2011-10-26 20:38:58 +0100},
+	Date-Modified = {2011-10-26 20:40:47 +0100},
+	Publisher = {Addison Wesley},
+	Title = {Design Patterns : Elements of reusable object orientated softwarePatterns of reusable object oriented software},
+	Year = {1997}}
+
+@book{Fowler1,
+	Date-Added = {2011-10-26 20:38:29 +0100},
+	Date-Modified = {2011-10-26 20:38:46 +0100},
+	Publisher = {Addison Wesley},
+	Title = {Refactoring}}
+
+@book{lessons,
+	Author = {Kaner, Bach, and Pettichord},
+	Date-Added = {2011-10-26 20:37:57 +0100},
+	Date-Modified = {2011-10-26 20:41:51 +0100},
+	Publisher = {Wiley Computer Publishing},
+	Title = {Lessons Learned in Software Testing},
+	Year = {2002}}
+
+@url{sts,
+	Author = {Software testing specialists},
+	Date-Added = {2011-10-26 20:36:50 +0100},
+	Date-Modified = {2011-10-26 20:37:44 +0100},
+	Title = {Definition of Smoke Testing},
+	Url = {http://www.aptest.com/glossary.html},
+	Bdsk-Url-1 = {http://www.aptest.com/glossary.html}}
+
+@url{meyers,
+	Author = {Meyers},
+	Date-Added = {2011-10-26 20:35:15 +0100},
+	Date-Modified = {2011-10-26 20:36:41 +0100},
+	Title = {Bridge pattern = Insulation},
+	Url = {http://www.vincehuston.org/dp/insulation.html},
+	Bdsk-Url-1 = {http://www.vincehuston.org/dp/insulation.html}}

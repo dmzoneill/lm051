@@ -1,0 +1,197 @@
+
+######################################################################
+## Q1
+######################################################################
+
+light <- read.table("NEWCOMB.txt");
+
+# look athe graphs
+# The dta was normalized to accuratley display the information
+# in a human readable form for use in plotting
+#
+
+
+hist(light$V1);
+boxplot(light$V1);
+stem(light$V1);
+
+# histogram show negatively skewd data
+
+#  -4 | 4
+#  -3 | 
+#  -2 | 
+#  -1 | 
+#  -0 | 2
+#   0 | 
+#   1 | 669
+#   2 | 01122333444445555566666777777888888899999
+#   3 | 0001122222334666679
+#   4 | 0
+
+######################################################################
+## Q2
+######################################################################
+
+#
+# Becuase of the error in the datan the standard deviatiomn for this dataset indicates 
+# it is not normal data
+#
+
+light$speed = 7442 / light$V1;
+hist(pnorm(light$speed))
+stem(light$speed, scale=20);
+
+j =0;
+
+pos <- c();
+
+for(i in 1: length(light$speed)){
+if(light$speed[i]>0)
+pos <- c(pos, light$speed[i]);
+}
+
+# our initial assumption of negatively skewed data set was wrong 
+# by removing the error we can now see it is positively skewed
+
+qqnorm(pos)
+qqline(pos)
+
+######################################################################
+## Q3
+######################################################################
+
+
+cvd <- read.table("CAVEND.txt");
+hist(cvd$V1);
+stem(cvd$V1, scale=4);
+qqnorm(cvd$V1);
+qqline(cvd$V1);
+
+# yes normal distribution
+ summary(cvd$V1);
+# Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+# 4.880   5.300   5.460   5.448   5.610   5.850
+
+# using a box plot we can see the 50% of the data is between 5.3 - 5.6
+# getting the mean of these would be 5.45
+# which is the close to the mathematical mean of the data
+
+######################################################################
+## Q4
+######################################################################
+
+darkies <- read.table("AFRICA.txt", sep="\t", header=TRUE);
+
+# gambia had the largest increase of 56.58%
+
+pop87 <- c();
+pop97 <- c();
+sum = 0;
+
+for(i in 1: length(darkies$Pop87)){
+if(darkies$Pop87>0 && darkies$Pop97>0){
+pop87 <- c(pop87, darkies$Pop87[i]);
+pop97 <- c(pop97, darkies$Pop97[i]);
+sum = sum + darkies$Pop97[i];
+}}
+
+# in relation to the population of 1987 nigeria at 106700 people 
+# is greatly above the mean at 11420
+
+hist(pop97);
+
+qqnorm(pnorm(pop97,mean=mean(pop97),sd(pop97)));
+qqline(pnorm(pop97,mean=mean(pop97),sd(pop97)));
+
+# if((mean(pop97)-(0.568*sd(pop97))) < pop97[i] && (mean(pop97)+(0.568*sd(pop97))) > pop97[i]){
+
+data1 <- c();
+for(i in 1: length(pop97)){
+if((mean(pop97)-(0.64*sd(pop97))) < pop97[i] && (mean(pop97)+(0.64*sd(pop97))) > pop97[i]){
+data1 <- c(data1,pop97[i]);
+}
+}
+
+qqnorm(data1);
+qqline(data1);
+shapiro.test(data1);
+
+# by analyzing the interquartile 
+# omitting the the upper and lower (tails) we can 
+# formalize our hypothesis that the distribution is normal
+
+# using the shapiro test we can obtain a p-value greater than 0.05 (0.08373) indicating
+# that h0 is of normal distribution
+# the taisl or lower and higher quartiles of the distibution 
+# ...
+# ..
+
+# ~ 50% p-value = 0.08373
+# ~ 55% p-value = 0.0688
+# ~ 60% p-value = 0.05783
+
+
+
+
+######################################################################
+## Q5
+######################################################################
+
+using the natural log on the negatively skewed dstribution we can adjust he values to 
+more accurately describe a normal distrubtion (indicated by the HIST and qqnorm)
+
+The sample quantiles of the natural log is twice that of the base 10 log
+
+In a trace analysis, using a logarithm as a transformation would adjust the values
+into a linear or distrubuted fashion.
+
+
+######################################################################
+## Q6
+######################################################################
+
+The babies below 2500g can be calulated using a normDist function
+subsituting in the a mean of 3400g and a standard deviation of 550gr.
+Calculating Gaussian Distribution we get a vlaue of 0.0509 (5.09%) of the babies are below 2500g.
+
+Applying the same function for babies below 3500g we can calulate that 0.5721 (57.21%) are below 3500g.
+
+For babies greater than 4000g we can compute a value of 0.1377 (13.77%)
+
+
+
+
+######################################################################
+## Q7
+######################################################################
+
+mean = 3400, SD = 550 
+Using the Normal Distribution Calulations
+
+The babies whose weight above 90% (10%) is 4105g.
+the babies below 1% is 2121g.
+the babies above 95 (5%) is 4305g.
+First quartile is 3029g.
+second quartile is 3400g (mean) as expected in a gaussian normal distribution.
+third quartile is 3771g.
+
+######################################################################
+## Q8
+######################################################################
+
+mean = 266, SD = 16
+Using the Normal Distribution Calulations
+
+Babies percentage born before 290 ( 93.32%)
+subtracting babies born before 250 days 0.1587 (15.87%)
+babies between 250 and 290 = 77.45%
+
+babies after 205 days 0.0074%
+
+The middle 95% of pregnancies last between 234.6 and 297.4 days
+
+At least 296.1 days require special care
+
+
+
+

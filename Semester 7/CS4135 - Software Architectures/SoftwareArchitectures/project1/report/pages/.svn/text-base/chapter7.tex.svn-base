@@ -1,0 +1,76 @@
+\chapter{Critique \& Discussion}
+	\vspace{3mm}
+	\begin{multicols}{2}
+		\paragraph{}
+			It became apparent very early on that the use of so many patterns in such a small compact framework would lead to implementation 
+			issues arising in the form of poor realization of requirements and the resulting scope of the application. Since the project was 
+			primarily focused on realising the patterns, the business concerns were somewhat self evident but they were not the primary focus 
+			of the application and as a result the patterns did not contiguously flow together as expected.   
+			\newline
+			\newline
+			After the initial phase of design the team set about implementing the code.  During this phase we realized that  even though we had 
+			successfully compartmentalized the patterns to best show their functionality, key information required for the interaction and between 
+			them was missing, such as references to the calling classes, how information for the user interface would be delegated to or 
+			passed to the concrete classes.
+			\newline
+			\newline
+			We set about refactoring the code to provide this delegation of data from the top level of the program to the inner workings 
+			of the classes via either constructors, accessors and mutators.  It was import also to account for the fluidness of the application 
+			while keeping the constructs of the patterns in tact in order to present this in the form expected for the project.
+			\newline
+			\newline
+			On retrospect this could have been accomplished via boundary and control classes as would be expected in good Object Oriented 
+			Analysis and Design however as this was not done but could have been accomplished using many of the requirements analysis 
+			techniques such as noun identification technique.
+			\newline
+			\newline
+			As novices in the field of software engineering, we believe as a team that academic research and learning in the aid of realizing 
+			a software architecture can only bring it so far.  From a novice perspective the experience required in the design of software 
+			architectures can only be accomplished by doing and learning; to the point that Extreme programming would have better 
+			realized the implementation.
+			\newline
+			\newline
+			Via coding, testing, listening designing the architecture could have been better implemented from a under graduate perspective.  
+			Through pair programming as seen in the lab exercises, shorter iterations, of designing, coding and listening together with an 
+			iterative waterfall approach would have resulted in a better overall project.  This implication would have resulted in greater 
+			overall understanding, which could potentially lead to us, as undergraduates being better software architects from a design 
+			point of view.
+			\newline
+			\newline
+			Some Benefits we identified :
+			\newline
+			\newline
+			Every difficulty encountered in software engineering has been approached and usually design patterns have been implemented to solve 
+			the intent of these problems.  That said design patterns when researched and understood by all parties in a software engineering 
+			project can help facilitate the rapid design and problem solving of solutions.  
+			\newline
+			\newline
+			These proven practices and methodologies allow developers to exploit the experience of their predecessors increasing the 
+			productivity and understandability of  software in the field and how it should be designed.  Using these pattern methodologies 
+			allow for the extensibility and resusabilty of software systems in varying circumstances.
+			\newline
+			\newline
+			As mentioned in the narrative, the primary gain of patterns are the ‘ilities’ or quality attributes, after all software 
+			reusability is key to market success, if it reusable then we need not reinvent the wheel again as the solution is already 
+			either already accessible or their is a solution which can be easily modified or extended to cater for the functionality 
+			we wish for it to provide.
+			\newline
+			\newline
+			Some Liabilities we identified :
+			\newline
+			\newline
+			Design Patterns are not without liabilities, or at least consequences one should keep in mind before using them. These 
+			"liabilities" include increased complexity, code bloat \& a certain level risk of out-dated application.
+			\newline
+			\newline
+			In traditional (small) college projects, design patterns rarely appear, apart from when that’s a requirement of the project. 
+			This is because (beside ignorance of design patterns) the use of design patterns in smaller projects tends to introduce lots of 
+			unnecessary complexity and refactoring to mold an easy more-procedural esc application to a design-pattern, oo-heavy one. 
+			The amount of code bloat in this over-design out ways the benefits of design patterns for smaller scale projects.
+			\newline
+			\newline
+			Certain patterns fair better than others as time has gone by. Singleton can be compared to a global variable in disguise, 
+			which in an OO world is considered a mistake. The GoF book, while great perhaps should not completely be learned, but learned 
+			from, as it’s practically in its 36th print of its First Edition, a lot of learning has surely occurred in the past 20 years.
+	
+	\end{multicols}

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="classA.xsl"?>
+<Class>
+	<Modules>
+		<Module type="base" code="CS8182">
+			<Title>C++ Programming</Title>
+		</Module>
+		<Module type="elective" code="CS8358">
+			<Title>Java Programming</Title>
+		</Module>
+		<Module type="base" code="CS8234">
+			<Title>Computer Graphics</Title>
+		</Module>
+		<Module type="base" code="CS8742">
+			<Title>Object-Oriented Design</Title>
+		</Module>
+	</Modules>
+	<Students id="students">
+		<Student id="03213232">
+			<Name>John</Name>
+			<Grade module="CS8182" value="3.5"/>
+			<Grade module="CS8234" value="8.5"/>
+			<Grade module="CS8742" value="2.25"/>
+		</Student>
+		<Student id="03453345">
+			<Name>Michelle</Name>
+			<Grade module="CS8182" value="10"/>
+			<Grade module="CS8358" value="2"/>
+			<Grade module="CS8234" value="5.5"/>
+			<Grade module="CS8742" value="4.5"/>
+		</Student>
+		<Student id="03329032">
+			<Name>Norah</Name>
+			<Grade module="CS8182" value="8"/>
+			<Grade module="CS8358" value="6.25"/>
+			<Grade module="CS8234" value="5"/>
+			<Grade module="CS8742" value="4"/>
+		</Student>
+	</Students>
+</Class>

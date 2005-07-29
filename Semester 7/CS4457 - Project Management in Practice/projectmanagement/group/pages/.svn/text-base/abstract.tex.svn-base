@@ -1,0 +1,53 @@
+\begin{abstract}
+	\begin{multicols*}{2}
+		Group policy a term more commonly associated with the Windows Active Directory domain is defined as a set of rules 
+		that govern an environments user and computer accounts.  Group policy provides a means of centralizing the 
+		management and therein the control of the configuration; of client operating systems and their features.  
+		\newline
+		\newline
+		Centralized management in a Linux environment is seen as a far more difficult problem.  
+		The environment given the multitude of different distributions, all subscribing to their own 
+		implementation philosophies have brought about almost infinite diversity, requiring companies to 
+		employ highly skilled technicians to manage these ever changing environments.  
+		These distributions or ``flavors'' seen to be highly different, however employ the same characteristics 
+		in their fundamental implementation only differing in the tools provided to control these characteristics.  
+		\newline
+		\newline
+		Since the conception of X.500 Directory Services specification eventually leading to Microsoft’s dominance in the
+	    enterprise management, there has been a continual drive to integrate mixed environments into Active Directory.  
+		However due to the mixed philosophies and therein the different distributions of Open Source Software (OSS) 
+		operating systems, creating policies within active directory that can manage this diversity is seen as next to 
+		impossible or at least limited.  
+		\newline
+		\newline
+		Unlike Microsoft clients that implement a common integrating architecture this cannot be said for 
+		Open Source Software (OSS) systems.  
+		\columnbreak
+		Enterprise solutions targeting systems such as Redhat Enterprise Linux and Suse Enterprise Linux aid 
+		production administrators in provisioning and maintainability but not subscribe to non - production environments 
+		where a greater degree of flexibility is expected within the environment or do they employ user friendly common 
+		language as seen in the windows domain.  
+		\newline
+		\newline
+		Observations within the field have led to the rapid development of Samba 4 offering directory services allowing 
+		for Windows Policies to be integrated into the internal directory structure but as of yet still no viable solution 
+		for Linux polices on the horizon.
+		\newline
+		\newline
+		The scope of this document is to provide insight into the issues surrounding this IT domain, to provide an 
+		analysis of the two main problems.  
+		\newline
+		\newline
+		{\bf 1)} The demand for technicians to be knowledgeable in all the varying flavors of ‘Gnu’s not Unix’ (GNU) 
+		systems and the abatement of this issue via common language, a domain specific language (DSL). 
+		\newline
+		\newline
+		{\bf 2)} How these varying systems and their configurations can be represented by means of a directory services schema. 
+		Like that of its Windows Group Policy Object (GPO) counterpart, the configuration, changeability and extensibility 
+		of these policies through the use of the schema, should be applicable to all these systems. 
+    \end{multicols*}
+\end{abstract}
+\cleardoublepage
+
+
+

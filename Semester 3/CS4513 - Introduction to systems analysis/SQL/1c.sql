@@ -1,0 +1,2 @@
+select BITRATE, FORMAT, FILESIZE, EPISODE from SYS.Podcasts 
+where LENGTH<60

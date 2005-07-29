@@ -1,0 +1,2 @@
+select FORMAT, min(FILESIZE), max(FILESIZE) from SYS.Podcasts 
+group by FORMAT

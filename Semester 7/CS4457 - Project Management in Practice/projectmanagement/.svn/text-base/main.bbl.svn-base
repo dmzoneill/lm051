@@ -1,0 +1,416 @@
+\begin{thebibliography}{10}
+
+\bibitem{LanguageProgramming}
+G.~Morrisett A.~Basu, M.~Hayden and T.~von Eicken.
+\newblock A language-based approach to protocol construction.
+
+\bibitem{RFC4519}
+Ed~A.~Sciberras.
+\newblock Lightweight directory access protocol (ldap): Schema for user
+  applications.
+\newblock {\em Network Working Group}, 2006.
+
+\bibitem{DSLLegacySystems}
+P.~Klint A.~van Deursen and C.~Verhoef.
+\newblock Research issues in software renovation.
+\newblock {\em Fundamental Approaches to Software Engineering}, 1999.
+
+\bibitem{SchemaEvolutionManagement}
+Leonard~M. Andany, J. and C~Palisser.
+\newblock Management of schema evolution in databases.
+\newblock {\em 17th International Conference on Very Large Databases}, 1991.
+
+\bibitem{SchemaDataModel}
+Chou H.-T. Garza J.F.-Kim W. Woelk~D. anerjee, J. and N~Ballou.
+\newblock Data model issues for object-oriented applications.
+\newblock {\em ACM Trans}, 1987.
+
+\bibitem{DomainAnlaysisArango}
+G.~Arango.
+\newblock Domain analysis: From art form to engineering discipline.
+\newblock {\em ACM SIGSOFT}, 1989.
+
+\bibitem{SchemaTemporallyOriented}
+G.~Ariav.
+\newblock Temporally oriented data definitions: managing schema evolution in
+  temporally oriented databases.
+\newblock 1991.
+
+\bibitem{SchemaInclusionEquivelance}
+Ausiello C.-Batini~C. Atzeni, P. and M~Moscarini.
+\newblock Inclusion and equivalence between relational database schemata.
+\newblock {\em Theoretical Computer Science}, 1982.
+
+\bibitem{SchemaRDTheory}
+P.~Atzeni and V~De~Antonellis.
+\newblock Relational database theory.
+\newblock 1993.
+
+\bibitem{CompilerPrinciples}
+R.~Sethi A.V.~Aho and J.D. Ullman.
+\newblock Compiler: Principles, techniques and tools.
+\newblock {\em Addison-Wesley}, 1986.
+
+\bibitem{SchemaEvolutionOO}
+Chou H.-T. Kim~H.J. Banerjee, J. and H.F Korth.
+\newblock Schema evolution in object-oriented persistent databases.
+\newblock {\em Advanced Database Symposium}, 1986.
+
+\bibitem{SchemaSemantecs}
+Chou H.-T. Kim~H.J. Banerjee, J. and H.F Korth.
+\newblock Semantics and implementation of schema evolution in object-oriented
+  databases.
+\newblock {\em ACM SIGMOD conference}, 1987.
+
+\bibitem{Schema-OODB}
+J.~Banerjee.
+\newblock Data model issues for object-oriented applications.
+\newblock {\em ACM Computing Surveys}, 1987.
+
+\bibitem{RFC1564}
+P.~Barker.
+\newblock Dsa metrics (osi-ds 34 (v3)).
+\newblock {\em Network Working Group}, 1994.
+
+\bibitem{DomainProgramming}
+D.~R. Barstow.
+\newblock Domain-specific automatic programming.
+\newblock {\em IEEE Transactions on Software Engineering}, 1985.
+
+\bibitem{Schema}
+D.~Beech and B~Mahbod.
+\newblock Generalised version control in an object-oriented database.
+\newblock {\em IEEE Computer Society}, 1988.
+
+\bibitem{LittleLanguages}
+J.~L. Bentley.
+\newblock Programming pearls: Little languages.
+\newblock {\em Communications of the ACM}, 1986.
+
+\bibitem{ToolbusCoordination}
+J.A. Bergstra and P.~Klint.
+\newblock The discrete time toolbus--a software coordination architecture.
+\newblock {\em Science of Computer Programming}, 1998.
+
+\bibitem{BDL}
+F.~Bertrand and M.~Augeraud.
+\newblock Bdl: A specialized language for per-object reactive control.
+\newblock {\em DSL-IEEE}.
+
+\bibitem{DSLeventsimulation}
+D.~Bruce.
+\newblock What makes a good domain-specific language? apostle, and its approach
+  to parallel discrete event simulation.
+\newblock {\em Karmin}.
+
+\bibitem{Burgess}
+Mark BURGESS.
+\newblock Micro promises, 2011.
+
+\bibitem{DSLOperatingSystemInstructions}
+C.~Cowan J.~Walpole C.~Pu, A.~Black and C.~Consel.
+\newblock Microlanguages for operating system specialization.
+\newblock {\em Kamin}.
+
+\bibitem{WebCombinators}
+L.~Cardelli and R.~Davies.
+\newblock Service combinators for web computing.
+\newblock {\em DSL-IEEE}.
+
+\bibitem{DSLDomainTaxonomy}
+E.J. Chikofsky and J.H. Cross.
+\newblock Reverse engineering and design recovery: A taxonomy.
+\newblock {\em IEEE Software}, 1990.
+
+\bibitem{ApplicationGenerators}
+J.~C. Cleaveland.
+\newblock Building application generators.
+\newblock {\em IEEE Software}, 1998.
+
+\bibitem{PrologSyntaxTrees}
+R.~F. Crew.
+\newblock Astlog: A language for examining abstract syntax trees.
+\newblock {\em Ramming}.
+
+\bibitem{GenerativeProgramming}
+K.~Czarnecki and U.~Eisenecker.
+\newblock Generative programming: Methods, techniques and applications.
+\newblock {\em Addison-Wesley}, 1999.
+
+\bibitem{DSL-IEEE}
+G.~Bruns D.~Atkins, T.~Ball and K.~Cox.
+\newblock A domain-specific language for form-based services.
+\newblock {\em DSL-IEEE}.
+
+\bibitem{LanguageLargeScale}
+A.~Rogers D.~Bonachea, K.~Fisher and F.~Smith.
+\newblock Hancock: A language for processing very large-scale data.
+\newblock {\em DSL-99}.
+
+\bibitem{SoftwareLines}
+J.-M. DeBaud and K.~Schmid.
+\newblock A systematic approach to derive the scope of software product lines.
+\newblock {\em 21st International Conference on Software Engineering}, 1999.
+
+\bibitem{DSLDomainEpecificExtensions}
+C.~Elliott.
+\newblock An embedded modeling language approach to interactive 3d and
+  multimedia animation.
+\newblock {\em DSL-IEEE}.
+
+\bibitem{ApplicationSpecificLanguages}
+D.~R. Engler.
+\newblock Interface compilation: Steps toward compiling program interfaces as
+  languages.
+\newblock {\em DSL-IEEE}.
+
+\bibitem{DesignPatterns}
+Ralph Johnson John~Vlissides Erich~Gamma, Richard~Helm.
+\newblock {\em Design Patterns : Elements of reusable object orientated
+  software}.
+\newblock Addison Wesley, 1995.
+
+\bibitem{RFC2229}
+R.~Faith.
+\newblock A dictionary server protocol.
+\newblock {\em Network Working Group}, 1997.
+
+\bibitem{OOFrameworks}
+M.~E. Fayad and D.~C. Schmidt.
+\newblock Object-oriented application frameworks.
+\newblock {\em Communications of the ACM}, 1997.
+
+\bibitem{FowlerRefactoring}
+Martin Fowler.
+\newblock {\em Rafactoring : Improving the design of existing code}.
+\newblock Addison Wesley, 1999.
+
+\bibitem{FolwerUML}
+Martin Fowler.
+\newblock {\em UML Distilled}.
+\newblock Addison Wesley, 2009.
+
+\bibitem{FowlerDSL}
+Martin Fowler.
+\newblock {\em Domain Specific Languages}.
+\newblock Addison Wesley, 2010.
+
+\bibitem{FowlerPatternsArchiteture}
+Martin Fowler.
+\newblock {\em Patterns of enterprise application architecture}.
+\newblock Addison Wesley, 2010.
+
+\bibitem{CSParralelServices}
+Greg Franks and Murray Woodside.
+\newblock Performance of multi-level client-server systems with parallel
+  service operations.
+\newblock {\em Association for Computing Machinery}, 1998.
+
+\bibitem{CSEarlyReply}
+Greg Franks and Murray Woodside.
+\newblock Effectiveness of early replies in client-server systems.
+\newblock {\em Performance Evaluation}, 1999.
+
+\bibitem{CSMulticlassServers}
+Greg Franks and Murray Woodside.
+\newblock Multiclass multiservers with deferred operations in layered queueing
+  networks, with software system applications.
+\newblock {\em Twelfth IEEE/ACM International Symposium on Modeling}, 2004.
+
+\bibitem{FreeBsdNis}
+Freebsd.
+\newblock Network information system.
+
+\bibitem{DSLAdhoc}
+M.~Fuchs.
+\newblock Domain specific languages for ad hoc distributed applications.
+\newblock {\em Ramming}.
+
+\bibitem{AspectOrientedProgramming}
+J.~Lamping J.-M. Loingtier C. Lopes C.~Maeda G.~Kiczales, J.~Irwin and
+  A.~Mendhekar.
+\newblock Aspect oriented programming.
+\newblock {\em Kamin}.
+
+\bibitem{PosixRealWorld}
+Bill~O. Gallmeister.
+\newblock {\em POSIX.4: Programming for the Real World}.
+\newblock O'Reilly, 1995.
+
+\bibitem{CSBottlenecks}
+Murray Woodside Jing~Xu Greg~Franks, Dorina~Petriu and Peter Tregunno.
+\newblock Layered bottlenecks and their mitigation.
+\newblock {\em Quantative Evaluation of Systems}, 2006.
+
+\bibitem{FREEBSD}
+Nis Handbook.
+\newblock Freebsd nis handbook.
+
+\bibitem{RFC2654}
+R.~Hedberg.
+\newblock A tagged index object for use in the common indexing protocol.
+\newblock {\em Network Working Group}, 1999.
+
+\bibitem{RFC2459}
+R.~Housley.
+\newblock Internet x.509 public key infrastructure certificate and crl profile.
+\newblock {\em Network Working Group}, 1999.
+
+\bibitem{DSLEmbedded}
+P.~Hudak.
+\newblock Building domain-specific embedded languages.
+\newblock {\em ACM Computing Surveys}, 1996.
+
+\bibitem{CommonalitySoftware}
+D.~Hoffman J.~Coplien and D.~Weiss.
+\newblock Commonality and variability in software engineering.
+\newblock {\em IEEE Software}, 1998.
+
+\bibitem{OOReuse}
+R.~E. Johnson and B.~Foote.
+\newblock Designing reusable classes.
+\newblock {\em Journal of Object-Oriented Programming}, 1988.
+
+\bibitem{RFC3698}
+Ed~K.~Zeilenga.
+\newblock Lightweight directory access protocol (ldap): Additional matching
+  rules.
+\newblock {\em Network Working Group}, 2004.
+
+\bibitem{FowlerRefactoringTo}
+Joshua Kerievsky.
+\newblock {\em Refactoring to patterns}.
+\newblock Addison Wesley, 2004.
+
+\bibitem{DSLTrees}
+N.~Klarlund and M.~I. Schwartzbach.
+\newblock A domain-specific language for regular sets of strings and trees.
+\newblock {\em DSL-IEEE}.
+
+\bibitem{DSLSoftwareReuse}
+C.~W. Krueger.
+\newblock Software reuse.
+\newblock {\em ACM Computing Surveys}, 1992.
+
+\bibitem{DSLMultiLamnguage}
+D.~A. Ladd and J.~C. Ramming.
+\newblock Two application languages in software production.
+\newblock {\em USENIX Very High Level Languages Symposium Proceedings}, 1994.
+
+\bibitem{DSLEmbeddedCompilers}
+D.~Leijen and E.~Meijer.
+\newblock Domain specific embedded compilers.
+\newblock {\em DSL-99}.
+
+\bibitem{DSLFramework}
+V.~Gupta M.~Fromherz and V.~Saraswat.
+\newblock Cc - a generic framework for domain-specific languages.
+\newblock {\em Kamin}.
+
+\bibitem{DSLInfocentrism}
+L.~Nakatani and M.~Jones.
+\newblock Jargons and infocentrism.
+\newblock {\em Kamin}.
+
+\bibitem{SoftwareComponents}
+J.~M. Bell J. Hook A. Kotov J. Lewis D. P. Oliva T. Sheard I.~Smith
+  R.~B.~Kieburtz, L.~McKinney and L.~Walton.
+\newblock A software engineering experiment in software component generation.
+\newblock {\em Software Engineering ICSE}, 1996.
+
+\bibitem{DSLRapidImplmentation}
+L.~S.~Nyland R.~E.~Faith and J.~F. Prins.
+\newblock Khepera: A system for rapid implementation of domain specific
+  languages.
+\newblock {\em Ramming}.
+
+\bibitem{DSLArchitectures}
+W.~Tracz R.~N.~Taylor and L.~Coglianese.
+\newblock Software development using domain-specific software architectures.
+\newblock {\em ACM SIGSOFT Software Engineering Notes}, 1995.
+
+\bibitem{DSLFrameworkTODSL}
+D.~Roberts and R.~Johnson.
+\newblock Evolve frameworks into domain-specific languages.
+\newblock {\em 3rd International Conference on Pattern Languages}, 1996.
+
+\bibitem{SchemaDynamic}
+J.F Roddick.
+\newblock Dynamically changing schemas within database modules.
+\newblock {\em Australian Computer Journal}, 1991.
+
+\bibitem{SchemaEvolutionQuery}
+J.F Roddick.
+\newblock Sql/se - a query language extension for databases supporting schema
+  evolution.
+\newblock {\em SIGMOD Record}, 1992.
+
+\bibitem{DSLCacheCoherent}
+B.~Richards S.~Chandra and J.~R. Larus.
+\newblock Teapot: A domain-specific language for writing cache coherence
+  protocols.
+\newblock {\em DSL-IEEE}.
+
+\bibitem{RFC2079}
+M.~Smith.
+\newblock Definition of an x.500 attribute type and an object class to hold
+  uniform resource identifiers (uris).
+\newblock {\em Network Working Group}, 1997.
+
+\bibitem{DSLNumericalAnalysis}
+M.~Haveraaen T.~B.~Dinesh and J.~Heering.
+\newblock An algebraic programming style for numerical software and its
+  optimization.
+\newblock {\em Technical Report SEN-R9844}, 1998.
+
+\bibitem{SchemaHybridEvolution}
+J.~Takahashi.
+\newblock Hybrid relations for database schema evolution.
+\newblock {\em IEEE Computer Society}, 1990.
+
+\bibitem{MicrosoftDns}
+MICROSOFT TECHNET.
+\newblock Domain name system.
+
+\bibitem{MicrosoftGlossary}
+MICROSOFT TECHNET.
+\newblock Server 2008 gloassry of terms.
+
+\bibitem{DSLOO}
+A.~van Deursen.
+\newblock Domain-specific languages versus object-oriented frameworks: A
+  financial engineering case study.
+\newblock {\em Smalltalk and Java in Industry and Academia}, 1997.
+
+\bibitem{DSLLittleLanguages}
+A.~van Deursen and P.~Klint.
+\newblock Little languages: Little maintenance?
+\newblock {\em Journal of Software Maintenance}, 1998.
+
+\bibitem{SchemaHeterogenity}
+V.~Ventrone and S~Heiler.
+\newblock Semantic heterogeneity as a result of domain evolution.
+\newblock {\em SIGMOD Record}, 1991.
+
+\bibitem{RFC2256}
+M.~Wahl.
+\newblock A summary of the x.500(96) user schema for use with ldapv3.
+\newblock {\em Network Working Group}, 1997.
+
+\bibitem{RFC}
+K.~Zeilenga.
+\newblock Subentries in the lightweight directory access protocol (ldap).
+\newblock {\em Network Working Group}, 2003.
+
+\bibitem{RFC3909}
+K.~Zeilenga.
+\newblock Lightweight directory access protocol (ldap) cancel operation.
+\newblock {\em Network Working Group}, 2004.
+
+\bibitem{RFC4523}
+K.~Zeilenga.
+\newblock Lightweight directory access protocol (ldap) schema definitions for
+  x.509 certificates.
+\newblock {\em Network Working Group}, 2006.
+
+\end{thebibliography}

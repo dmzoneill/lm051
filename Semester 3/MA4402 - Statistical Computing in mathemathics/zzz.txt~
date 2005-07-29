@@ -1,0 +1,134 @@
+
+######################################################################
+## Q1
+######################################################################
+
+light <- read.table("NEWCOMB.txt");
+
+# look athe graphs
+# The dta was normalized to accuratley display the information
+# in a human readable form for use in plotting
+#
+
+
+hist(light$V1);
+boxplot(light$V1);
+stem(light$V1);
+
+# histogram show negatively skewd data
+
+#  -4 | 4
+#  -3 | 
+#  -2 | 
+#  -1 | 
+#  -0 | 2
+#   0 | 
+#   1 | 669
+#   2 | 01122333444445555566666777777888888899999
+#   3 | 0001122222334666679
+#   4 | 0
+
+######################################################################
+## Q2
+######################################################################
+
+#
+# Becuase of the error in the datan the standard deviatiomn for this dataset indicates 
+# it is not normal data
+#
+
+light$speed = 7442 / light$V1;
+hist(pnorm(light$speed))
+stem(light$speed, scale=20);
+
+j =0;
+
+pos <- c();
+
+for(i in 1: length(light$speed)){
+if(light$speed[i]>0)
+pos <- c(pos, light$speed[i]);
+}
+
+# our initial assumption of negatively skewed data set was wrong 
+# by removing the error we can now see it is positively skewed
+
+qqnorm(pos)
+qqline(pos)
+
+######################################################################
+## Q3
+######################################################################
+
+
+cvd <- read.table("CAVEND.txt");
+hist(cvd$V1);
+stem(cvd$V1, scale=4);
+qqnorm(cvd$V1);
+qqline(cvd$V1);
+
+# yes normal distribution
+ summary(cvd$V1);
+# Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+# 4.880   5.300   5.460   5.448   5.610   5.850
+
+# using a box plot we can see the 50% of the data is between 5.3 - 5.6
+# getting the mean of these would be 5.45
+# which is the close to the mathematical mean of the data
+
+######################################################################
+## Q4
+######################################################################
+
+darkies <- read.table("AFRICA.txt", sep="\t", header=TRUE);
+
+# gambia had the largest increase of 56.58%
+
+pop87 <- c();
+pop97 <- c();
+sum = 0;
+
+for(i in 1: length(darkies$Pop87)){
+if(darkies$Pop87>0 && darkies$Pop97>0){
+pop87 <- c(pop87, darkies$Pop87[i]);
+pop97 <- c(pop97, darkies$Pop97[i]);
+sum = sum + darkies$Pop97[i];
+}}
+
+# in relation to the population of 1987 nigeria at 106700 people 
+# is greatly above the mean at 11420
+
+hist(pop97);
+
+qqnorm(pnorm(pop97,mean=mean(pop97),sd(pop97)));
+qqline(pnorm(pop97,mean=mean(pop97),sd(pop97)));
+
+# if((mean(pop97)-(0.568*sd(pop97))) < pop97[i] && (mean(pop97)+(0.568*sd(pop97))) > pop97[i]){
+
+data1 <- c();
+for(i in 1: length(pop97)){
+if((mean(pop97)-(0.64*sd(pop97))) < pop97[i] && (mean(pop97)+(0.64*sd(pop97))) > pop97[i]){
+data1 <- c(data1,pop97[i]);
+}
+}
+
+qqnorm(data1);
+qqline(data1);
+shapiro.test(data1);
+
+# by analyzing the interquartile 
+# omitting the the upper and lower (tails) we can 
+# formalize our hypothesis that the distribution is normal
+
+# using the shapiro test we can obtain a p-value greater than 0.05 (0.08373) indicating
+# that h0 is of normal distribution
+# the taisl or lower and higher quartiles of the distibution 
+# ...
+# ..
+
+# ~ 50% p-value = 0.08373
+# ~ 55% p-value = 0.0688
+# ~ 60% p-value = 0.05783
+
+
+

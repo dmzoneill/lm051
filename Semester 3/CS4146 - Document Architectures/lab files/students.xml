@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="newclass.xsl"?>
+<Class>
+    <Students>
+        <Student id="03453345">
+            <Name>Michelle</Name>
+            <Grade module="CS8182" value="3"/>
+            <Grade module="CS8358" value="3"/>
+            <Grade module="CS8234" value="1"/>
+            <Grade module="CS8742" value="4.5"/>
+        </Student>
+        <Student id="03329032">
+            <Name>Norah</Name>
+            <Grade module="CS8182" value="8"/>
+            <Grade module="CS8358" value="6.25"/>
+            <Grade module="CS8234" value="5"/>
+            <Grade module="CS8742" value="4"/>
+        </Student>
+        <Student id="03353453">
+            <Name>Peter</Name>
+            <Grade module="CS8182" value="1"/>
+            <Grade module="CS8358" value="2"/>
+            <Grade module="CS8234" value="2"/>
+            <Grade module="CS8742" value="2"/>
+        </Student>
+    </Students>
+</Class>

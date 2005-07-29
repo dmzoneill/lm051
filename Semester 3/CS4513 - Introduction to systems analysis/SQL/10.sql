@@ -1,0 +1,3 @@
+select ID, EPISODE, FILESIZE, (((BITRATE * (LENGTH * 60)) / 8) / 1024), FILESIZE*0.7, FILESIZE*1.3 from SYS.Podcasts 
+where FILESIZE>((((BITRATE * (LENGTH * 60)) / 8) / 1024)*0.7) 
+and FILESIZE<((((BITRATE * (LENGTH * 60)) / 8) / 1024)*1.3)

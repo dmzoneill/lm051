@@ -1,0 +1,36 @@
+mam <- read.table("MAMMALS.txt", sep="\t", header=TRUE);
+mam$rel = mam$brain / mam$body;
+mam = mam[mam["brain"] < mam$body,];
+
+
+
+
+
+data = mam[mam["rel"] < 0.5,];
+x = mean(data$rel) + (1.96 * sd(data$rel));
+
+data = data[data["rel"] < x,];
+datalm = lm(data$brain ~ data$body);
+
+bodyUpper = mean(data$body) + (1.96 * sd(data$body));
+bodyLower = mean(data$body) - (1.96 * sd(data$body));
+brainUpper = mean(data$brain) + (1.96 * sd(data$brain));
+brainLower = mean(data$brain) - (1.96 * sd(data$brain));
+
+newMam = data[data["body"] < bodyUpper,];
+newMam = data[data["body"] > bodyLower,];
+newMam = data[data["brain"] < brainUpper,];
+newMam = data[data["brain"] > brainLower,];
+
+newRel = lm(newMam$body ~ newMam$brain);
+
+
+
+
+
+
+
+
+
+
+

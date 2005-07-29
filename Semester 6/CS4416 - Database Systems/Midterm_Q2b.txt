@@ -1,0 +1,56 @@
+////////// 1 /////////////
+
+SELECT maker
+FROM Product, ((SELECT model,speed FROM PC) UNION (SELECT model,speed FROM Laptop)) X
+WHERE Product.model = X.model
+GROUP BY maker
+HAVING MIN(speed) >= 2.2;
+
+////////// 2 /////////////
+
+SELECT maker
+FROM Product
+WHERE maker NOT IN ((SELECT maker
+                     FROM Product, PC
+                     WHERE Product.model = PC.model AND speed < 2.2) 
+                    UNION
+                    (SELECT maker
+                     FROM Product, Laptop
+                     WHERE Product.model = Laptop.model AND speed < 2.2));
+
+////////// 3 /////////////
+
+SELECT maker
+FROM Product
+WHERE maker <> ALL((SELECT maker
+                    FROM Product, PC
+                    WHERE Product.model = PC.model AND speed < 2.2) 
+                   UNION
+                   (SELECT maker
+                    FROM Product, Laptop
+                    WHERE Product.model = Laptop.model AND speed < 2.2));
+
+////////// 4 /////////////
+
+(((SELECT maker FROM Product) MINUS 
+  (SELECT maker 
+   FROM Product, PC
+   WHERE Product.model = PC.model AND speed < 2.2))
+ MINUS 
+ (SELECT maker
+  FROM Product, Laptop
+  WHERE Product.model = Laptop.model AND speed < 2.2))
+)
+
+////////// 5 /////////////
+
+((SELECT maker FROM Product) 
+ MINUS 
+ ((SELECT maker 
+   FROM Product, PC
+   WHERE Product.model = PC.model AND speed < 2.2))
+  UNION 
+  (SELECT maker
+   FROM Product, Laptop
+   WHERE Product.model = Laptop.model AND speed < 2.2))
+)

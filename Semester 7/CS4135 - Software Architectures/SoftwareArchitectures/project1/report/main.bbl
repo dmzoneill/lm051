@@ -1,0 +1,25 @@
+\begin{thebibliography}{1}
+
+\bibitem{Fowler1}
+{\em Refactoring}.
+\newblock Addison Wesley.
+
+\bibitem{gof}
+{\em Design Patterns : Elements of reusable object orientated softwarePatterns
+  of reusable object oriented software}.
+\newblock Addison Wesley, 1997.
+
+\bibitem{lessons}
+Bach Kaner and Pettichord.
+\newblock {\em Lessons Learned in Software Testing}.
+\newblock Wiley Computer Publishing, 2002.
+
+\bibitem{meyers}
+Meyers.
+\newblock Bridge pattern = insulation.
+
+\bibitem{sts}
+Software testing specialists.
+\newblock Definition of smoke testing.
+
+\end{thebibliography}
