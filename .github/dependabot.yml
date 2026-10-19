@@ -1,0 +1,32 @@
+---
+# Managed by https://github.com/dmzoneill/dmzoneill setup.sh.
+# Entries follow manifests detected in this repository.
+version: 2
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5
+    labels:
+      - "dependencies"
+    groups:
+      github-actions:
+        patterns:
+          - "*"
+  - package-ecosystem: "nuget"
+    directories:
+      - "/Semester 7/CS4135 - Software Architectures/SoftwareArchitectures/project1/Battleship"
+      - "/Semester 7/CS4135 - Software Architectures/SoftwareArchitectures/project1/Battleship/Battleship"
+      - "/Semester 7/CS4135 - Software Architectures/SoftwareArchitectures/project2/CalculatorService"
+      - "/Semester 7/CS4135 - Software Architectures/SoftwareArchitectures/project2/CalculatorService/CalculatorClient"
+      - "/Semester 7/CS4135 - Software Architectures/SoftwareArchitectures/project2/CalculatorService/CalculatorService"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5
+    labels:
+      - "dependencies"
+    groups:
+      nuget:
+        patterns:
+          - "*"
