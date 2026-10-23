@@ -1,0 +1,19 @@
+# MSBuild/WPF build output (obj/ intermediates incl. *.g.cs/*.g.i.cs, bin/ binaries) from the C# coursework projects.
+**/obj/
+**/bin/
+
+# Subversion working-copy metadata (.svn/ pristine copies) committed along with the coursework.
+**/.svn/
+
+# pdfLaTeX/BibTeX build artefacts generated when compiling the LaTeX reports.
+*.log
+*.aux
+*.toc
+*.out
+*.bbl
+*.blg
+*.lof
+*.lot
+
+# Editor backup files (Emacs/gedit "~" copies of the originals next to them).
+*~
