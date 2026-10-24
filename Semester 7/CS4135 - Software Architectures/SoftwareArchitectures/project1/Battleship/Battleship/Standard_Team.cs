@@ -1,4 +1,5 @@
-﻿using System;
+// jscpd:ignore-start
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,12 +24,12 @@ namespace Battleship.GameEngine.Group
             BattleshipTest.acceptMessage(this.ToString(), "Constructed", Colors.Magenta);
         }
 
-        public Standard_Team( String type )
+        public Standard_Team(String type)
         {
             BattleshipTest.acceptMessage(this.ToString(), "Constructed", Colors.Magenta);
         }
 
-        public Standard_Team( Game game )
+        public Standard_Team(Game game)
         {
             BattleshipTest.acceptMessage(this.ToString(), "Constructed", Colors.Magenta);
             this.game = game;
@@ -38,7 +39,7 @@ namespace Battleship.GameEngine.Group
             string typeOfTeam, List<string> computerAlgorithmTypes)
         {
 
-            switch( typeOfTeam )
+            switch (typeOfTeam)
             {
                 default:
                     return this;
@@ -57,12 +58,12 @@ namespace Battleship.GameEngine.Group
 
         public override I_Player[] GetPlayers()
         {
-            Console.WriteLine( "Called" );
-            Console.WriteLine( this.Players.Length );
+            Console.WriteLine("Called");
+            Console.WriteLine(this.Players.Length);
             return this.Players;
         }
 
-        public override void SetPlayers( I_Player[] players )
+        public override void SetPlayers(I_Player[] players)
         {
             this.Players = players;
         }
@@ -77,9 +78,10 @@ namespace Battleship.GameEngine.Group
             return this.color;
         }
 
-        public override void SetColor( Color color )
+        public override void SetColor(Color color)
         {
             this.color = color;
         }
     }
 }
+// jscpd:ignore-end

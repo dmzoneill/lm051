@@ -1,3 +1,5 @@
+-- noqa: disable=all
+-- jscpd:ignore-start
  -- Q1
 select HIREDATE 
 from SYS.EMP 
@@ -256,3 +258,4 @@ where SYS.DEPT.DEPTNO not in
   not like 'J%'
 ); 
 
+-- jscpd:ignore-end

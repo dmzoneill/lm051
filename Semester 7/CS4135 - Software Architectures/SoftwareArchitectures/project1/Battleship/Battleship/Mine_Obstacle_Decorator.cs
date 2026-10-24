@@ -1,3 +1,4 @@
+// jscpd:ignore-start
 using System;
 using Battleship.GameEngine.Boundary;
 using Battleship.GameEngine.Gamepiece;
@@ -19,10 +20,11 @@ namespace Battleship.GameEngine.Maze
         {
             base.Populate_Map();
 
-            BattleshipTest.acceptMessage(this.ToString(), 
+            BattleshipTest.acceptMessage(this.ToString(),
                 "Populated with mines.", Colors.Brown);
         }
 
     }
 
 }
+// jscpd:ignore-end

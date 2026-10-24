@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- jscpd:ignore-start -->
 
 <!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.0//EN' 'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
 <svg style="fill-opacity:1; color-rendering:auto; color-interpolation:auto; stroke:black; text-rendering:auto; stroke-linecap:square; stroke-miterlimit:10; stroke-opacity:1; shape-rendering:auto; fill:black; stroke-dasharray:none; font-weight:normal; stroke-width:1; font-family:&apos;Dialog&apos;; font-style:normal; stroke-linejoin:miter; font-size:12; stroke-dashoffset:0; image-rendering:auto;" xmlns="http://www.w3.org/2000/svg" width="2266" xmlns:xlink="http://www.w3.org/1999/xlink" height="2036">
@@ -780,7 +781,7 @@
       <text x="2" y="139" style="clip-path:url(#clipPath50); stroke:none;" xml:space="preserve">-undoMove : int</text>
       <line x1="0" x2="440" y1="144" style="stroke-linecap:butt; clip-path:url(#clipPath50); fill:none; stroke-linejoin:bevel; stroke-miterlimit:0;" y2="144" />
       <text x="2" y="157" style="clip-path:url(#clipPath50); stroke:none;" xml:space="preserve">+Game()</text>
-      <text x="2" y="171" style="clip-path:url(#clipPath50); stroke:none;" xml:space="preserve">+CreateTeams(teamTypes : List&lt;string&gt;, computerAlgorithmTypes : List&lt;strin...</text>
+      <text x="2" y="171" style="clip-path:url(#clipPath50); stroke:none;" xml:space="preserve">+CreateTeams(teamTypes : List&lt;string&gt;, computerAlgorithmTypes : List&lt;strin...</text><!-- codespell:ignore strin -->
       <text x="2" y="185" style="clip-path:url(#clipPath50); stroke:none;" xml:space="preserve">+GetTeams() : Team []</text>
       <text x="2" y="199" style="clip-path:url(#clipPath50); stroke:none;" xml:space="preserve">+SetTeams(Teams : Team []) : void</text>
       <text x="2" y="213" style="clip-path:url(#clipPath50); stroke:none;" xml:space="preserve">+UndoMove() : void</text>
@@ -1334,3 +1335,4 @@
     </g>
   </g>
 </svg>
+<!-- jscpd:ignore-end -->

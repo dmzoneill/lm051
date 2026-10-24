@@ -1,3 +1,4 @@
+// jscpd:ignore-start
 using System;
 using System.Windows.Media;
 using Battleship.GameEngine.Boundary;
@@ -12,12 +13,13 @@ namespace Battleship.GameEngine.Group
     public interface I_Team : I_Observer
     {
         I_Player[] GetPlayers();
-        void SetPlayers( I_Player[] players );
+        void SetPlayers(I_Player[] players);
         int GetNumPlayers();
         Color GetColor();
-        void SetColor( Color color );
-        I_Team CreateTeams(string typeOfTeam, 
+        void SetColor(Color color);
+        I_Team CreateTeams(string typeOfTeam,
             System.Collections.Generic.List<string> computerAlgorithmTypes);
     }
 
 }
+// jscpd:ignore-end

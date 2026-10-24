@@ -1,3 +1,4 @@
+// jscpd:ignore-start
 using System;
 using System.Windows.Media;
 
@@ -15,15 +16,16 @@ namespace Battleship.GameEngine.Participant
     {
         public RL_Move_Strategy()
         {
-            BattleshipTest.acceptMessage(this.ToString(), 
+            BattleshipTest.acceptMessage(this.ToString(),
                 "Constructing Reinforcement Learning Alg for Computer Player", Colors.Navy);
         }
 
         public override void AlgorithmInterface()
         {
-            BattleshipTest.acceptMessage(this.ToString(), 
+            BattleshipTest.acceptMessage(this.ToString(),
                 "made Reinforcement learning move", Colors.Navy);
         }
     }
 
 }
+// jscpd:ignore-end

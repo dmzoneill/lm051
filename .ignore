@@ -17,3 +17,7 @@
 
 # Editor backup files (Emacs/gedit "~" copies of the originals next to them).
 *~
+
+# Plain-text coursework copies with no comment syntax (R session transcript and lab copy of the example text).
+Semester 3/MA4402 - Statistical Computing in mathemathics/assignments/r.txt
+Semester 3/CS4146 - Document Architectures/lab files/15092009111315_exampletext.txt

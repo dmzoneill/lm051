@@ -1,0 +1,3 @@
+# CS4513 coursework SQL (2009) has no declared dialect; sqlfluff needs one to parse. Rules are disabled inline per file with noqa.
+[sqlfluff]
+dialect = ansi

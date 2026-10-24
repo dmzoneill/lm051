@@ -1,3 +1,4 @@
+// jscpd:ignore-start
 using System;
 using System.Windows.Media;
 
@@ -21,3 +22,4 @@ namespace Battleship.GameEngine.Participant
     }
 
 }
+// jscpd:ignore-end
