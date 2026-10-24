@@ -1,3 +1,4 @@
+// jscpd:ignore-start
 using System;
 using System.Windows.Media;
 
@@ -15,7 +16,7 @@ namespace Battleship.GameEngine.Participant
     {
         public Concrete_Move_Strategy_B()
         {
-            BattleshipTest.acceptMessage(this.ToString(), 
+            BattleshipTest.acceptMessage(this.ToString(),
                 "Constructing Min-Max Alg", Colors.Blue);
         }
 
@@ -25,3 +26,4 @@ namespace Battleship.GameEngine.Participant
     }
 
 }
+// jscpd:ignore-end

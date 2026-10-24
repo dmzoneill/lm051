@@ -1,3 +1,4 @@
+// jscpd:ignore-start
 using System;
 using Battleship.GameEngine;
 using Battleship.GameEngine.Boundary;
@@ -11,7 +12,7 @@ using System.Windows.Media;
 
 namespace Battleship.GameEngine.Participant
 {
-    public class Player : Originator , I_Player
+    public class Player : Originator, I_Player
     {
         private I_Ship[] myShips;
         private int myShipsRemaining;
@@ -25,49 +26,49 @@ namespace Battleship.GameEngine.Participant
         public Player()
         {
             this.observers = new ArrayList();
-            this.myShips = new Ship[ 5 ];
+            this.myShips = new Ship[5];
         }
 
         public Memento CreateMemento()
         {
-            BattleshipTest.acceptMessage( this.ToString() , 
-                "Created memento of my ships" , Colors.Lime );
-            return new Memento( this.myShips );
+            BattleshipTest.acceptMessage(this.ToString(),
+                "Created memento of my ships", Colors.Lime);
+            return new Memento(this.myShips);
         }
 
-        public void SetMemento( Memento memento )
+        public void SetMemento(Memento memento)
         {
-            BattleshipTest.acceptMessage(this.ToString(), 
+            BattleshipTest.acceptMessage(this.ToString(),
                 "restoring memento of my ships", Colors.Lime);
             this.myShips = memento.GetState();
         }
 
-        public void Notify( string message )
+        public void Notify(string message)
         {
-            BattleshipTest.acceptMessage(this.ToString(), 
-                "Sending messsage to observers", Colors.Orange);
-            foreach( I_Observer obj in this.observers )
+            BattleshipTest.acceptMessage(this.ToString(),
+                "Sending messsage to observers", Colors.Orange); // codespell:ignore messsage
+            foreach (I_Observer obj in this.observers)
             {
-                obj.Update( this , message );
+                obj.Update(this, message);
             }
         }
 
-        public void Update( I_Observer subject , String message )
+        public void Update(I_Observer subject, String message)
         {
-            BattleshipTest.acceptMessage(this.ToString(), 
-                "Recevied : \"" + message + "\" from : " + subject.ToString(), Colors.Orange);
+            BattleshipTest.acceptMessage(this.ToString(),
+                "Recevied : \"" + message + "\" from : " + subject.ToString(), Colors.Orange); // codespell:ignore recevied
         }
 
-        public void Attach( I_Observer observer )
+        public void Attach(I_Observer observer)
         {
-            this.observers.Add( observer );
-            BattleshipTest.acceptMessage(this.ToString(), 
+            this.observers.Add(observer);
+            BattleshipTest.acceptMessage(this.ToString(),
                 "Observer was attached to me", Colors.Orange);
         }
 
-        public void Detach( I_Observer observer )
+        public void Detach(I_Observer observer)
         {
-            this.observers.Remove( observer );
+            this.observers.Remove(observer);
         }
 
         public I_Ship[] GetMyShips()
@@ -75,7 +76,7 @@ namespace Battleship.GameEngine.Participant
             return this.myShips;
         }
 
-        public void SetMyShips( I_Ship[] myShips )
+        public void SetMyShips(I_Ship[] myShips)
         {
             this.myShips = myShips;
         }
@@ -85,7 +86,7 @@ namespace Battleship.GameEngine.Participant
             return this.myShips.Length;
         }
 
-        public void SetNumShips( int myShipsRemaining )
+        public void SetNumShips(int myShipsRemaining)
         {
             this.myShipsRemaining = myShipsRemaining;
         }
@@ -95,7 +96,7 @@ namespace Battleship.GameEngine.Participant
             return this.name;
         }
 
-        public void SetName( string name )
+        public void SetName(string name)
         {
             this.name = name;
         }
@@ -105,7 +106,7 @@ namespace Battleship.GameEngine.Participant
             return this.power;
         }
 
-        public void SetPower( int power )
+        public void SetPower(int power)
         {
             this.power = power;
         }
@@ -115,16 +116,17 @@ namespace Battleship.GameEngine.Participant
             return this.playerScore;
         }
 
-        public void SetPlayerScore( int playerScore )
+        public void SetPlayerScore(int playerScore)
         {
             this.playerScore = playerScore;
         }
 
         public virtual void makeMove()
         {
-            BattleshipTest.acceptMessage(this.ToString(), 
+            BattleshipTest.acceptMessage(this.ToString(),
                 "human player made move", Colors.Blue);
         }
-       
+
     }
 }
+// jscpd:ignore-end

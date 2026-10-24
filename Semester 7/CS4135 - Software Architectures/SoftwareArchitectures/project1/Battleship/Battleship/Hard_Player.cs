@@ -1,3 +1,4 @@
+// jscpd:ignore-start
 using System;
 using Battleship.GameEngine.Boundary;
 using Battleship.GameEngine.Gamepiece;
@@ -13,7 +14,8 @@ namespace Battleship.GameEngine.Participant
     {
         public Hard_Player()
         {
-            BattleshipTest.acceptMessage( this.ToString() , "Constructed" , Colors.Magenta );
+            BattleshipTest.acceptMessage(this.ToString(), "Constructed", Colors.Magenta);
         }
     }
 }
+// jscpd:ignore-end

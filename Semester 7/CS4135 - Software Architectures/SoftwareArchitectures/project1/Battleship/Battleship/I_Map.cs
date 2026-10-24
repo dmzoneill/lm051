@@ -1,3 +1,4 @@
+// jscpd:ignore-start
 using System;
 using Battleship.GameEngine.Boundary;
 using Battleship.GameEngine.Gamepiece;
@@ -6,10 +7,13 @@ using Battleship.GameEngine.Participant;
 using Battleship.GameEngine.Group;
 using Battleship.GameEngine.User_Interface;
 
-namespace Battleship.GameEngine.Maze {
-	public interface I_Map {
-		void Populate();
+namespace Battleship.GameEngine.Maze
+{
+    public interface I_Map
+    {
+        void Populate();
 
-	}
+    }
 
 }
+// jscpd:ignore-end

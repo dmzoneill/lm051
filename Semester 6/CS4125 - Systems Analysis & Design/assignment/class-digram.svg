@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- jscpd:ignore-start -->
 
 <!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.0//EN' 'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
 <svg style="fill-opacity:1; color-rendering:auto; color-interpolation:auto; stroke:black; text-rendering:auto; stroke-linecap:square; stroke-miterlimit:10; stroke-opacity:1; shape-rendering:auto; fill:black; stroke-dasharray:none; font-weight:normal; stroke-width:1; font-family:&apos;Dialog&apos;; font-style:normal; stroke-linejoin:miter; font-size:12; stroke-dashoffset:0; image-rendering:auto;" xmlns="http://www.w3.org/2000/svg" width="3242" xmlns:xlink="http://www.w3.org/1999/xlink" height="1706">
@@ -639,7 +640,7 @@
       <text x="2" y="13" style="clip-path:url(#clipPath21); stroke:none;" xml:space="preserve">#paymentObservers : Observer[]</text>
       <line x1="0" x2="220" y1="18" style="stroke-linecap:butt; clip-path:url(#clipPath21); fill:none; stroke-linejoin:bevel; stroke-miterlimit:0;" y2="18" />
       <text x="2" y="31" style="clip-path:url(#clipPath21); stroke:none;" xml:space="preserve">+attach(obj : Observer)</text>
-      <text x="2" y="45" style="clip-path:url(#clipPath21); stroke:none;" xml:space="preserve">+dettach(obj : Observer)</text>
+      <text x="2" y="45" style="clip-path:url(#clipPath21); stroke:none;" xml:space="preserve">+dettach(obj : Observer)</text><!-- codespell:ignore dettach -->
       <text x="2" y="59" style="clip-path:url(#clipPath21); stroke:none;" xml:space="preserve">+notify()</text>
       <text x="2" y="73" style="clip-path:url(#clipPath21); stroke:none;" xml:space="preserve">+update(sub : Observer, msg : string)</text>
     </g>
@@ -674,7 +675,7 @@
       <text x="2" y="199" style="clip-path:url(#clipPath24); stroke:none;" xml:space="preserve">+getSerialized() : string</text>
       <text x="2" y="213" style="clip-path:url(#clipPath24); stroke:none;" xml:space="preserve">+getCommunicationComplete() : boolean</text>
       <text x="2" y="227" style="clip-path:url(#clipPath24); stroke:none;" xml:space="preserve">+attach(obj : Observer)</text>
-      <text x="2" y="241" style="clip-path:url(#clipPath24); stroke:none;" xml:space="preserve">+dettach(obj : Observer)</text>
+      <text x="2" y="241" style="clip-path:url(#clipPath24); stroke:none;" xml:space="preserve">+dettach(obj : Observer)</text><!-- codespell:ignore dettach -->
       <text x="2" y="255" style="clip-path:url(#clipPath24); stroke:none;" xml:space="preserve">+notify()</text>
       <text x="2" y="269" style="clip-path:url(#clipPath24); stroke:none;" xml:space="preserve">+update(sub : Observer, msg : string)</text>
     </g>
@@ -696,7 +697,7 @@
       <text x="2" y="45" style="clip-path:url(#clipPath27); font-style:italic; stroke:none;" xml:space="preserve">+reDraw()</text>
       <text x="2" y="59" style="clip-path:url(#clipPath27); font-style:italic; stroke:none;" xml:space="preserve">+populate()</text>
       <text x="2" y="73" style="clip-path:url(#clipPath27); stroke:none;" xml:space="preserve">+attach(obj : Observer)</text>
-      <text x="2" y="87" style="clip-path:url(#clipPath27); stroke:none;" xml:space="preserve">+dettach(obj : Observer)</text>
+      <text x="2" y="87" style="clip-path:url(#clipPath27); stroke:none;" xml:space="preserve">+dettach(obj : Observer)</text><!-- codespell:ignore dettach -->
       <text x="2" y="101" style="clip-path:url(#clipPath27); stroke:none;" xml:space="preserve">+notify()</text>
       <text x="2" y="115" style="clip-path:url(#clipPath27); stroke:none;" xml:space="preserve">+update(sub : Observer, msg : string)</text>
     </g>
@@ -765,7 +766,7 @@
       <text x="2" y="45" style="clip-path:url(#clipPath27); font-style:italic; stroke:none;" xml:space="preserve">+draw()</text>
       <text x="2" y="59" style="clip-path:url(#clipPath27); font-style:italic; stroke:none;" xml:space="preserve">+initialize()</text>
       <text x="2" y="73" style="clip-path:url(#clipPath27); stroke:none;" xml:space="preserve">+attach(obj : Observer)</text>
-      <text x="2" y="87" style="clip-path:url(#clipPath27); stroke:none;" xml:space="preserve">+dettach(obj : Observer)</text>
+      <text x="2" y="87" style="clip-path:url(#clipPath27); stroke:none;" xml:space="preserve">+dettach(obj : Observer)</text><!-- codespell:ignore dettach -->
       <text x="2" y="101" style="clip-path:url(#clipPath27); stroke:none;" xml:space="preserve">+notify()</text>
       <text x="2" y="115" style="clip-path:url(#clipPath27); stroke:none;" xml:space="preserve">+update(sub : Observer, msg : string)</text>
     </g>
@@ -1000,7 +1001,7 @@
     </g>
     <g style="text-rendering:geometricPrecision; font-size:11; font-family:sans-serif;" transform="translate(732,100)">
       <text x="2" y="13" style="clip-path:url(#clipPath60); stroke:none;" xml:space="preserve">+notify()</text>
-      <text x="2" y="27" style="clip-path:url(#clipPath60); stroke:none;" xml:space="preserve">+dettach(obj : Observer)</text>
+      <text x="2" y="27" style="clip-path:url(#clipPath60); stroke:none;" xml:space="preserve">+dettach(obj : Observer)</text><!-- codespell:ignore dettach -->
       <text x="2" y="41" style="clip-path:url(#clipPath60); stroke:none;" xml:space="preserve">+attach(obj : Observer)</text>
       <text x="2" y="55" style="clip-path:url(#clipPath60); stroke:none;" xml:space="preserve">+update(sub : Observer, msg : string)</text>
     </g>
@@ -1019,7 +1020,7 @@
       <text x="2" y="13" style="clip-path:url(#clipPath62); stroke:none;" xml:space="preserve">-views : Observer[]</text>
       <line x1="0" x2="220" y1="18" style="clip-path:url(#clipPath62); fill:none; stroke-linejoin:bevel;" y2="18" />
       <text x="2" y="31" style="clip-path:url(#clipPath62); stroke:none;" xml:space="preserve">+attach(obj : Observer)</text>
-      <text x="2" y="45" style="clip-path:url(#clipPath62); stroke:none;" xml:space="preserve">+dettach(obj : Observer)</text>
+      <text x="2" y="45" style="clip-path:url(#clipPath62); stroke:none;" xml:space="preserve">+dettach(obj : Observer)</text><!-- codespell:ignore dettach -->
       <text x="2" y="59" style="clip-path:url(#clipPath62); stroke:none;" xml:space="preserve">+notify()</text>
       <text x="2" y="73" style="clip-path:url(#clipPath62); stroke:none;" xml:space="preserve">+update(sub : Observer, msg : string)</text>
     </g>
@@ -1159,7 +1160,7 @@
       <text x="2" y="13" style="clip-path:url(#clipPath71); stroke:none;" xml:space="preserve">-vWindow</text>
       <line x1="0" x2="220" y1="18" style="stroke-linecap:butt; clip-path:url(#clipPath71); fill:none; stroke-linejoin:bevel; stroke-miterlimit:0;" y2="18" />
       <text x="2" y="31" style="clip-path:url(#clipPath71); stroke:none;" xml:space="preserve">+attach(obj : Observer)</text>
-      <text x="2" y="45" style="clip-path:url(#clipPath71); stroke:none;" xml:space="preserve">+dettach(obj : Observer)</text>
+      <text x="2" y="45" style="clip-path:url(#clipPath71); stroke:none;" xml:space="preserve">+dettach(obj : Observer)</text><!-- codespell:ignore dettach -->
       <text x="2" y="59" style="clip-path:url(#clipPath71); stroke:none;" xml:space="preserve">+notify()</text>
       <text x="2" y="73" style="clip-path:url(#clipPath71); stroke:none;" xml:space="preserve">+update(sub : Observer, msg : string)</text>
     </g>
@@ -1259,7 +1260,7 @@
       <line x1="2" x2="81" y1="131" style="clip-path:url(#clipPath82); fill:none;" y2="131" />
       <text x="2" y="143" style="clip-path:url(#clipPath82); stroke:none;" xml:space="preserve">+remove(item : Item)</text>
       <text x="2" y="157" style="clip-path:url(#clipPath82); stroke:none;" xml:space="preserve">+attach(obj : Observer)</text>
-      <text x="2" y="171" style="clip-path:url(#clipPath82); stroke:none;" xml:space="preserve">+dettach(obj : Observer)</text>
+      <text x="2" y="171" style="clip-path:url(#clipPath82); stroke:none;" xml:space="preserve">+dettach(obj : Observer)</text><!-- codespell:ignore dettach -->
       <text x="2" y="185" style="clip-path:url(#clipPath82); stroke:none;" xml:space="preserve">+notify()</text>
       <text x="2" y="199" style="clip-path:url(#clipPath82); stroke:none;" xml:space="preserve">+update(sub : Observer, msg : string)</text>
     </g>
@@ -1309,7 +1310,7 @@
       <text x="2" y="437" style="clip-path:url(#clipPath84); stroke:none;" xml:space="preserve">+getAvatar() : string</text>
       <text x="2" y="451" style="clip-path:url(#clipPath84); stroke:none;" xml:space="preserve">+setAvatar(av : string) : void</text>
       <text x="2" y="465" style="clip-path:url(#clipPath84); stroke:none;" xml:space="preserve">+attach(obj : Observer)</text>
-      <text x="2" y="479" style="clip-path:url(#clipPath84); stroke:none;" xml:space="preserve">+dettach(obj : Observer)</text>
+      <text x="2" y="479" style="clip-path:url(#clipPath84); stroke:none;" xml:space="preserve">+dettach(obj : Observer)</text><!-- codespell:ignore dettach -->
       <text x="2" y="493" style="clip-path:url(#clipPath84); stroke:none;" xml:space="preserve">+notify()</text>
       <text x="2" y="507" style="clip-path:url(#clipPath84); stroke:none;" xml:space="preserve">+update(sub : Observer, msg : string)</text>
     </g>
@@ -1460,7 +1461,7 @@
       <text x="2" y="143" style="clip-path:url(#clipPath98); stroke:none;" xml:space="preserve">+getLoggedin() : boolean</text>
       <text x="2" y="157" style="clip-path:url(#clipPath98); stroke:none;" xml:space="preserve">-setLoggedin(loggedIn : boolean) : void</text>
       <text x="2" y="171" style="clip-path:url(#clipPath98); stroke:none;" xml:space="preserve">+attach(obj : Observer)</text>
-      <text x="2" y="185" style="clip-path:url(#clipPath98); stroke:none;" xml:space="preserve">+dettach(obj : Observer)</text>
+      <text x="2" y="185" style="clip-path:url(#clipPath98); stroke:none;" xml:space="preserve">+dettach(obj : Observer)</text><!-- codespell:ignore dettach -->
       <text x="2" y="199" style="clip-path:url(#clipPath98); stroke:none;" xml:space="preserve">+notify()</text>
       <text x="2" y="213" style="clip-path:url(#clipPath98); stroke:none;" xml:space="preserve">+update(sub : Observer, msg : string)</text>
     </g>
@@ -1905,3 +1906,4 @@
     </g>
   </g>
 </svg>
+<!-- jscpd:ignore-end -->

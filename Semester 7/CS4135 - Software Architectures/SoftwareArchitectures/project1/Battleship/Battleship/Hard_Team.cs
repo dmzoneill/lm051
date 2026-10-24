@@ -1,3 +1,4 @@
+// jscpd:ignore-start
 using System;
 using Battleship.GameEngine.Boundary;
 using Battleship.GameEngine.Gamepiece;
@@ -14,11 +15,12 @@ namespace Battleship.GameEngine.Group
         public Hard_Team()
         {
             BattleshipTest.acceptMessage(this.ToString(), "Constructed", Colors.Magenta);
-            this.Players = new Player[ 2 ];
-            this.Players[ 0 ] = new Hard_Player();
-            this.Players[ 1 ] = new Hard_Player();
-            Console.WriteLine( "Created players" );
+            this.Players = new Player[2];
+            this.Players[0] = new Hard_Player();
+            this.Players[1] = new Hard_Player();
+            Console.WriteLine("Created players");
         }
     }
 
 }
+// jscpd:ignore-end

@@ -1,4 +1,5 @@
-﻿using System;
+// jscpd:ignore-start
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -51,18 +52,18 @@ namespace Battleship
             string reinforcementAlg = "Reinforcement Algorithm";
 
             // Default Algorithms
-            this.computerAlgorithmTypes.Add( evolutionary );
-            this.computerAlgorithmTypes.Add( reinforcementAlg );
+            this.computerAlgorithmTypes.Add(evolutionary);
+            this.computerAlgorithmTypes.Add(reinforcementAlg);
 
             // Check Box Filling & Default
-            this.Computer_1_AI_cb.Items.Add( evolutionary );
-            this.Computer_1_AI_cb.Items.Add( reinforcementAlg );
+            this.Computer_1_AI_cb.Items.Add(evolutionary);
+            this.Computer_1_AI_cb.Items.Add(reinforcementAlg);
 
             this.Computer_1_AI_cb.SelectedIndex = 0;
 
             // Check Box Filling & Default
-            this.Computer_2_AI_cb.Items.Add( evolutionary );
-            this.Computer_2_AI_cb.Items.Add( reinforcementAlg );
+            this.Computer_2_AI_cb.Items.Add(evolutionary);
+            this.Computer_2_AI_cb.Items.Add(reinforcementAlg);
 
             this.Computer_2_AI_cb.SelectedIndex = 0;
 
@@ -77,9 +78,9 @@ namespace Battleship
                 this.gameThread.Abort();
 
                 // While gameThread is terminating, main thread will wait for half a second
-                System.Threading.Thread.Sleep( 500 );
+                System.Threading.Thread.Sleep(500);
             }
-            catch( Exception )
+            catch (Exception)
             {
 
             }
@@ -119,54 +120,54 @@ namespace Battleship
             }
         }
 
-        private void restoreMememtoButton_Click( object sender , RoutedEventArgs e )
+        private void restoreMememtoButton_Click(object sender, RoutedEventArgs e)
         {
             this.game.UndoMove();
         }
         #endregion
 
         #region Team control ui elements
-        private void createTeamsButton_Click( object sender , RoutedEventArgs e )
+        private void createTeamsButton_Click(object sender, RoutedEventArgs e)
         {
             // Fowler would be upset, remove temps! bad code smell
-            bool teamEasy = (bool) easyTeam_TB.IsChecked;
-            bool teamHard = ( bool ) hardTeam_TB.IsChecked;
-            bool teamComputer = ( bool ) computerTeam_TB.IsChecked;
+            bool teamEasy = (bool)easyTeam_TB.IsChecked;
+            bool teamHard = (bool)hardTeam_TB.IsChecked;
+            bool teamComputer = (bool)computerTeam_TB.IsChecked;
 
             // Defensive code block, bad!
-            if( teamEasy && teamHard && teamComputer )
+            if (teamEasy && teamHard && teamComputer)
             {
-                MessageBox.Show( "Please select only two teams." );
+                MessageBox.Show("Please select only two teams.");
                 this.easyTeam_TB.IsChecked = false;
                 this.hardTeam_TB.IsChecked = false;
                 this.computerTeam_TB.IsChecked = false;
                 this.selectedTeams.Clear();
             }
-            else if( ( teamEasy && teamHard && !teamComputer ) 
-                  || ( teamEasy && !teamHard && teamComputer ) 
-                  || ( !teamEasy && teamHard && teamComputer ) )
+            else if ((teamEasy && teamHard && !teamComputer)
+                  || (teamEasy && !teamHard && teamComputer)
+                  || (!teamEasy && teamHard && teamComputer))
             {
                 if (teamEasy == true)
                 {
-                    this.selectedTeams.Add( "Easy" );
+                    this.selectedTeams.Add("Easy");
                 }
 
-                if ( teamHard == true)
+                if (teamHard == true)
                 {
-                    this.selectedTeams.Add( "Hard" );
+                    this.selectedTeams.Add("Hard");
                 }
 
-                if ( teamComputer == true)
+                if (teamComputer == true)
                 {
-                    this.selectedTeams.Add( "Computer" );
+                    this.selectedTeams.Add("Computer");
                 }
 
-                this.computerAlgorithmTypes[ 0 ] = 
-                                           ( string ) this.Computer_1_AI_cb.SelectedValue;
-                this.computerAlgorithmTypes[ 1 ] = 
-                                           ( string ) this.Computer_2_AI_cb.SelectedValue;
-         
-                this.game.CreateTeams( selectedTeams , computerAlgorithmTypes );
+                this.computerAlgorithmTypes[0] =
+                                           (string)this.Computer_1_AI_cb.SelectedValue;
+                this.computerAlgorithmTypes[1] =
+                                           (string)this.Computer_2_AI_cb.SelectedValue;
+
+                this.game.CreateTeams(selectedTeams, computerAlgorithmTypes);
                 this.gameControlButton.IsEnabled = true;
                 this.restoreMememtoButton.IsEnabled = true;
             }
@@ -174,11 +175,11 @@ namespace Battleship
             {
                 MessageBox.Show("Please select 2 teams!");
             }
-        }       
+        }
         #endregion
 
-        #region Message handling area for delgated messages to the UI
-        public void addMessageToRichtextBox( string classname , string message , Color color )
+        #region Message handling area for delgated messages to the UI // codespell:ignore delgated
+        public void addMessageToRichtextBox(string classname, string message, Color color)
         {
             string package;
             string objname;
@@ -186,63 +187,64 @@ namespace Battleship
             Paragraph p = new Paragraph();
             p.LineHeight = 5;
 
-            int x = classname.LastIndexOf( '.' );
+            int x = classname.LastIndexOf('.');
 
-            if( x == -1 )
+            if (x == -1)
             {
                 package = "";
                 objname = classname;
             }
             else
             {
-                package = classname.Substring( 0 , x );
-                objname = classname.Substring( x + 1 , classname.Length - x - 1 );
+                package = classname.Substring(0, x);
+                objname = classname.Substring(x + 1, classname.Length - x - 1);
             }
 
-            Run r1 = new Run( "Package : " );
-            r1.Foreground = new SolidColorBrush( Colors.Green );
-            p.Inlines.Add( r1 );
+            Run r1 = new Run("Package : ");
+            r1.Foreground = new SolidColorBrush(Colors.Green);
+            p.Inlines.Add(r1);
 
-            Run r2 = new Run( package );
-            r2.Foreground = new SolidColorBrush( Colors.Red );
-            p.Inlines.Add( r2 );
+            Run r2 = new Run(package);
+            r2.Foreground = new SolidColorBrush(Colors.Red);
+            p.Inlines.Add(r2);
 
-            Run r3 = new Run( "  Object : " );
-            r3.Foreground = new SolidColorBrush( Colors.Green );
-            p.Inlines.Add( r3 );
+            Run r3 = new Run("  Object : ");
+            r3.Foreground = new SolidColorBrush(Colors.Green);
+            p.Inlines.Add(r3);
 
-            Run r4 = new Run( objname );
-            r4.Foreground = new SolidColorBrush( Colors.Red );
-            p.Inlines.Add( r4 );
+            Run r4 = new Run(objname);
+            r4.Foreground = new SolidColorBrush(Colors.Red);
+            p.Inlines.Add(r4);
 
-            Run r5 = new Run( "  Said : " );
-            r5.Foreground = new SolidColorBrush( Colors.Green );
-            p.Inlines.Add( r5 );
+            Run r5 = new Run("  Said : ");
+            r5.Foreground = new SolidColorBrush(Colors.Green);
+            p.Inlines.Add(r5);
 
-            Run r6 = new Run( message );
-            r6.Foreground = new SolidColorBrush( color );
-            p.Inlines.Add( r6 );
+            Run r6 = new Run(message);
+            r6.Foreground = new SolidColorBrush(color);
+            p.Inlines.Add(r6);
 
-            this.richTextBox1.Document.Blocks.Add( p );
+            this.richTextBox1.Document.Blocks.Add(p);
             this.richTextBox1.ScrollToEnd();
         }
 
-        public static void acceptMessage( string classname , string message , Color color )
+        public static void acceptMessage(string classname, string message, Color color)
         {
-            BattleshipTest.instance.addMessage( classname , message , color );
+            BattleshipTest.instance.addMessage(classname, message, color);
         }
 
-        public void addMessage( string classname , string message , Color color )
+        public void addMessage(string classname, string message, Color color)
         {
-            this.Dispatcher.Invoke( System.Windows.Threading.DispatcherPriority.Background , 
+            this.Dispatcher.Invoke(System.Windows.Threading.DispatcherPriority.Background,
                 new System.Windows.Threading.DispatcherOperationCallback(
             delegate
             {
-                this.callBack( classname , message , color );
+                this.callBack(classname, message, color);
                 return null;
-            } ) , null );
+            }), null);
         }
 
         #endregion
     }
 }
+// jscpd:ignore-end

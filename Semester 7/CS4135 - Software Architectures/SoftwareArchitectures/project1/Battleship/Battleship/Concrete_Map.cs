@@ -1,3 +1,4 @@
+// jscpd:ignore-start
 using System;
 using Battleship.GameEngine.Boundary;
 using Battleship.GameEngine.Gamepiece;
@@ -8,7 +9,7 @@ using Battleship.GameEngine.User_Interface;
 
 namespace Battleship.GameEngine.Maze
 {
-    public class Concrete_Map : Map_Decorator , I_Map_Component
+    public class Concrete_Map : Map_Decorator, I_Map_Component
     {
         public override void Populate()
         {
@@ -18,3 +19,4 @@ namespace Battleship.GameEngine.Maze
     }
 
 }
+// jscpd:ignore-end

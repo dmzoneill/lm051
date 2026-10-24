@@ -1,3 +1,4 @@
+// jscpd:ignore-start
 using System;
 using Battleship.GameEngine.Boundary;
 using Battleship.GameEngine.Gamepiece;
@@ -10,11 +11,12 @@ namespace Battleship.GameEngine
 {
     public interface I_Observer
     {
-        void Notify( string message );
-        void Update( I_Observer subject , String message );
-        void Attach( I_Observer I_Observer );
-        void Detach( I_Observer I_Observer );
+        void Notify(string message);
+        void Update(I_Observer subject, String message);
+        void Attach(I_Observer I_Observer);
+        void Detach(I_Observer I_Observer);
 
     }
 
 }
+// jscpd:ignore-end

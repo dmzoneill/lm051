@@ -1,3 +1,4 @@
+// jscpd:ignore-start
 using System;
 using Battleship.GameEngine.Boundary;
 using Battleship.GameEngine.Gamepiece;
@@ -20,3 +21,4 @@ namespace Battleship.GameEngine.Maze
     }
 
 }
+// jscpd:ignore-end

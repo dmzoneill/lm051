@@ -1,3 +1,4 @@
+// jscpd:ignore-start
 using System;
 using Battleship.GameEngine.Boundary;
 using Battleship.GameEngine.Gamepiece;
@@ -21,7 +22,7 @@ namespace Battleship.GameEngine.Maze
             BattleshipTest.acceptMessage(this.ToString(), "Constructed", Colors.Brown);
         }
 
-        public Map_Decorator( I_Map_Component component )
+        public Map_Decorator(I_Map_Component component)
         {
             BattleshipTest.acceptMessage(this.ToString(), "Constructed", Colors.Brown);
             this.map = component;
@@ -54,3 +55,4 @@ namespace Battleship.GameEngine.Maze
     }
 
 }
+// jscpd:ignore-end

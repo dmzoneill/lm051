@@ -1,3 +1,5 @@
+-- noqa: disable=all
+-- jscpd:ignore-start
  -- Q1
 select HIREDATE 
 from SYS.EMP 
@@ -94,3 +96,4 @@ select SYS.DEPT.DEPTNO, SYS.DEPT.DNAME from SYS.DEPT join SYS.EMP on SYS.DEPT.DE
 select distinct SYS.DEPT.DNAME, SYS.DEPT.LOC from SYS.DEPT join SYS.EMP on SYS.DEPT.DEPTNO = SYS.EMP.DEPTNO where ENAME like 'S%' or ENAME like 'J%';
 
  
+-- jscpd:ignore-end

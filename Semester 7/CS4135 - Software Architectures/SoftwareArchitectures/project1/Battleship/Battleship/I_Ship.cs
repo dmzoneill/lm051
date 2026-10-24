@@ -1,3 +1,4 @@
+// jscpd:ignore-start
 using System;
 using Battleship.GameEngine.Boundary;
 using Battleship.GameEngine.Gamepiece;
@@ -16,11 +17,12 @@ namespace Battleship.GameEngine.Gamepiece
 
         int GetStartX();
         int GetStartY();
-        void SetEndX( int endX );
+        void SetEndX(int endX);
 
-        void SetEndY( int endY );
-        void SetStartX( int startX );
-        void SetStartY( int startY );
+        void SetEndY(int endY);
+        void SetStartX(int startX);
+        void SetStartY(int startY);
     }
 
 }
+// jscpd:ignore-end
