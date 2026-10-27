@@ -1,5 +1,9 @@
 # LM051 Course Materials
 
+<p align="center">
+  <img src=".github/logo.png" alt="lm051 logo" width="128" />
+</p>
+
 Course materials collected while studying the LM051 Computer Systems
 degree at the University of Limerick.
 
